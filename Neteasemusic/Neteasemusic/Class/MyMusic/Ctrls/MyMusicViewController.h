@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface MyMusicViewController : UIViewController
+@interface MyMusicViewController : BaseViewController
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 

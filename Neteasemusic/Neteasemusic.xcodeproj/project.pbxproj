@@ -54,6 +54,7 @@
 		9F7DE8791E04145B002E782C /* cm2_lay_icn_time@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DE8731E04145B002E782C /* cm2_lay_icn_time@3x.png */; };
 		9F7DE87C1E04181A002E782C /* cm2_act_icn_arr@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DE87A1E04181A002E782C /* cm2_act_icn_arr@2x.png */; };
 		9F7DE87D1E04181A002E782C /* cm2_act_icn_arr@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DE87B1E04181A002E782C /* cm2_act_icn_arr@3x.png */; };
+		9F7DE8871E041BC4002E782C /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7DE8861E041BC4002E782C /* BaseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +139,8 @@
 		9F7DE8731E04145B002E782C /* cm2_lay_icn_time@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_lay_icn_time@3x.png"; sourceTree = "<group>"; };
 		9F7DE87A1E04181A002E782C /* cm2_act_icn_arr@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_act_icn_arr@2x.png"; sourceTree = "<group>"; };
 		9F7DE87B1E04181A002E782C /* cm2_act_icn_arr@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_act_icn_arr@3x.png"; sourceTree = "<group>"; };
+		9F7DE8851E041BC4002E782C /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		9F7DE8861E041BC4002E782C /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,6 +270,7 @@
 		9F7DE8271E03DC92002E782C /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				9F7DE8811E041B4E002E782C /* Base */,
 				9F7DE8581E03E28B002E782C /* Helper */,
 				9F7DE8281E03DC92002E782C /* Account */,
 				9F7DE82C1E03DC92002E782C /* Discover */,
@@ -451,6 +455,15 @@
 			path = myMusic;
 			sourceTree = "<group>";
 		};
+		9F7DE8811E041B4E002E782C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				9F7DE8851E041BC4002E782C /* BaseViewController.h */,
+				9F7DE8861E041BC4002E782C /* BaseViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -621,6 +634,7 @@
 			files = (
 				9F7DE8401E03DCE7002E782C /* DiscoverViewController.m in Sources */,
 				9F7DE7C11E03D394002E782C /* ViewController.m in Sources */,
+				9F7DE8871E041BC4002E782C /* BaseViewController.m in Sources */,
 				9F7DE8481E03DDBB002E782C /* TabberController.m in Sources */,
 				9F7DE86A1E04114D002E782C /* MyMusicTableHeaderView.m in Sources */,
 				9F7DE8511E03DE14002E782C /* MyMusicViewController.m in Sources */,
@@ -866,6 +880,7 @@
 				9F7DE7E51E03D394002E782C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9F7DE7E61E03D394002E782C /* Build configuration list for PBXNativeTarget "NeteasemusicTests" */ = {
 			isa = XCConfigurationList;
@@ -874,6 +889,7 @@
 				9F7DE7E81E03D394002E782C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9F7DE7E91E03D394002E782C /* Build configuration list for PBXNativeTarget "NeteasemusicUITests" */ = {
 			isa = XCConfigurationList;
@@ -882,6 +898,7 @@
 				9F7DE7EB1E03D394002E782C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
