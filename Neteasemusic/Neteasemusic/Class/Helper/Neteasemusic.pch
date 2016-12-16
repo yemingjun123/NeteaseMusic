@@ -1,0 +1,18 @@
+//
+//  Neteasemusic.pch
+//  Neteasemusic
+//
+//  Created by 叶明君 on 16/12/16.
+//  Copyright © 2016年 叶明君. All rights reserved.
+//
+
+#ifndef Neteasemusic_pch
+#define Neteasemusic_pch
+
+#ifdef __OBJC__
+#import "Global.h"
+
+#endif
+
+
+#endif
