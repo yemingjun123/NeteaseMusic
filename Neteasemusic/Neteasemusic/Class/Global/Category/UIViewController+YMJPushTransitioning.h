@@ -11,11 +11,10 @@
 
 @interface UIViewController (YMJPushTransitioning)<UINavigationControllerDelegate>
 
-@property (strong, nonatomic)YMJAnimation *pushAnimation;
 @property (strong, nonatomic)YMJAnimation *popAnimation;
+@property (strong, nonatomic)YMJAnimation *pushAnimation;
 
 - (void)ymj_pushAnimation:(YMJAnimation*)animation;
-
 - (void)ymj_popAnimation:(YMJAnimation *)animation;
 
 @end
