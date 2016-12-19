@@ -20,7 +20,13 @@
     [super viewDidLoad];
     self.navigationController.navigationBar.translucent = NO;
     self.navigationController.navigationBar.barTintColor = UIColorFromRGB(darkRedColor);
-    [self setLeftBarButton:[UIImage imageNamed:@"cm2_topbar_icn_back.png"] title:nil target:self action:@selector(touchBackEvent)];
+    [self setLeftBarButton:[UIImage imageNamed:@"cm2_topbar_icn_back.png"]
+                     title:nil
+                    target:self
+                    action:@selector(touchBackEvent)];
+    [self setRightBarButton:[UIImage imageNamed:@""]
+                      title:nil target:self
+                     action:@selector(touchPlayPageEvent)];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -60,6 +66,10 @@
 #pragma mark - Response Event
 - (void)touchBackEvent {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)touchPlayPageEvent {
+    
 }
 
 @end

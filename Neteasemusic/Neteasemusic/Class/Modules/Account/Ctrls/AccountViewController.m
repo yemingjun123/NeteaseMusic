@@ -16,7 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [self setMiddleLabelTitle:@"账号" color:UIColorFromRGB(whiteColor)];
+    
 }
 
 - (void)didReceiveMemoryWarning {
