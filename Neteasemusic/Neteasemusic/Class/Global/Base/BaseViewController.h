@@ -14,12 +14,12 @@
 
 - (void)setMiddleLabelTitle:(NSString *)title color:(UIColor *)color;
 
-- (void)setLeftButton:(UIImage*)image
+- (void)setLeftBarButton:(UIImage*)image
                 title:(NSString*)title
                target:(id)target
                action:(SEL)action;
 
-- (void)setRightButton:(UIImage*)image
+- (void)setRightBarButton:(UIImage*)image
                  title:(NSString*)title
                 target:(id)target
                 action:(SEL)action;

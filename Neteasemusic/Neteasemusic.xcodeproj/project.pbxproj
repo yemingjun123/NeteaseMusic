@@ -7,6 +7,56 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F2C35141E07C21D0004867B /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2C34D81E07C21D0004867B /* BaseViewController.m */; };
+		9F2C35151E07C21D0004867B /* UIViewController+YMJPushTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2C34DB1E07C21D0004867B /* UIViewController+YMJPushTransitioning.m */; };
+		9F2C35161E07C21D0004867B /* YMJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2C34E01E07C21D0004867B /* YMJExtension.m */; };
+		9F2C35171E07C21D0004867B /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2C34E51E07C21D0004867B /* AccountViewController.m */; };
+		9F2C35191E07C21D0004867B /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2C34EC1E07C21D0004867B /* DiscoverViewController.m */; };
+		9F2C351A1E07C21D0004867B /* DiscoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F2C34EF1E07C21D0004867B /* DiscoverViewController.xib */; };
+		9F2C351B1E07C21D0004867B /* FriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2C34F31E07C21D0004867B /* FriendViewController.m */; };
+		9F2C351C1E07C21D0004867B /* FriendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F2C34F41E07C21D0004867B /* FriendViewController.xib */; };
+		9F2C351D1E07C21D0004867B /* MyMusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2C34FE1E07C21D0004867B /* MyMusicViewController.m */; };
+		9F2C351F1E07C21D0004867B /* MySingerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2C35011E07C21D0004867B /* MySingerViewController.m */; };
+		9F2C35211E07C21D0004867B /* PlayListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2C35041E07C21D0004867B /* PlayListViewController.m */; };
+		9F2C35231E07C21D0004867B /* MyMusicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2C35081E07C21D0004867B /* MyMusicCell.m */; };
+		9F2C35251E07C21D0004867B /* MyMusicTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2C350B1E07C21D0004867B /* MyMusicTableHeaderView.m */; };
+		9F2C35261E07C21D0004867B /* TabberController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2C35101E07C21D0004867B /* TabberController.m */; };
+		9F2C35491E07C2460004867B /* cm2_act_icn_arr@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F2C352A1E07C2460004867B /* cm2_act_icn_arr@2x.png */; };
+		9F2C354A1E07C2460004867B /* cm2_act_icn_arr@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F2C352B1E07C2460004867B /* cm2_act_icn_arr@3x.png */; };
+		9F2C354B1E07C2460004867B /* cm2_lay_icn_artist_new@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F2C352C1E07C2460004867B /* cm2_lay_icn_artist_new@2x.png */; };
+		9F2C354C1E07C2460004867B /* cm2_lay_icn_artist_new@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F2C352D1E07C2460004867B /* cm2_lay_icn_artist_new@3x.png */; };
+		9F2C354D1E07C2460004867B /* cm2_lay_icn_dld_new@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F2C352E1E07C2460004867B /* cm2_lay_icn_dld_new@2x.png */; };
+		9F2C354E1E07C2460004867B /* cm2_lay_icn_dld_new@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F2C352F1E07C2460004867B /* cm2_lay_icn_dld_new@3x.png */; };
+		9F2C354F1E07C2460004867B /* cm2_lay_icn_time@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F2C35301E07C2460004867B /* cm2_lay_icn_time@2x.png */; };
+		9F2C35501E07C2460004867B /* cm2_lay_icn_time@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F2C35311E07C2460004867B /* cm2_lay_icn_time@3x.png */; };
+		9F2C35511E07C2460004867B /* cm2_topbar_icn_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F2C35321E07C2460004867B /* cm2_topbar_icn_back@2x.png */; };
+		9F2C35521E07C2460004867B /* cm2_topbar_icn_back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F2C35331E07C2460004867B /* cm2_topbar_icn_back@3x.png */; };
+		9F2C35531E07C2460004867B /* cm2_btm_icn_account@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F2C35351E07C2460004867B /* cm2_btm_icn_account@2x.png */; };
+		9F2C35541E07C2460004867B /* cm2_btm_icn_account@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F2C35361E07C2460004867B /* cm2_btm_icn_account@3x.png */; };
+		9F2C35551E07C2460004867B /* cm2_btm_icn_account_prs@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F2C35371E07C2460004867B /* cm2_btm_icn_account_prs@2x.png */; };
+		9F2C35561E07C2460004867B /* cm2_btm_icn_account_prs@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F2C35381E07C2460004867B /* cm2_btm_icn_account_prs@3x.png */; };
+		9F2C35571E07C2460004867B /* cm2_btm_icn_discovery@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F2C35391E07C2460004867B /* cm2_btm_icn_discovery@2x.png */; };
+		9F2C35581E07C2460004867B /* cm2_btm_icn_discovery@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F2C353A1E07C2460004867B /* cm2_btm_icn_discovery@3x.png */; };
+		9F2C35591E07C2460004867B /* cm2_btm_icn_discovery_prs@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F2C353B1E07C2460004867B /* cm2_btm_icn_discovery_prs@2x.png */; };
+		9F2C355A1E07C2460004867B /* cm2_btm_icn_discovery_prs@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F2C353C1E07C2460004867B /* cm2_btm_icn_discovery_prs@3x.png */; };
+		9F2C355B1E07C2460004867B /* cm2_btm_icn_friend@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F2C353D1E07C2460004867B /* cm2_btm_icn_friend@2x.png */; };
+		9F2C355C1E07C2460004867B /* cm2_btm_icn_friend@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F2C353E1E07C2460004867B /* cm2_btm_icn_friend@3x.png */; };
+		9F2C355D1E07C2460004867B /* cm2_btm_icn_friend_prs@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F2C353F1E07C2460004867B /* cm2_btm_icn_friend_prs@2x.png */; };
+		9F2C355E1E07C2460004867B /* cm2_btm_icn_friend_prs@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F2C35401E07C2460004867B /* cm2_btm_icn_friend_prs@3x.png */; };
+		9F2C355F1E07C2460004867B /* cm2_btm_icn_music@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F2C35411E07C2460004867B /* cm2_btm_icn_music@2x.png */; };
+		9F2C35601E07C2460004867B /* cm2_btm_icn_music@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F2C35421E07C2460004867B /* cm2_btm_icn_music@3x.png */; };
+		9F2C35611E07C2460004867B /* cm2_btm_icn_music_prs@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F2C35431E07C2460004867B /* cm2_btm_icn_music_prs@2x.png */; };
+		9F2C35621E07C2460004867B /* cm2_btm_icn_music_prs@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F2C35441E07C2460004867B /* cm2_btm_icn_music_prs@3x.png */; };
+		9F2C35631E07C2460004867B /* cm2_btm_tab_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F2C35451E07C2460004867B /* cm2_btm_tab_right@2x.png */; };
+		9F2C35641E07C2460004867B /* cm2_btm_tab_right@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F2C35461E07C2460004867B /* cm2_btm_tab_right@3x.png */; };
+		9F2C35651E07C2460004867B /* cm2_topbar_icn_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F2C35471E07C2460004867B /* cm2_topbar_icn_back@2x.png */; };
+		9F2C35661E07C2460004867B /* cm2_topbar_icn_back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F2C35481E07C2460004867B /* cm2_topbar_icn_back@3x.png */; };
+		9F2C356B1E07C57B0004867B /* YMJAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2C356A1E07C57B0004867B /* YMJAnimation.m */; };
+		9F2C356D1E07CAF50004867B /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F2C356C1E07CAF50004867B /* AccountViewController.xib */; };
+		9F2C35711E07CB1A0004867B /* MyMusicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F2C356E1E07CB1A0004867B /* MyMusicViewController.xib */; };
+		9F2C35721E07CB1A0004867B /* MySingerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F2C356F1E07CB1A0004867B /* MySingerViewController.xib */; };
+		9F2C35731E07CB1A0004867B /* PlayListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F2C35701E07CB1A0004867B /* PlayListViewController.xib */; };
+		9F2C35751E07CB360004867B /* MyMusicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F2C35741E07CB360004867B /* MyMusicCell.xib */; };
 		9F7DE7BB1E03D394002E782C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7DE7BA1E03D394002E782C /* main.m */; };
 		9F7DE7BE1E03D394002E782C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7DE7BD1E03D394002E782C /* AppDelegate.m */; };
 		9F7DE7C11E03D394002E782C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7DE7C01E03D394002E782C /* ViewController.m */; };
@@ -15,46 +65,6 @@
 		9F7DE7C91E03D394002E782C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DE7C71E03D394002E782C /* LaunchScreen.storyboard */; };
 		9F7DE7D41E03D394002E782C /* NeteasemusicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7DE7D31E03D394002E782C /* NeteasemusicTests.m */; };
 		9F7DE7DF1E03D394002E782C /* NeteasemusicUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7DE7DE1E03D394002E782C /* NeteasemusicUITests.m */; };
-		9F7DE8051E03D4EF002E782C /* cm2_btm_icn_account@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DE7F51E03D4EF002E782C /* cm2_btm_icn_account@2x.png */; };
-		9F7DE8061E03D4EF002E782C /* cm2_btm_icn_account@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DE7F61E03D4EF002E782C /* cm2_btm_icn_account@3x.png */; };
-		9F7DE8071E03D4EF002E782C /* cm2_btm_icn_account_prs@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DE7F71E03D4EF002E782C /* cm2_btm_icn_account_prs@2x.png */; };
-		9F7DE8081E03D4EF002E782C /* cm2_btm_icn_account_prs@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DE7F81E03D4EF002E782C /* cm2_btm_icn_account_prs@3x.png */; };
-		9F7DE8091E03D4EF002E782C /* cm2_btm_icn_discovery@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DE7F91E03D4EF002E782C /* cm2_btm_icn_discovery@2x.png */; };
-		9F7DE80A1E03D4EF002E782C /* cm2_btm_icn_discovery@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DE7FA1E03D4EF002E782C /* cm2_btm_icn_discovery@3x.png */; };
-		9F7DE80B1E03D4EF002E782C /* cm2_btm_icn_discovery_prs@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DE7FB1E03D4EF002E782C /* cm2_btm_icn_discovery_prs@2x.png */; };
-		9F7DE80C1E03D4EF002E782C /* cm2_btm_icn_discovery_prs@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DE7FC1E03D4EF002E782C /* cm2_btm_icn_discovery_prs@3x.png */; };
-		9F7DE80D1E03D4EF002E782C /* cm2_btm_icn_friend@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DE7FD1E03D4EF002E782C /* cm2_btm_icn_friend@2x.png */; };
-		9F7DE80E1E03D4EF002E782C /* cm2_btm_icn_friend@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DE7FE1E03D4EF002E782C /* cm2_btm_icn_friend@3x.png */; };
-		9F7DE80F1E03D4EF002E782C /* cm2_btm_icn_friend_prs@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DE7FF1E03D4EF002E782C /* cm2_btm_icn_friend_prs@2x.png */; };
-		9F7DE8101E03D4EF002E782C /* cm2_btm_icn_friend_prs@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DE8001E03D4EF002E782C /* cm2_btm_icn_friend_prs@3x.png */; };
-		9F7DE8111E03D4EF002E782C /* cm2_btm_icn_music@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DE8011E03D4EF002E782C /* cm2_btm_icn_music@2x.png */; };
-		9F7DE8121E03D4EF002E782C /* cm2_btm_icn_music@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DE8021E03D4EF002E782C /* cm2_btm_icn_music@3x.png */; };
-		9F7DE8131E03D4EF002E782C /* cm2_btm_icn_music_prs@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DE8031E03D4EF002E782C /* cm2_btm_icn_music_prs@2x.png */; };
-		9F7DE8141E03D4EF002E782C /* cm2_btm_icn_music_prs@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DE8041E03D4EF002E782C /* cm2_btm_icn_music_prs@3x.png */; };
-		9F7DE8401E03DCE7002E782C /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7DE83E1E03DCE7002E782C /* DiscoverViewController.m */; };
-		9F7DE8431E03DD2D002E782C /* DiscoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DE8421E03DD2D002E782C /* DiscoverViewController.xib */; };
-		9F7DE8481E03DDBB002E782C /* TabberController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7DE8471E03DDBB002E782C /* TabberController.m */; };
-		9F7DE84C1E03DDEA002E782C /* FriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7DE84A1E03DDEA002E782C /* FriendViewController.m */; };
-		9F7DE84D1E03DDEA002E782C /* FriendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DE84B1E03DDEA002E782C /* FriendViewController.xib */; };
-		9F7DE8511E03DE14002E782C /* MyMusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7DE84F1E03DE14002E782C /* MyMusicViewController.m */; };
-		9F7DE8521E03DE14002E782C /* MyMusicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DE8501E03DE14002E782C /* MyMusicViewController.xib */; };
-		9F7DE8561E03DE3F002E782C /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7DE8541E03DE3F002E782C /* AccountViewController.m */; };
-		9F7DE8571E03DE3F002E782C /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DE8551E03DE3F002E782C /* AccountViewController.xib */; };
-		9F7DE8611E03EBD5002E782C /* cm2_btm_tab_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DE85F1E03EBD5002E782C /* cm2_btm_tab_right@2x.png */; };
-		9F7DE8621E03EBD5002E782C /* cm2_btm_tab_right@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DE8601E03EBD5002E782C /* cm2_btm_tab_right@3x.png */; };
-		9F7DE8661E03F19D002E782C /* MyMusicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7DE8641E03F19D002E782C /* MyMusicCell.m */; };
-		9F7DE8671E03F19D002E782C /* MyMusicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DE8651E03F19D002E782C /* MyMusicCell.xib */; };
-		9F7DE86A1E04114D002E782C /* MyMusicTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7DE8691E04114D002E782C /* MyMusicTableHeaderView.m */; };
-		9F7DE86C1E041208002E782C /* MyMusicTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DE86B1E041208002E782C /* MyMusicTableHeaderView.xib */; };
-		9F7DE8741E04145B002E782C /* cm2_lay_icn_artist_new@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DE86E1E04145B002E782C /* cm2_lay_icn_artist_new@2x.png */; };
-		9F7DE8751E04145B002E782C /* cm2_lay_icn_artist_new@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DE86F1E04145B002E782C /* cm2_lay_icn_artist_new@3x.png */; };
-		9F7DE8761E04145B002E782C /* cm2_lay_icn_dld_new@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DE8701E04145B002E782C /* cm2_lay_icn_dld_new@2x.png */; };
-		9F7DE8771E04145B002E782C /* cm2_lay_icn_dld_new@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DE8711E04145B002E782C /* cm2_lay_icn_dld_new@3x.png */; };
-		9F7DE8781E04145B002E782C /* cm2_lay_icn_time@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DE8721E04145B002E782C /* cm2_lay_icn_time@2x.png */; };
-		9F7DE8791E04145B002E782C /* cm2_lay_icn_time@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DE8731E04145B002E782C /* cm2_lay_icn_time@3x.png */; };
-		9F7DE87C1E04181A002E782C /* cm2_act_icn_arr@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DE87A1E04181A002E782C /* cm2_act_icn_arr@2x.png */; };
-		9F7DE87D1E04181A002E782C /* cm2_act_icn_arr@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DE87B1E04181A002E782C /* cm2_act_icn_arr@3x.png */; };
-		9F7DE8871E041BC4002E782C /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7DE8861E041BC4002E782C /* BaseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +85,71 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F2C34D71E07C21D0004867B /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		9F2C34D81E07C21D0004867B /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		9F2C34DA1E07C21D0004867B /* UIViewController+YMJPushTransitioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+YMJPushTransitioning.h"; sourceTree = "<group>"; };
+		9F2C34DB1E07C21D0004867B /* UIViewController+YMJPushTransitioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+YMJPushTransitioning.m"; sourceTree = "<group>"; };
+		9F2C34DD1E07C21D0004867B /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
+		9F2C34DE1E07C21D0004867B /* Neteasemusic.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Neteasemusic.pch; sourceTree = "<group>"; };
+		9F2C34DF1E07C21D0004867B /* YMJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMJExtension.h; sourceTree = "<group>"; };
+		9F2C34E01E07C21D0004867B /* YMJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMJExtension.m; sourceTree = "<group>"; };
+		9F2C34E41E07C21D0004867B /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
+		9F2C34E51E07C21D0004867B /* AccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
+		9F2C34EB1E07C21D0004867B /* DiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverViewController.h; sourceTree = "<group>"; };
+		9F2C34EC1E07C21D0004867B /* DiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverViewController.m; sourceTree = "<group>"; };
+		9F2C34EF1E07C21D0004867B /* DiscoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiscoverViewController.xib; sourceTree = "<group>"; };
+		9F2C34F21E07C21D0004867B /* FriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendViewController.h; sourceTree = "<group>"; };
+		9F2C34F31E07C21D0004867B /* FriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendViewController.m; sourceTree = "<group>"; };
+		9F2C34F41E07C21D0004867B /* FriendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendViewController.xib; sourceTree = "<group>"; };
+		9F2C34FD1E07C21D0004867B /* MyMusicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMusicViewController.h; sourceTree = "<group>"; };
+		9F2C34FE1E07C21D0004867B /* MyMusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMusicViewController.m; sourceTree = "<group>"; };
+		9F2C35001E07C21D0004867B /* MySingerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySingerViewController.h; sourceTree = "<group>"; };
+		9F2C35011E07C21D0004867B /* MySingerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySingerViewController.m; sourceTree = "<group>"; };
+		9F2C35031E07C21D0004867B /* PlayListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayListViewController.h; sourceTree = "<group>"; };
+		9F2C35041E07C21D0004867B /* PlayListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayListViewController.m; sourceTree = "<group>"; };
+		9F2C35071E07C21D0004867B /* MyMusicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMusicCell.h; sourceTree = "<group>"; };
+		9F2C35081E07C21D0004867B /* MyMusicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMusicCell.m; sourceTree = "<group>"; };
+		9F2C350A1E07C21D0004867B /* MyMusicTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMusicTableHeaderView.h; sourceTree = "<group>"; };
+		9F2C350B1E07C21D0004867B /* MyMusicTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMusicTableHeaderView.m; sourceTree = "<group>"; };
+		9F2C350F1E07C21D0004867B /* TabberController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabberController.h; sourceTree = "<group>"; };
+		9F2C35101E07C21D0004867B /* TabberController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabberController.m; sourceTree = "<group>"; };
+		9F2C352A1E07C2460004867B /* cm2_act_icn_arr@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_act_icn_arr@2x.png"; sourceTree = "<group>"; };
+		9F2C352B1E07C2460004867B /* cm2_act_icn_arr@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_act_icn_arr@3x.png"; sourceTree = "<group>"; };
+		9F2C352C1E07C2460004867B /* cm2_lay_icn_artist_new@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_lay_icn_artist_new@2x.png"; sourceTree = "<group>"; };
+		9F2C352D1E07C2460004867B /* cm2_lay_icn_artist_new@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_lay_icn_artist_new@3x.png"; sourceTree = "<group>"; };
+		9F2C352E1E07C2460004867B /* cm2_lay_icn_dld_new@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_lay_icn_dld_new@2x.png"; sourceTree = "<group>"; };
+		9F2C352F1E07C2460004867B /* cm2_lay_icn_dld_new@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_lay_icn_dld_new@3x.png"; sourceTree = "<group>"; };
+		9F2C35301E07C2460004867B /* cm2_lay_icn_time@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_lay_icn_time@2x.png"; sourceTree = "<group>"; };
+		9F2C35311E07C2460004867B /* cm2_lay_icn_time@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_lay_icn_time@3x.png"; sourceTree = "<group>"; };
+		9F2C35321E07C2460004867B /* cm2_topbar_icn_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_topbar_icn_back@2x.png"; sourceTree = "<group>"; };
+		9F2C35331E07C2460004867B /* cm2_topbar_icn_back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_topbar_icn_back@3x.png"; sourceTree = "<group>"; };
+		9F2C35351E07C2460004867B /* cm2_btm_icn_account@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_btm_icn_account@2x.png"; sourceTree = "<group>"; };
+		9F2C35361E07C2460004867B /* cm2_btm_icn_account@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_btm_icn_account@3x.png"; sourceTree = "<group>"; };
+		9F2C35371E07C2460004867B /* cm2_btm_icn_account_prs@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_btm_icn_account_prs@2x.png"; sourceTree = "<group>"; };
+		9F2C35381E07C2460004867B /* cm2_btm_icn_account_prs@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_btm_icn_account_prs@3x.png"; sourceTree = "<group>"; };
+		9F2C35391E07C2460004867B /* cm2_btm_icn_discovery@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_btm_icn_discovery@2x.png"; sourceTree = "<group>"; };
+		9F2C353A1E07C2460004867B /* cm2_btm_icn_discovery@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_btm_icn_discovery@3x.png"; sourceTree = "<group>"; };
+		9F2C353B1E07C2460004867B /* cm2_btm_icn_discovery_prs@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_btm_icn_discovery_prs@2x.png"; sourceTree = "<group>"; };
+		9F2C353C1E07C2460004867B /* cm2_btm_icn_discovery_prs@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_btm_icn_discovery_prs@3x.png"; sourceTree = "<group>"; };
+		9F2C353D1E07C2460004867B /* cm2_btm_icn_friend@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_btm_icn_friend@2x.png"; sourceTree = "<group>"; };
+		9F2C353E1E07C2460004867B /* cm2_btm_icn_friend@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_btm_icn_friend@3x.png"; sourceTree = "<group>"; };
+		9F2C353F1E07C2460004867B /* cm2_btm_icn_friend_prs@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_btm_icn_friend_prs@2x.png"; sourceTree = "<group>"; };
+		9F2C35401E07C2460004867B /* cm2_btm_icn_friend_prs@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_btm_icn_friend_prs@3x.png"; sourceTree = "<group>"; };
+		9F2C35411E07C2460004867B /* cm2_btm_icn_music@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_btm_icn_music@2x.png"; sourceTree = "<group>"; };
+		9F2C35421E07C2460004867B /* cm2_btm_icn_music@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_btm_icn_music@3x.png"; sourceTree = "<group>"; };
+		9F2C35431E07C2460004867B /* cm2_btm_icn_music_prs@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_btm_icn_music_prs@2x.png"; sourceTree = "<group>"; };
+		9F2C35441E07C2460004867B /* cm2_btm_icn_music_prs@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_btm_icn_music_prs@3x.png"; sourceTree = "<group>"; };
+		9F2C35451E07C2460004867B /* cm2_btm_tab_right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_btm_tab_right@2x.png"; sourceTree = "<group>"; };
+		9F2C35461E07C2460004867B /* cm2_btm_tab_right@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_btm_tab_right@3x.png"; sourceTree = "<group>"; };
+		9F2C35471E07C2460004867B /* cm2_topbar_icn_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_topbar_icn_back@2x.png"; sourceTree = "<group>"; };
+		9F2C35481E07C2460004867B /* cm2_topbar_icn_back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_topbar_icn_back@3x.png"; sourceTree = "<group>"; };
+		9F2C35691E07C57B0004867B /* YMJAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMJAnimation.h; sourceTree = "<group>"; };
+		9F2C356A1E07C57B0004867B /* YMJAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMJAnimation.m; sourceTree = "<group>"; };
+		9F2C356C1E07CAF50004867B /* AccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
+		9F2C356E1E07CB1A0004867B /* MyMusicViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyMusicViewController.xib; sourceTree = "<group>"; };
+		9F2C356F1E07CB1A0004867B /* MySingerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MySingerViewController.xib; sourceTree = "<group>"; };
+		9F2C35701E07CB1A0004867B /* PlayListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayListViewController.xib; sourceTree = "<group>"; };
+		9F2C35741E07CB360004867B /* MyMusicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyMusicCell.xib; sourceTree = "<group>"; };
 		9F7DE7B61E03D394002E782C /* Neteasemusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neteasemusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F7DE7BA1E03D394002E782C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9F7DE7BC1E03D394002E782C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -91,56 +166,6 @@
 		9F7DE7DA1E03D394002E782C /* NeteasemusicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeteasemusicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F7DE7DE1E03D394002E782C /* NeteasemusicUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NeteasemusicUITests.m; sourceTree = "<group>"; };
 		9F7DE7E01E03D394002E782C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9F7DE7F51E03D4EF002E782C /* cm2_btm_icn_account@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_btm_icn_account@2x.png"; sourceTree = "<group>"; };
-		9F7DE7F61E03D4EF002E782C /* cm2_btm_icn_account@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_btm_icn_account@3x.png"; sourceTree = "<group>"; };
-		9F7DE7F71E03D4EF002E782C /* cm2_btm_icn_account_prs@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_btm_icn_account_prs@2x.png"; sourceTree = "<group>"; };
-		9F7DE7F81E03D4EF002E782C /* cm2_btm_icn_account_prs@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_btm_icn_account_prs@3x.png"; sourceTree = "<group>"; };
-		9F7DE7F91E03D4EF002E782C /* cm2_btm_icn_discovery@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_btm_icn_discovery@2x.png"; sourceTree = "<group>"; };
-		9F7DE7FA1E03D4EF002E782C /* cm2_btm_icn_discovery@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_btm_icn_discovery@3x.png"; sourceTree = "<group>"; };
-		9F7DE7FB1E03D4EF002E782C /* cm2_btm_icn_discovery_prs@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_btm_icn_discovery_prs@2x.png"; sourceTree = "<group>"; };
-		9F7DE7FC1E03D4EF002E782C /* cm2_btm_icn_discovery_prs@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_btm_icn_discovery_prs@3x.png"; sourceTree = "<group>"; };
-		9F7DE7FD1E03D4EF002E782C /* cm2_btm_icn_friend@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_btm_icn_friend@2x.png"; sourceTree = "<group>"; };
-		9F7DE7FE1E03D4EF002E782C /* cm2_btm_icn_friend@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_btm_icn_friend@3x.png"; sourceTree = "<group>"; };
-		9F7DE7FF1E03D4EF002E782C /* cm2_btm_icn_friend_prs@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_btm_icn_friend_prs@2x.png"; sourceTree = "<group>"; };
-		9F7DE8001E03D4EF002E782C /* cm2_btm_icn_friend_prs@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_btm_icn_friend_prs@3x.png"; sourceTree = "<group>"; };
-		9F7DE8011E03D4EF002E782C /* cm2_btm_icn_music@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_btm_icn_music@2x.png"; sourceTree = "<group>"; };
-		9F7DE8021E03D4EF002E782C /* cm2_btm_icn_music@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_btm_icn_music@3x.png"; sourceTree = "<group>"; };
-		9F7DE8031E03D4EF002E782C /* cm2_btm_icn_music_prs@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_btm_icn_music_prs@2x.png"; sourceTree = "<group>"; };
-		9F7DE8041E03D4EF002E782C /* cm2_btm_icn_music_prs@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_btm_icn_music_prs@3x.png"; sourceTree = "<group>"; };
-		9F7DE83D1E03DCE7002E782C /* DiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverViewController.h; sourceTree = "<group>"; };
-		9F7DE83E1E03DCE7002E782C /* DiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverViewController.m; sourceTree = "<group>"; };
-		9F7DE8421E03DD2D002E782C /* DiscoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiscoverViewController.xib; sourceTree = "<group>"; };
-		9F7DE8461E03DDBB002E782C /* TabberController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabberController.h; sourceTree = "<group>"; };
-		9F7DE8471E03DDBB002E782C /* TabberController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabberController.m; sourceTree = "<group>"; };
-		9F7DE8491E03DDEA002E782C /* FriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendViewController.h; sourceTree = "<group>"; };
-		9F7DE84A1E03DDEA002E782C /* FriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendViewController.m; sourceTree = "<group>"; };
-		9F7DE84B1E03DDEA002E782C /* FriendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FriendViewController.xib; path = ../Ctrls/FriendViewController.xib; sourceTree = "<group>"; };
-		9F7DE84E1E03DE14002E782C /* MyMusicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMusicViewController.h; sourceTree = "<group>"; };
-		9F7DE84F1E03DE14002E782C /* MyMusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMusicViewController.m; sourceTree = "<group>"; };
-		9F7DE8501E03DE14002E782C /* MyMusicViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MyMusicViewController.xib; path = ../Ctrls/MyMusicViewController.xib; sourceTree = "<group>"; };
-		9F7DE8531E03DE3F002E782C /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
-		9F7DE8541E03DE3F002E782C /* AccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
-		9F7DE8551E03DE3F002E782C /* AccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AccountViewController.xib; path = ../Ctrls/AccountViewController.xib; sourceTree = "<group>"; };
-		9F7DE8591E03E2ED002E782C /* Neteasemusic.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Neteasemusic.pch; sourceTree = "<group>"; };
-		9F7DE85A1E03E3A6002E782C /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
-		9F7DE85F1E03EBD5002E782C /* cm2_btm_tab_right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_btm_tab_right@2x.png"; sourceTree = "<group>"; };
-		9F7DE8601E03EBD5002E782C /* cm2_btm_tab_right@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_btm_tab_right@3x.png"; sourceTree = "<group>"; };
-		9F7DE8631E03F19D002E782C /* MyMusicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMusicCell.h; sourceTree = "<group>"; };
-		9F7DE8641E03F19D002E782C /* MyMusicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMusicCell.m; sourceTree = "<group>"; };
-		9F7DE8651E03F19D002E782C /* MyMusicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MyMusicCell.xib; path = ../Views/MyMusicCell.xib; sourceTree = "<group>"; };
-		9F7DE8681E04114D002E782C /* MyMusicTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMusicTableHeaderView.h; sourceTree = "<group>"; };
-		9F7DE8691E04114D002E782C /* MyMusicTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMusicTableHeaderView.m; sourceTree = "<group>"; };
-		9F7DE86B1E041208002E782C /* MyMusicTableHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyMusicTableHeaderView.xib; sourceTree = "<group>"; };
-		9F7DE86E1E04145B002E782C /* cm2_lay_icn_artist_new@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_lay_icn_artist_new@2x.png"; sourceTree = "<group>"; };
-		9F7DE86F1E04145B002E782C /* cm2_lay_icn_artist_new@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_lay_icn_artist_new@3x.png"; sourceTree = "<group>"; };
-		9F7DE8701E04145B002E782C /* cm2_lay_icn_dld_new@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_lay_icn_dld_new@2x.png"; sourceTree = "<group>"; };
-		9F7DE8711E04145B002E782C /* cm2_lay_icn_dld_new@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_lay_icn_dld_new@3x.png"; sourceTree = "<group>"; };
-		9F7DE8721E04145B002E782C /* cm2_lay_icn_time@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_lay_icn_time@2x.png"; sourceTree = "<group>"; };
-		9F7DE8731E04145B002E782C /* cm2_lay_icn_time@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_lay_icn_time@3x.png"; sourceTree = "<group>"; };
-		9F7DE87A1E04181A002E782C /* cm2_act_icn_arr@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_act_icn_arr@2x.png"; sourceTree = "<group>"; };
-		9F7DE87B1E04181A002E782C /* cm2_act_icn_arr@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_act_icn_arr@3x.png"; sourceTree = "<group>"; };
-		9F7DE8851E041BC4002E782C /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
-		9F7DE8861E041BC4002E782C /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +193,365 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F2C34D41E07C21D0004867B /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				9F2C34D51E07C21D0004867B /* Global */,
+				9F2C34DC1E07C21D0004867B /* Helper */,
+				9F2C34E11E07C21D0004867B /* Modules */,
+				9F2C35131E07C21D0004867B /* Vendors */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		9F2C34D51E07C21D0004867B /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				9F2C34D61E07C21D0004867B /* Base */,
+				9F2C34D91E07C21D0004867B /* Category */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		9F2C34D61E07C21D0004867B /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				9F2C34D71E07C21D0004867B /* BaseViewController.h */,
+				9F2C34D81E07C21D0004867B /* BaseViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		9F2C34D91E07C21D0004867B /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				9F2C34DA1E07C21D0004867B /* UIViewController+YMJPushTransitioning.h */,
+				9F2C34DB1E07C21D0004867B /* UIViewController+YMJPushTransitioning.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		9F2C34DC1E07C21D0004867B /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				9F2C34DD1E07C21D0004867B /* Global.h */,
+				9F2C34DE1E07C21D0004867B /* Neteasemusic.pch */,
+				9F2C34DF1E07C21D0004867B /* YMJExtension.h */,
+				9F2C34E01E07C21D0004867B /* YMJExtension.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		9F2C34E11E07C21D0004867B /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				9F2C34E21E07C21D0004867B /* Account */,
+				9F2C34E91E07C21D0004867B /* Discover */,
+				9F2C34F01E07C21D0004867B /* Friend */,
+				9F2C34F71E07C21D0004867B /* Login */,
+				9F2C34FB1E07C21D0004867B /* MyMusic */,
+				9F2C350D1E07C21D0004867B /* Root */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		9F2C34E21E07C21D0004867B /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				9F2C34E31E07C21D0004867B /* Ctrls */,
+				9F2C34E71E07C21D0004867B /* Views */,
+				9F2C34E81E07C21D0004867B /* xib */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		9F2C34E31E07C21D0004867B /* Ctrls */ = {
+			isa = PBXGroup;
+			children = (
+				9F2C34E41E07C21D0004867B /* AccountViewController.h */,
+				9F2C34E51E07C21D0004867B /* AccountViewController.m */,
+			);
+			path = Ctrls;
+			sourceTree = "<group>";
+		};
+		9F2C34E71E07C21D0004867B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9F2C34E81E07C21D0004867B /* xib */ = {
+			isa = PBXGroup;
+			children = (
+				9F2C356C1E07CAF50004867B /* AccountViewController.xib */,
+			);
+			path = xib;
+			sourceTree = "<group>";
+		};
+		9F2C34E91E07C21D0004867B /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				9F2C34EA1E07C21D0004867B /* Ctrls */,
+				9F2C34ED1E07C21D0004867B /* Views */,
+				9F2C34EE1E07C21D0004867B /* xib */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		9F2C34EA1E07C21D0004867B /* Ctrls */ = {
+			isa = PBXGroup;
+			children = (
+				9F2C34EB1E07C21D0004867B /* DiscoverViewController.h */,
+				9F2C34EC1E07C21D0004867B /* DiscoverViewController.m */,
+			);
+			path = Ctrls;
+			sourceTree = "<group>";
+		};
+		9F2C34ED1E07C21D0004867B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9F2C34EE1E07C21D0004867B /* xib */ = {
+			isa = PBXGroup;
+			children = (
+				9F2C34EF1E07C21D0004867B /* DiscoverViewController.xib */,
+			);
+			path = xib;
+			sourceTree = "<group>";
+		};
+		9F2C34F01E07C21D0004867B /* Friend */ = {
+			isa = PBXGroup;
+			children = (
+				9F2C34F11E07C21D0004867B /* Ctrls */,
+				9F2C34F51E07C21D0004867B /* Views */,
+				9F2C34F61E07C21D0004867B /* xib */,
+			);
+			path = Friend;
+			sourceTree = "<group>";
+		};
+		9F2C34F11E07C21D0004867B /* Ctrls */ = {
+			isa = PBXGroup;
+			children = (
+				9F2C34F21E07C21D0004867B /* FriendViewController.h */,
+				9F2C34F31E07C21D0004867B /* FriendViewController.m */,
+				9F2C34F41E07C21D0004867B /* FriendViewController.xib */,
+			);
+			path = Ctrls;
+			sourceTree = "<group>";
+		};
+		9F2C34F51E07C21D0004867B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9F2C34F61E07C21D0004867B /* xib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = xib;
+			sourceTree = "<group>";
+		};
+		9F2C34F71E07C21D0004867B /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				9F2C34F81E07C21D0004867B /* Ctrls */,
+				9F2C34F91E07C21D0004867B /* Views */,
+				9F2C34FA1E07C21D0004867B /* xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		9F2C34F81E07C21D0004867B /* Ctrls */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Ctrls;
+			sourceTree = "<group>";
+		};
+		9F2C34F91E07C21D0004867B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9F2C34FA1E07C21D0004867B /* xib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = xib;
+			sourceTree = "<group>";
+		};
+		9F2C34FB1E07C21D0004867B /* MyMusic */ = {
+			isa = PBXGroup;
+			children = (
+				9F2C34FC1E07C21D0004867B /* Ctrls */,
+				9F2C35061E07C21D0004867B /* Views */,
+				9F2C350C1E07C21D0004867B /* xib */,
+			);
+			path = MyMusic;
+			sourceTree = "<group>";
+		};
+		9F2C34FC1E07C21D0004867B /* Ctrls */ = {
+			isa = PBXGroup;
+			children = (
+				9F2C34FD1E07C21D0004867B /* MyMusicViewController.h */,
+				9F2C34FE1E07C21D0004867B /* MyMusicViewController.m */,
+				9F2C35001E07C21D0004867B /* MySingerViewController.h */,
+				9F2C35011E07C21D0004867B /* MySingerViewController.m */,
+				9F2C35031E07C21D0004867B /* PlayListViewController.h */,
+				9F2C35041E07C21D0004867B /* PlayListViewController.m */,
+			);
+			path = Ctrls;
+			sourceTree = "<group>";
+		};
+		9F2C35061E07C21D0004867B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9F2C35071E07C21D0004867B /* MyMusicCell.h */,
+				9F2C35081E07C21D0004867B /* MyMusicCell.m */,
+				9F2C350A1E07C21D0004867B /* MyMusicTableHeaderView.h */,
+				9F2C350B1E07C21D0004867B /* MyMusicTableHeaderView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9F2C350C1E07C21D0004867B /* xib */ = {
+			isa = PBXGroup;
+			children = (
+				9F2C35741E07CB360004867B /* MyMusicCell.xib */,
+				9F2C356E1E07CB1A0004867B /* MyMusicViewController.xib */,
+				9F2C356F1E07CB1A0004867B /* MySingerViewController.xib */,
+				9F2C35701E07CB1A0004867B /* PlayListViewController.xib */,
+			);
+			path = xib;
+			sourceTree = "<group>";
+		};
+		9F2C350D1E07C21D0004867B /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				9F2C350E1E07C21D0004867B /* Ctrls */,
+				9F2C35111E07C21D0004867B /* Views */,
+				9F2C35121E07C21D0004867B /* xib */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		9F2C350E1E07C21D0004867B /* Ctrls */ = {
+			isa = PBXGroup;
+			children = (
+				9F2C350F1E07C21D0004867B /* TabberController.h */,
+				9F2C35101E07C21D0004867B /* TabberController.m */,
+			);
+			path = Ctrls;
+			sourceTree = "<group>";
+		};
+		9F2C35111E07C21D0004867B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9F2C35121E07C21D0004867B /* xib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = xib;
+			sourceTree = "<group>";
+		};
+		9F2C35131E07C21D0004867B /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				9F2C35671E07C4D30004867B /* Animations */,
+			);
+			path = Vendors;
+			sourceTree = "<group>";
+		};
+		9F2C35271E07C2460004867B /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				9F2C35281E07C2460004867B /* Images */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		9F2C35281E07C2460004867B /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				9F2C35291E07C2460004867B /* myMusic */,
+				9F2C35341E07C2460004867B /* tabber */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		9F2C35291E07C2460004867B /* myMusic */ = {
+			isa = PBXGroup;
+			children = (
+				9F2C352A1E07C2460004867B /* cm2_act_icn_arr@2x.png */,
+				9F2C352B1E07C2460004867B /* cm2_act_icn_arr@3x.png */,
+				9F2C352C1E07C2460004867B /* cm2_lay_icn_artist_new@2x.png */,
+				9F2C352D1E07C2460004867B /* cm2_lay_icn_artist_new@3x.png */,
+				9F2C352E1E07C2460004867B /* cm2_lay_icn_dld_new@2x.png */,
+				9F2C352F1E07C2460004867B /* cm2_lay_icn_dld_new@3x.png */,
+				9F2C35301E07C2460004867B /* cm2_lay_icn_time@2x.png */,
+				9F2C35311E07C2460004867B /* cm2_lay_icn_time@3x.png */,
+				9F2C35321E07C2460004867B /* cm2_topbar_icn_back@2x.png */,
+				9F2C35331E07C2460004867B /* cm2_topbar_icn_back@3x.png */,
+			);
+			path = myMusic;
+			sourceTree = "<group>";
+		};
+		9F2C35341E07C2460004867B /* tabber */ = {
+			isa = PBXGroup;
+			children = (
+				9F2C35351E07C2460004867B /* cm2_btm_icn_account@2x.png */,
+				9F2C35361E07C2460004867B /* cm2_btm_icn_account@3x.png */,
+				9F2C35371E07C2460004867B /* cm2_btm_icn_account_prs@2x.png */,
+				9F2C35381E07C2460004867B /* cm2_btm_icn_account_prs@3x.png */,
+				9F2C35391E07C2460004867B /* cm2_btm_icn_discovery@2x.png */,
+				9F2C353A1E07C2460004867B /* cm2_btm_icn_discovery@3x.png */,
+				9F2C353B1E07C2460004867B /* cm2_btm_icn_discovery_prs@2x.png */,
+				9F2C353C1E07C2460004867B /* cm2_btm_icn_discovery_prs@3x.png */,
+				9F2C353D1E07C2460004867B /* cm2_btm_icn_friend@2x.png */,
+				9F2C353E1E07C2460004867B /* cm2_btm_icn_friend@3x.png */,
+				9F2C353F1E07C2460004867B /* cm2_btm_icn_friend_prs@2x.png */,
+				9F2C35401E07C2460004867B /* cm2_btm_icn_friend_prs@3x.png */,
+				9F2C35411E07C2460004867B /* cm2_btm_icn_music@2x.png */,
+				9F2C35421E07C2460004867B /* cm2_btm_icn_music@3x.png */,
+				9F2C35431E07C2460004867B /* cm2_btm_icn_music_prs@2x.png */,
+				9F2C35441E07C2460004867B /* cm2_btm_icn_music_prs@3x.png */,
+				9F2C35451E07C2460004867B /* cm2_btm_tab_right@2x.png */,
+				9F2C35461E07C2460004867B /* cm2_btm_tab_right@3x.png */,
+				9F2C35471E07C2460004867B /* cm2_topbar_icn_back@2x.png */,
+				9F2C35481E07C2460004867B /* cm2_topbar_icn_back@3x.png */,
+			);
+			path = tabber;
+			sourceTree = "<group>";
+		};
+		9F2C35671E07C4D30004867B /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				9F2C35681E07C4D30004867B /* Transitioning */,
+				9F2C35691E07C57B0004867B /* YMJAnimation.h */,
+				9F2C356A1E07C57B0004867B /* YMJAnimation.m */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		9F2C35681E07C4D30004867B /* Transitioning */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Transitioning;
+			sourceTree = "<group>";
+		};
 		9F7DE7AD1E03D393002E782C = {
 			isa = PBXGroup;
 			children = (
@@ -191,9 +575,8 @@
 		9F7DE7B81E03D394002E782C /* Neteasemusic */ = {
 			isa = PBXGroup;
 			children = (
-				9F7DE8451E03DDBB002E782C /* Tabbar */,
-				9F7DE8271E03DC92002E782C /* Class */,
-				9F7DE7F31E03D4EF002E782C /* Images */,
+				9F2C35271E07C2460004867B /* Resource */,
+				9F2C34D41E07C21D0004867B /* Class */,
 				9F7DE7BC1E03D394002E782C /* AppDelegate.h */,
 				9F7DE7BD1E03D394002E782C /* AppDelegate.m */,
 				9F7DE7BF1E03D394002E782C /* ViewController.h */,
@@ -231,237 +614,6 @@
 				9F7DE7E01E03D394002E782C /* Info.plist */,
 			);
 			path = NeteasemusicUITests;
-			sourceTree = "<group>";
-		};
-		9F7DE7F31E03D4EF002E782C /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				9F7DE86D1E04145B002E782C /* myMusic */,
-				9F7DE7F41E03D4EF002E782C /* tabber */,
-			);
-			path = Images;
-			sourceTree = "<group>";
-		};
-		9F7DE7F41E03D4EF002E782C /* tabber */ = {
-			isa = PBXGroup;
-			children = (
-				9F7DE85F1E03EBD5002E782C /* cm2_btm_tab_right@2x.png */,
-				9F7DE8601E03EBD5002E782C /* cm2_btm_tab_right@3x.png */,
-				9F7DE7F51E03D4EF002E782C /* cm2_btm_icn_account@2x.png */,
-				9F7DE7F61E03D4EF002E782C /* cm2_btm_icn_account@3x.png */,
-				9F7DE7F71E03D4EF002E782C /* cm2_btm_icn_account_prs@2x.png */,
-				9F7DE7F81E03D4EF002E782C /* cm2_btm_icn_account_prs@3x.png */,
-				9F7DE7F91E03D4EF002E782C /* cm2_btm_icn_discovery@2x.png */,
-				9F7DE7FA1E03D4EF002E782C /* cm2_btm_icn_discovery@3x.png */,
-				9F7DE7FB1E03D4EF002E782C /* cm2_btm_icn_discovery_prs@2x.png */,
-				9F7DE7FC1E03D4EF002E782C /* cm2_btm_icn_discovery_prs@3x.png */,
-				9F7DE7FD1E03D4EF002E782C /* cm2_btm_icn_friend@2x.png */,
-				9F7DE7FE1E03D4EF002E782C /* cm2_btm_icn_friend@3x.png */,
-				9F7DE7FF1E03D4EF002E782C /* cm2_btm_icn_friend_prs@2x.png */,
-				9F7DE8001E03D4EF002E782C /* cm2_btm_icn_friend_prs@3x.png */,
-				9F7DE8011E03D4EF002E782C /* cm2_btm_icn_music@2x.png */,
-				9F7DE8021E03D4EF002E782C /* cm2_btm_icn_music@3x.png */,
-				9F7DE8031E03D4EF002E782C /* cm2_btm_icn_music_prs@2x.png */,
-				9F7DE8041E03D4EF002E782C /* cm2_btm_icn_music_prs@3x.png */,
-			);
-			path = tabber;
-			sourceTree = "<group>";
-		};
-		9F7DE8271E03DC92002E782C /* Class */ = {
-			isa = PBXGroup;
-			children = (
-				9F7DE8811E041B4E002E782C /* Base */,
-				9F7DE8581E03E28B002E782C /* Helper */,
-				9F7DE8281E03DC92002E782C /* Account */,
-				9F7DE82C1E03DC92002E782C /* Discover */,
-				9F7DE8331E03DC92002E782C /* Friend */,
-				9F7DE8371E03DC92002E782C /* MyMusic */,
-			);
-			path = Class;
-			sourceTree = "<group>";
-		};
-		9F7DE8281E03DC92002E782C /* Account */ = {
-			isa = PBXGroup;
-			children = (
-				9F7DE8291E03DC92002E782C /* Ctrls */,
-				9F7DE82A1E03DC92002E782C /* Views */,
-				9F7DE82B1E03DC92002E782C /* xib */,
-			);
-			path = Account;
-			sourceTree = "<group>";
-		};
-		9F7DE8291E03DC92002E782C /* Ctrls */ = {
-			isa = PBXGroup;
-			children = (
-				9F7DE8531E03DE3F002E782C /* AccountViewController.h */,
-				9F7DE8541E03DE3F002E782C /* AccountViewController.m */,
-			);
-			path = Ctrls;
-			sourceTree = "<group>";
-		};
-		9F7DE82A1E03DC92002E782C /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		9F7DE82B1E03DC92002E782C /* xib */ = {
-			isa = PBXGroup;
-			children = (
-				9F7DE8551E03DE3F002E782C /* AccountViewController.xib */,
-			);
-			path = xib;
-			sourceTree = "<group>";
-		};
-		9F7DE82C1E03DC92002E782C /* Discover */ = {
-			isa = PBXGroup;
-			children = (
-				9F7DE82D1E03DC92002E782C /* Ctrls */,
-				9F7DE8301E03DC92002E782C /* Views */,
-				9F7DE8311E03DC92002E782C /* xib */,
-			);
-			path = Discover;
-			sourceTree = "<group>";
-		};
-		9F7DE82D1E03DC92002E782C /* Ctrls */ = {
-			isa = PBXGroup;
-			children = (
-				9F7DE83D1E03DCE7002E782C /* DiscoverViewController.h */,
-				9F7DE83E1E03DCE7002E782C /* DiscoverViewController.m */,
-			);
-			path = Ctrls;
-			sourceTree = "<group>";
-		};
-		9F7DE8301E03DC92002E782C /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		9F7DE8311E03DC92002E782C /* xib */ = {
-			isa = PBXGroup;
-			children = (
-				9F7DE8421E03DD2D002E782C /* DiscoverViewController.xib */,
-			);
-			path = xib;
-			sourceTree = "<group>";
-		};
-		9F7DE8331E03DC92002E782C /* Friend */ = {
-			isa = PBXGroup;
-			children = (
-				9F7DE8341E03DC92002E782C /* Ctrls */,
-				9F7DE8351E03DC92002E782C /* Views */,
-				9F7DE8361E03DC92002E782C /* xib */,
-			);
-			path = Friend;
-			sourceTree = "<group>";
-		};
-		9F7DE8341E03DC92002E782C /* Ctrls */ = {
-			isa = PBXGroup;
-			children = (
-				9F7DE8491E03DDEA002E782C /* FriendViewController.h */,
-				9F7DE84A1E03DDEA002E782C /* FriendViewController.m */,
-			);
-			path = Ctrls;
-			sourceTree = "<group>";
-		};
-		9F7DE8351E03DC92002E782C /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		9F7DE8361E03DC92002E782C /* xib */ = {
-			isa = PBXGroup;
-			children = (
-				9F7DE84B1E03DDEA002E782C /* FriendViewController.xib */,
-			);
-			path = xib;
-			sourceTree = "<group>";
-		};
-		9F7DE8371E03DC92002E782C /* MyMusic */ = {
-			isa = PBXGroup;
-			children = (
-				9F7DE8381E03DC92002E782C /* Ctrls */,
-				9F7DE8391E03DC92002E782C /* Views */,
-				9F7DE83A1E03DC92002E782C /* xib */,
-			);
-			path = MyMusic;
-			sourceTree = "<group>";
-		};
-		9F7DE8381E03DC92002E782C /* Ctrls */ = {
-			isa = PBXGroup;
-			children = (
-				9F7DE84E1E03DE14002E782C /* MyMusicViewController.h */,
-				9F7DE84F1E03DE14002E782C /* MyMusicViewController.m */,
-			);
-			path = Ctrls;
-			sourceTree = "<group>";
-		};
-		9F7DE8391E03DC92002E782C /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				9F7DE8631E03F19D002E782C /* MyMusicCell.h */,
-				9F7DE8641E03F19D002E782C /* MyMusicCell.m */,
-				9F7DE8681E04114D002E782C /* MyMusicTableHeaderView.h */,
-				9F7DE8691E04114D002E782C /* MyMusicTableHeaderView.m */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		9F7DE83A1E03DC92002E782C /* xib */ = {
-			isa = PBXGroup;
-			children = (
-				9F7DE8651E03F19D002E782C /* MyMusicCell.xib */,
-				9F7DE8501E03DE14002E782C /* MyMusicViewController.xib */,
-				9F7DE86B1E041208002E782C /* MyMusicTableHeaderView.xib */,
-			);
-			path = xib;
-			sourceTree = "<group>";
-		};
-		9F7DE8451E03DDBB002E782C /* Tabbar */ = {
-			isa = PBXGroup;
-			children = (
-				9F7DE8461E03DDBB002E782C /* TabberController.h */,
-				9F7DE8471E03DDBB002E782C /* TabberController.m */,
-			);
-			path = Tabbar;
-			sourceTree = "<group>";
-		};
-		9F7DE8581E03E28B002E782C /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-				9F7DE8591E03E2ED002E782C /* Neteasemusic.pch */,
-				9F7DE85A1E03E3A6002E782C /* Global.h */,
-			);
-			path = Helper;
-			sourceTree = "<group>";
-		};
-		9F7DE86D1E04145B002E782C /* myMusic */ = {
-			isa = PBXGroup;
-			children = (
-				9F7DE87A1E04181A002E782C /* cm2_act_icn_arr@2x.png */,
-				9F7DE87B1E04181A002E782C /* cm2_act_icn_arr@3x.png */,
-				9F7DE86E1E04145B002E782C /* cm2_lay_icn_artist_new@2x.png */,
-				9F7DE86F1E04145B002E782C /* cm2_lay_icn_artist_new@3x.png */,
-				9F7DE8701E04145B002E782C /* cm2_lay_icn_dld_new@2x.png */,
-				9F7DE8711E04145B002E782C /* cm2_lay_icn_dld_new@3x.png */,
-				9F7DE8721E04145B002E782C /* cm2_lay_icn_time@2x.png */,
-				9F7DE8731E04145B002E782C /* cm2_lay_icn_time@3x.png */,
-			);
-			path = myMusic;
-			sourceTree = "<group>";
-		};
-		9F7DE8811E041B4E002E782C /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				9F7DE8851E041BC4002E782C /* BaseViewController.h */,
-				9F7DE8861E041BC4002E782C /* BaseViewController.m */,
-			);
-			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -573,41 +725,46 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F7DE84D1E03DDEA002E782C /* FriendViewController.xib in Resources */,
-				9F7DE8071E03D4EF002E782C /* cm2_btm_icn_account_prs@2x.png in Resources */,
-				9F7DE8781E04145B002E782C /* cm2_lay_icn_time@2x.png in Resources */,
-				9F7DE8621E03EBD5002E782C /* cm2_btm_tab_right@3x.png in Resources */,
-				9F7DE8671E03F19D002E782C /* MyMusicCell.xib in Resources */,
-				9F7DE86C1E041208002E782C /* MyMusicTableHeaderView.xib in Resources */,
-				9F7DE8791E04145B002E782C /* cm2_lay_icn_time@3x.png in Resources */,
-				9F7DE8741E04145B002E782C /* cm2_lay_icn_artist_new@2x.png in Resources */,
-				9F7DE8141E03D4EF002E782C /* cm2_btm_icn_music_prs@3x.png in Resources */,
-				9F7DE80C1E03D4EF002E782C /* cm2_btm_icn_discovery_prs@3x.png in Resources */,
-				9F7DE8611E03EBD5002E782C /* cm2_btm_tab_right@2x.png in Resources */,
-				9F7DE8111E03D4EF002E782C /* cm2_btm_icn_music@2x.png in Resources */,
-				9F7DE8051E03D4EF002E782C /* cm2_btm_icn_account@2x.png in Resources */,
-				9F7DE8751E04145B002E782C /* cm2_lay_icn_artist_new@3x.png in Resources */,
-				9F7DE8521E03DE14002E782C /* MyMusicViewController.xib in Resources */,
-				9F7DE8061E03D4EF002E782C /* cm2_btm_icn_account@3x.png in Resources */,
-				9F7DE80F1E03D4EF002E782C /* cm2_btm_icn_friend_prs@2x.png in Resources */,
-				9F7DE8081E03D4EF002E782C /* cm2_btm_icn_account_prs@3x.png in Resources */,
-				9F7DE80B1E03D4EF002E782C /* cm2_btm_icn_discovery_prs@2x.png in Resources */,
-				9F7DE8431E03DD2D002E782C /* DiscoverViewController.xib in Resources */,
-				9F7DE8131E03D4EF002E782C /* cm2_btm_icn_music_prs@2x.png in Resources */,
-				9F7DE80E1E03D4EF002E782C /* cm2_btm_icn_friend@3x.png in Resources */,
-				9F7DE80D1E03D4EF002E782C /* cm2_btm_icn_friend@2x.png in Resources */,
-				9F7DE8101E03D4EF002E782C /* cm2_btm_icn_friend_prs@3x.png in Resources */,
+				9F2C35491E07C2460004867B /* cm2_act_icn_arr@2x.png in Resources */,
+				9F2C35661E07C2460004867B /* cm2_topbar_icn_back@3x.png in Resources */,
+				9F2C35521E07C2460004867B /* cm2_topbar_icn_back@3x.png in Resources */,
+				9F2C355E1E07C2460004867B /* cm2_btm_icn_friend_prs@3x.png in Resources */,
+				9F2C355C1E07C2460004867B /* cm2_btm_icn_friend@3x.png in Resources */,
+				9F2C351C1E07C21D0004867B /* FriendViewController.xib in Resources */,
+				9F2C35501E07C2460004867B /* cm2_lay_icn_time@3x.png in Resources */,
 				9F7DE7C91E03D394002E782C /* LaunchScreen.storyboard in Resources */,
-				9F7DE8091E03D4EF002E782C /* cm2_btm_icn_discovery@2x.png in Resources */,
+				9F2C354F1E07C2460004867B /* cm2_lay_icn_time@2x.png in Resources */,
+				9F2C35531E07C2460004867B /* cm2_btm_icn_account@2x.png in Resources */,
+				9F2C354E1E07C2460004867B /* cm2_lay_icn_dld_new@3x.png in Resources */,
+				9F2C354C1E07C2460004867B /* cm2_lay_icn_artist_new@3x.png in Resources */,
+				9F2C35731E07CB1A0004867B /* PlayListViewController.xib in Resources */,
+				9F2C354B1E07C2460004867B /* cm2_lay_icn_artist_new@2x.png in Resources */,
+				9F2C356D1E07CAF50004867B /* AccountViewController.xib in Resources */,
+				9F2C35541E07C2460004867B /* cm2_btm_icn_account@3x.png in Resources */,
+				9F2C355A1E07C2460004867B /* cm2_btm_icn_discovery_prs@3x.png in Resources */,
+				9F2C35601E07C2460004867B /* cm2_btm_icn_music@3x.png in Resources */,
+				9F2C35511E07C2460004867B /* cm2_topbar_icn_back@2x.png in Resources */,
+				9F2C355F1E07C2460004867B /* cm2_btm_icn_music@2x.png in Resources */,
+				9F2C35641E07C2460004867B /* cm2_btm_tab_right@3x.png in Resources */,
+				9F2C35581E07C2460004867B /* cm2_btm_icn_discovery@3x.png in Resources */,
 				9F7DE7C61E03D394002E782C /* Assets.xcassets in Resources */,
+				9F2C354A1E07C2460004867B /* cm2_act_icn_arr@3x.png in Resources */,
+				9F2C35631E07C2460004867B /* cm2_btm_tab_right@2x.png in Resources */,
+				9F2C355B1E07C2460004867B /* cm2_btm_icn_friend@2x.png in Resources */,
+				9F2C35551E07C2460004867B /* cm2_btm_icn_account_prs@2x.png in Resources */,
+				9F2C35571E07C2460004867B /* cm2_btm_icn_discovery@2x.png in Resources */,
+				9F2C35561E07C2460004867B /* cm2_btm_icn_account_prs@3x.png in Resources */,
+				9F2C355D1E07C2460004867B /* cm2_btm_icn_friend_prs@2x.png in Resources */,
+				9F2C35721E07CB1A0004867B /* MySingerViewController.xib in Resources */,
 				9F7DE7C41E03D394002E782C /* Main.storyboard in Resources */,
-				9F7DE87D1E04181A002E782C /* cm2_act_icn_arr@3x.png in Resources */,
-				9F7DE8121E03D4EF002E782C /* cm2_btm_icn_music@3x.png in Resources */,
-				9F7DE8761E04145B002E782C /* cm2_lay_icn_dld_new@2x.png in Resources */,
-				9F7DE8571E03DE3F002E782C /* AccountViewController.xib in Resources */,
-				9F7DE80A1E03D4EF002E782C /* cm2_btm_icn_discovery@3x.png in Resources */,
-				9F7DE8771E04145B002E782C /* cm2_lay_icn_dld_new@3x.png in Resources */,
-				9F7DE87C1E04181A002E782C /* cm2_act_icn_arr@2x.png in Resources */,
+				9F2C35591E07C2460004867B /* cm2_btm_icn_discovery_prs@2x.png in Resources */,
+				9F2C354D1E07C2460004867B /* cm2_lay_icn_dld_new@2x.png in Resources */,
+				9F2C351A1E07C21D0004867B /* DiscoverViewController.xib in Resources */,
+				9F2C35651E07C2460004867B /* cm2_topbar_icn_back@2x.png in Resources */,
+				9F2C35711E07CB1A0004867B /* MyMusicViewController.xib in Resources */,
+				9F2C35611E07C2460004867B /* cm2_btm_icn_music_prs@2x.png in Resources */,
+				9F2C35621E07C2460004867B /* cm2_btm_icn_music_prs@3x.png in Resources */,
+				9F2C35751E07CB360004867B /* MyMusicCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -632,17 +789,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F7DE8401E03DCE7002E782C /* DiscoverViewController.m in Sources */,
+				9F2C35211E07C21D0004867B /* PlayListViewController.m in Sources */,
+				9F2C35161E07C21D0004867B /* YMJExtension.m in Sources */,
+				9F2C35191E07C21D0004867B /* DiscoverViewController.m in Sources */,
+				9F2C351D1E07C21D0004867B /* MyMusicViewController.m in Sources */,
+				9F2C35251E07C21D0004867B /* MyMusicTableHeaderView.m in Sources */,
 				9F7DE7C11E03D394002E782C /* ViewController.m in Sources */,
-				9F7DE8871E041BC4002E782C /* BaseViewController.m in Sources */,
-				9F7DE8481E03DDBB002E782C /* TabberController.m in Sources */,
-				9F7DE86A1E04114D002E782C /* MyMusicTableHeaderView.m in Sources */,
-				9F7DE8511E03DE14002E782C /* MyMusicViewController.m in Sources */,
-				9F7DE8661E03F19D002E782C /* MyMusicCell.m in Sources */,
+				9F2C35231E07C21D0004867B /* MyMusicCell.m in Sources */,
+				9F2C35261E07C21D0004867B /* TabberController.m in Sources */,
+				9F2C35171E07C21D0004867B /* AccountViewController.m in Sources */,
+				9F2C356B1E07C57B0004867B /* YMJAnimation.m in Sources */,
+				9F2C351B1E07C21D0004867B /* FriendViewController.m in Sources */,
+				9F2C35141E07C21D0004867B /* BaseViewController.m in Sources */,
 				9F7DE7BE1E03D394002E782C /* AppDelegate.m in Sources */,
-				9F7DE84C1E03DDEA002E782C /* FriendViewController.m in Sources */,
-				9F7DE8561E03DE3F002E782C /* AccountViewController.m in Sources */,
+				9F2C351F1E07C21D0004867B /* MySingerViewController.m in Sources */,
 				9F7DE7BB1E03D394002E782C /* main.m in Sources */,
+				9F2C35151E07C21D0004867B /* UIViewController+YMJPushTransitioning.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

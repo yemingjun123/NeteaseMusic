@@ -27,7 +27,6 @@ UINavigationController *createNv(UIViewController *vc, NSString *imageName, NSSt
     return nv;
 };
 
-
 @implementation TabberController
 
 + (instancetype)singleton {
@@ -61,11 +60,8 @@ UINavigationController *createNv(UIViewController *vc, NSString *imageName, NSSt
                              createNv(account, @"cm2_btm_icn_account.png", @"cm2_btm_icn_account_prs.png")
                              ];
     
-    self.tabBar.tintColor = UIColorFromRGB(WitheColor);
-    
+    self.tabBar.tintColor = UIColorFromRGB(whiteColor);
     UIImage *bgImage = [UIImage imageNamed:@"cm2_btm_tab_right.png"];
-    
-//    [bgImage resizableImageWithCapInsets:UIEdgeInsetsMake(bgImage.size.height / 2, bgImage.size.width /2 - 1 , bgImage.size.height / 2, bgImage.size.width / 2) resizingMode:UIImageResizingModeStretch];
     self.tabBar.backgroundImage = bgImage;
 }
 
@@ -73,9 +69,6 @@ UINavigationController *createNv(UIViewController *vc, NSString *imageName, NSSt
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
-
 
 
 @end
