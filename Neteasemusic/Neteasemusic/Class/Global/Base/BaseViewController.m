@@ -7,8 +7,12 @@
 //
 
 #import "BaseViewController.h"
+#import "TapBarPlayButton.h"
+
 
 @interface BaseViewController ()
+
+@property (strong, nonatomic) TapBarPlayButton *reightBarItem;
 
 @end
 
@@ -21,12 +25,13 @@
     self.navigationController.navigationBar.translucent = NO;
     self.navigationController.navigationBar.barTintColor = UIColorFromRGB(darkRedColor);
     [self setLeftBarButton:[UIImage imageNamed:@"cm2_topbar_icn_back.png"]
-                     title:nil
-                    target:self
-                    action:@selector(touchBackEvent)];
-    [self setRightBarButton:[UIImage imageNamed:@""]
-                      title:nil target:self
-                     action:@selector(touchPlayPageEvent)];
+        title:nil target:self action:@selector(touchBackEvent)];
+    if (!self.reightBarItem) {
+        self.reightBarItem = [[TapBarPlayButton alloc]initWithFrame:CGRectMake(0, 0, 44, 44)
+            target:self action:@selector(touchPlayPageEvent)];
+        UIBarButtonItem *rightBar = [[UIBarButtonItem alloc] initWithCustomView:self.reightBarItem];
+        self.navigationItem.rightBarButtonItem = rightBar;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -69,7 +74,7 @@
 }
 
 - (void)touchPlayPageEvent {
-    
+    [self.reightBarItem startAnimation];
 }
 
 @end

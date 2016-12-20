@@ -10,7 +10,10 @@
 
 @interface TapBarPlayButton : UIView
 
-- (void)shartAnimation;
+- (instancetype)initWithFrame:(CGRect)frame target:(id)target action:(SEL)action;
 
+- (void)startAnimation;
+
+- (void)stopAnimation;
 
 @end
