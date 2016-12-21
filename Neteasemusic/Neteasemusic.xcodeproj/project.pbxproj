@@ -75,9 +75,11 @@
 		9F30A0821E07DC1500759A4E /* cm2_topbar_icn_playing5@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F30A0701E07DC1500759A4E /* cm2_topbar_icn_playing5@3x.png */; };
 		9F30A0841E07DC1500759A4E /* cm2_topbar_icn_playing6@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F30A0721E07DC1500759A4E /* cm2_topbar_icn_playing6@3x.png */; };
 		9F30A0861E07DCCF00759A4E /* cm2_topbar_icn_playing6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F30A0851E07DCCF00759A4E /* cm2_topbar_icn_playing6@2x.png */; };
-		9F30A0891E07DE0100759A4E /* TapBarPlayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F30A0881E07DE0100759A4E /* TapBarPlayButton.m */; };
+		9F30A0891E07DE0100759A4E /* TopBarPlayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F30A0881E07DE0100759A4E /* TopBarPlayButton.m */; };
 		9F40AE421E08E3C70058A395 /* UIView+YMJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F40AE411E08E3C70058A395 /* UIView+YMJExtension.m */; };
 		9F40AE451E08F4A50058A395 /* UIScrollView+YMJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F40AE441E08F4A50058A395 /* UIScrollView+YMJExtension.m */; };
+		9F40AE5A1E0A10820058A395 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F40AE591E0A10820058A395 /* BaseNavigationController.m */; };
+		9F7768621E0A58CB0024F827 /* SlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7768611E0A58CB0024F827 /* SlidingViewController.m */; };
 		9F7DE7BB1E03D394002E782C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7DE7BA1E03D394002E782C /* main.m */; };
 		9F7DE7BE1E03D394002E782C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7DE7BD1E03D394002E782C /* AppDelegate.m */; };
 		9F7DE7C41E03D394002E782C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DE7C21E03D394002E782C /* Main.storyboard */; };
@@ -85,6 +87,12 @@
 		9F7DE7C91E03D394002E782C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DE7C71E03D394002E782C /* LaunchScreen.storyboard */; };
 		9F7DE7D41E03D394002E782C /* NeteasemusicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7DE7D31E03D394002E782C /* NeteasemusicTests.m */; };
 		9F7DE7DF1E03D394002E782C /* NeteasemusicUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7DE7DE1E03D394002E782C /* NeteasemusicUITests.m */; };
+		9F8F584D1E0A4BD0006744A1 /* cm2_topbar_icn_invite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F8F584B1E0A4BD0006744A1 /* cm2_topbar_icn_invite@2x.png */; };
+		9F8F584E1E0A4BD0006744A1 /* cm2_topbar_icn_invite@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F8F584C1E0A4BD0006744A1 /* cm2_topbar_icn_invite@3x.png */; };
+		9F8F58511E0A4C8C006744A1 /* cm2_topbar_icn_mic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F8F584F1E0A4C8C006744A1 /* cm2_topbar_icn_mic@2x.png */; };
+		9F8F58521E0A4C8C006744A1 /* cm2_topbar_icn_mic@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F8F58501E0A4C8C006744A1 /* cm2_topbar_icn_mic@3x.png */; };
+		9FF207651E0A635800A70C35 /* SegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF207641E0A635800A70C35 /* SegmentView.m */; };
+		9FF207691E0A814500A70C35 /* NSString+YMJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF207681E0A814500A70C35 /* NSString+YMJExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -188,12 +196,16 @@
 		9F30A0701E07DC1500759A4E /* cm2_topbar_icn_playing5@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_topbar_icn_playing5@3x.png"; sourceTree = "<group>"; };
 		9F30A0721E07DC1500759A4E /* cm2_topbar_icn_playing6@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_topbar_icn_playing6@3x.png"; sourceTree = "<group>"; };
 		9F30A0851E07DCCF00759A4E /* cm2_topbar_icn_playing6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_topbar_icn_playing6@2x.png"; sourceTree = "<group>"; };
-		9F30A0871E07DE0100759A4E /* TapBarPlayButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapBarPlayButton.h; sourceTree = "<group>"; };
-		9F30A0881E07DE0100759A4E /* TapBarPlayButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapBarPlayButton.m; sourceTree = "<group>"; };
+		9F30A0871E07DE0100759A4E /* TopBarPlayButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopBarPlayButton.h; sourceTree = "<group>"; };
+		9F30A0881E07DE0100759A4E /* TopBarPlayButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopBarPlayButton.m; sourceTree = "<group>"; };
 		9F40AE401E08E3C70058A395 /* UIView+YMJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YMJExtension.h"; sourceTree = "<group>"; };
 		9F40AE411E08E3C70058A395 /* UIView+YMJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YMJExtension.m"; sourceTree = "<group>"; };
 		9F40AE431E08F4A50058A395 /* UIScrollView+YMJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+YMJExtension.h"; sourceTree = "<group>"; };
 		9F40AE441E08F4A50058A395 /* UIScrollView+YMJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+YMJExtension.m"; sourceTree = "<group>"; };
+		9F40AE581E0A10820058A395 /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		9F40AE591E0A10820058A395 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
+		9F7768601E0A58CB0024F827 /* SlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlidingViewController.h; sourceTree = "<group>"; };
+		9F7768611E0A58CB0024F827 /* SlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlidingViewController.m; sourceTree = "<group>"; };
 		9F7DE7B61E03D394002E782C /* Neteasemusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neteasemusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F7DE7BA1E03D394002E782C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9F7DE7BC1E03D394002E782C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -208,6 +220,15 @@
 		9F7DE7DA1E03D394002E782C /* NeteasemusicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeteasemusicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F7DE7DE1E03D394002E782C /* NeteasemusicUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NeteasemusicUITests.m; sourceTree = "<group>"; };
 		9F7DE7E01E03D394002E782C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F8F584B1E0A4BD0006744A1 /* cm2_topbar_icn_invite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_topbar_icn_invite@2x.png"; sourceTree = "<group>"; };
+		9F8F584C1E0A4BD0006744A1 /* cm2_topbar_icn_invite@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_topbar_icn_invite@3x.png"; sourceTree = "<group>"; };
+		9F8F584F1E0A4C8C006744A1 /* cm2_topbar_icn_mic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_topbar_icn_mic@2x.png"; sourceTree = "<group>"; };
+		9F8F58501E0A4C8C006744A1 /* cm2_topbar_icn_mic@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_topbar_icn_mic@3x.png"; sourceTree = "<group>"; };
+		9FF207631E0A635800A70C35 /* SegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentView.h; sourceTree = "<group>"; };
+		9FF207641E0A635800A70C35 /* SegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentView.m; sourceTree = "<group>"; };
+		9FF207661E0A7CC900A70C35 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		9FF207671E0A814500A70C35 /* NSString+YMJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YMJExtension.h"; sourceTree = "<group>"; };
+		9FF207681E0A814500A70C35 /* NSString+YMJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YMJExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +281,10 @@
 			children = (
 				9F2C34D71E07C21D0004867B /* BaseViewController.h */,
 				9F2C34D81E07C21D0004867B /* BaseViewController.m */,
+				9F40AE581E0A10820058A395 /* BaseNavigationController.h */,
+				9F40AE591E0A10820058A395 /* BaseNavigationController.m */,
+				9F7768601E0A58CB0024F827 /* SlidingViewController.h */,
+				9F7768611E0A58CB0024F827 /* SlidingViewController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -273,6 +298,8 @@
 				9F40AE411E08E3C70058A395 /* UIView+YMJExtension.m */,
 				9F40AE431E08F4A50058A395 /* UIScrollView+YMJExtension.h */,
 				9F40AE441E08F4A50058A395 /* UIScrollView+YMJExtension.m */,
+				9FF207671E0A814500A70C35 /* NSString+YMJExtension.h */,
+				9FF207681E0A814500A70C35 /* NSString+YMJExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -280,6 +307,7 @@
 		9F2C34DC1E07C21D0004867B /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				9FF207661E0A7CC900A70C35 /* Singleton.h */,
 				9F2C34DD1E07C21D0004867B /* Global.h */,
 				9F2C34DE1E07C21D0004867B /* Neteasemusic.pch */,
 				9F2C34DF1E07C21D0004867B /* YMJExtension.h */,
@@ -357,6 +385,8 @@
 		9F2C34ED1E07C21D0004867B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9FF207631E0A635800A70C35 /* SegmentView.h */,
+				9FF207641E0A635800A70C35 /* SegmentView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -501,8 +531,8 @@
 		9F2C35111E07C21D0004867B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9F30A0871E07DE0100759A4E /* TapBarPlayButton.h */,
-				9F30A0881E07DE0100759A4E /* TapBarPlayButton.m */,
+				9F30A0871E07DE0100759A4E /* TopBarPlayButton.h */,
+				9F30A0881E07DE0100759A4E /* TopBarPlayButton.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -559,6 +589,10 @@
 		9F2C35341E07C2460004867B /* tabber */ = {
 			isa = PBXGroup;
 			children = (
+				9F8F584F1E0A4C8C006744A1 /* cm2_topbar_icn_mic@2x.png */,
+				9F8F58501E0A4C8C006744A1 /* cm2_topbar_icn_mic@3x.png */,
+				9F8F584B1E0A4BD0006744A1 /* cm2_topbar_icn_invite@2x.png */,
+				9F8F584C1E0A4BD0006744A1 /* cm2_topbar_icn_invite@3x.png */,
 				9F30A0611E07DC1500759A4E /* cm2_list_loading1@2x.png */,
 				9F30A0621E07DC1500759A4E /* cm2_list_loading1@3x.png */,
 				9F30A0631E07DC1500759A4E /* cm2_list_loading3@2x.png */,
@@ -798,11 +832,13 @@
 				9F2C351C1E07C21D0004867B /* FriendViewController.xib in Resources */,
 				9F30A0751E07DC1500759A4E /* cm2_list_loading3@2x.png in Resources */,
 				9F2C35501E07C2460004867B /* cm2_lay_icn_time@3x.png in Resources */,
+				9F8F584D1E0A4BD0006744A1 /* cm2_topbar_icn_invite@2x.png in Resources */,
 				9F30A0771E07DC1500759A4E /* cm2_list_loading4@2x.png in Resources */,
 				9F30A0731E07DC1500759A4E /* cm2_list_loading1@2x.png in Resources */,
 				9F7DE7C91E03D394002E782C /* LaunchScreen.storyboard in Resources */,
 				9F2C354F1E07C2460004867B /* cm2_lay_icn_time@2x.png in Resources */,
 				9F2C35531E07C2460004867B /* cm2_btm_icn_account@2x.png in Resources */,
+				9F8F58511E0A4C8C006744A1 /* cm2_topbar_icn_mic@2x.png in Resources */,
 				9F2C354E1E07C2460004867B /* cm2_lay_icn_dld_new@3x.png in Resources */,
 				9F2C354C1E07C2460004867B /* cm2_lay_icn_artist_new@3x.png in Resources */,
 				9F2C35731E07CB1A0004867B /* PlayListViewController.xib in Resources */,
@@ -814,6 +850,7 @@
 				9F30A07D1E07DC1500759A4E /* cm2_topbar_icn_playing3@2x.png in Resources */,
 				9F30A0741E07DC1500759A4E /* cm2_list_loading1@3x.png in Resources */,
 				9F30A07B1E07DC1500759A4E /* cm2_topbar_icn_playing2@2x.png in Resources */,
+				9F8F584E1E0A4BD0006744A1 /* cm2_topbar_icn_invite@3x.png in Resources */,
 				9F30A0761E07DC1500759A4E /* cm2_list_loading3@3x.png in Resources */,
 				9F2C355A1E07C2460004867B /* cm2_btm_icn_discovery_prs@3x.png in Resources */,
 				9F2C35601E07C2460004867B /* cm2_btm_icn_music@3x.png in Resources */,
@@ -845,6 +882,7 @@
 				9F30A0791E07DC1500759A4E /* cm2_topbar_icn_playing1@2x.png in Resources */,
 				9F2C35711E07CB1A0004867B /* MyMusicViewController.xib in Resources */,
 				9F2C35611E07C2460004867B /* cm2_btm_icn_music_prs@2x.png in Resources */,
+				9F8F58521E0A4C8C006744A1 /* cm2_topbar_icn_mic@3x.png in Resources */,
 				9F2C35621E07C2460004867B /* cm2_btm_icn_music_prs@3x.png in Resources */,
 				9F2C35751E07CB360004867B /* MyMusicCell.xib in Resources */,
 			);
@@ -872,16 +910,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F2C35211E07C21D0004867B /* PlayListViewController.m in Sources */,
+				9FF207651E0A635800A70C35 /* SegmentView.m in Sources */,
 				9F2C35161E07C21D0004867B /* YMJExtension.m in Sources */,
 				9F2C35191E07C21D0004867B /* DiscoverViewController.m in Sources */,
 				9F2C351D1E07C21D0004867B /* MyMusicViewController.m in Sources */,
 				9F2C35251E07C21D0004867B /* MyMusicTableHeaderView.m in Sources */,
 				9F2C35231E07C21D0004867B /* MyMusicCell.m in Sources */,
+				9F7768621E0A58CB0024F827 /* SlidingViewController.m in Sources */,
+				9F40AE5A1E0A10820058A395 /* BaseNavigationController.m in Sources */,
 				9F2C35261E07C21D0004867B /* TabberController.m in Sources */,
+				9FF207691E0A814500A70C35 /* NSString+YMJExtension.m in Sources */,
 				9F2C35171E07C21D0004867B /* AccountViewController.m in Sources */,
 				9F40AE451E08F4A50058A395 /* UIScrollView+YMJExtension.m in Sources */,
 				9F2C356B1E07C57B0004867B /* YMJAnimation.m in Sources */,
-				9F30A0891E07DE0100759A4E /* TapBarPlayButton.m in Sources */,
+				9F30A0891E07DE0100759A4E /* TopBarPlayButton.m in Sources */,
 				9F2C351B1E07C21D0004867B /* FriendViewController.m in Sources */,
 				9F2C35141E07C21D0004867B /* BaseViewController.m in Sources */,
 				9F7DE7BE1E03D394002E782C /* AppDelegate.m in Sources */,

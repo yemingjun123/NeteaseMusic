@@ -6,25 +6,26 @@
 //  Copyright © 2016年 叶明君. All rights reserved.
 //
 
-#import "TapBarPlayButton.h"
+#import "TopBarPlayButton.h"
 
 UIImage *newImage(NSString *imageName) {
     return [UIImage imageNamed:imageName];
 }
 
-@interface TapBarPlayButton ()
+@interface TopBarPlayButton ()
 
 @property (strong, nonatomic) UIImageView *imageView;
 
 @end
 
-@implementation TapBarPlayButton
+@implementation TopBarPlayButton
 
-- (instancetype)initWithFrame:(CGRect)frame target:(id)target action:(SEL)action {
+SINGLETON_M_CLASS(TopBarPlayButton)
+
+- (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        UITapGestureRecognizer *single = [[UITapGestureRecognizer alloc]initWithTarget:target action:action];
-        [self addGestureRecognizer:single];
+        self.frame = CGRectMake(0, 0, 44, 44);
         [self setUI];
     }
     return self;
@@ -32,7 +33,7 @@ UIImage *newImage(NSString *imageName) {
 
 - (void)setUI {
     UIImage *image = newImage(@"cm2_topbar_icn_playing1.png");
-    CGFloat imageViewX = (self.ymj_w - image.size.width) / 2;
+    CGFloat imageViewX = (self.ymj_w - image.size.width); 
     CGFloat imageViewY = (self.ymj_h - image.size.height) / 2;
     CGFloat imageViewW = image.size.width;
     CGFloat imageViewH = image.size.height;
@@ -52,7 +53,7 @@ UIImage *newImage(NSString *imageName) {
                                        newImage(@"cm2_topbar_icn_playing3.png"),
                                        newImage(@"cm2_topbar_icn_playing2.png")
                                        ];
-    self.imageView.animationDuration = 0.5f;
+    self.imageView.animationDuration = 1.0f;
     self.imageView.animationRepeatCount = MAXFLOAT;
     [self addSubview:self.imageView];
 }
@@ -64,5 +65,16 @@ UIImage *newImage(NSString *imageName) {
 - (void)stopAnimation {
     [self.imageView stopAnimating];
 }
+
+- (void)addTarget:(id)target action:(SEL)action {
+    UITapGestureRecognizer *single = [[UITapGestureRecognizer alloc]initWithTarget:target action:action];
+    [self addGestureRecognizer:single];
+}
+
+
+- (void)dealloc {
+    self.imageView.animationImages = nil;
+}
+
 
 @end

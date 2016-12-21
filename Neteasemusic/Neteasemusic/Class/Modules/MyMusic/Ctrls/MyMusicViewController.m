@@ -10,7 +10,7 @@
 #import "MySingerViewController.h"
 #import "PlayListViewController.h"
 
-@interface MyMusicViewController ()
+@interface MyMusicViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (strong, nonatomic)MySingerViewController *singerController;
 @property (strong, nonatomic)PlayListViewController *playlistController;
@@ -25,13 +25,21 @@
     [self setMiddleLabelTitle:@"我的音乐" color:UIColorFromRGB(whiteColor)];
     [self setLeftBarButton:nil title:@"更多" target:self action:@selector(touchMoreEvent)];
     [self.tableView setTableHeaderView:self.tableHeaderView];
-    
-    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - delegate 
+// UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self tableView:tableView numberOfRowsInSection:section];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [self tableView:tableView cellForRowAtIndexPath:indexPath];
 }
 
 #pragma mark - Response Event

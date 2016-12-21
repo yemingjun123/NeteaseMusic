@@ -8,7 +8,10 @@
 
 #import "DiscoverViewController.h"
 
-@interface DiscoverViewController ()
+@interface DiscoverViewController ()<SlidingViewDelegate,SlidingViewDataSource>
+
+@property (strong, nonatomic) NSArray *titles;
+@property (strong, nonatomic) NSArray *controllers;
 
 @end
 
@@ -16,7 +19,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    self.delegate = self;
+    self.dataSource = self;
+    self.titles = @[@"个性推荐",@"歌单",@"主播电台",@"排行榜"];
+    
+    
+    UIViewController *v1 = [[UIViewController alloc]init];
+    v1.view.backgroundColor = UIColorFromRGB(darkRedColor);
+    
+    UIViewController *v2 = [[UIViewController alloc]init];
+    v2.view.backgroundColor = UIColorFromRGB(darkGrayColor);
+    
+    UIViewController *v3 = [[UIViewController alloc]init];
+    v3.view.backgroundColor = UIColorFromRGB(whiteColor);
+    
+    UIViewController *v4 = [[UIViewController alloc]init];
+    v4.view.backgroundColor = UIColorFromRGB(lightGrayColor);
+    
+    self.controllers = @[v1,v2,v3,v4];
+    
+    [self reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +47,19 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - delegate
+// SlidingViewDataSource
+- (NSInteger)numberOfPageInSlidingController:(SlidingViewController *)controller {
+    return self.titles.count;
 }
-*/
+
+- (UIViewController *)slidingController:(SlidingViewController *)slidingController controllerAtIndex:(NSInteger)index {
+    return self.controllers[index];
+}
+
+- (NSString *)slidingController:(SlidingViewController *)slidingController titleAtIndex:(NSInteger)index {
+    return self.titles[index];
+}
+
 
 @end

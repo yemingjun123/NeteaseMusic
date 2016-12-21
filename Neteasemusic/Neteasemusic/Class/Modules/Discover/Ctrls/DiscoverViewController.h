@@ -6,8 +6,8 @@
 //  Copyright © 2016年 叶明君. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "SlidingViewController.h"
 
-@interface DiscoverViewController : UIViewController
+@interface DiscoverViewController : SlidingViewController
 
 @end

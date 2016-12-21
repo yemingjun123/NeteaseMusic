@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TapBarPlayButton : UIView
+@interface TopBarPlayButton : UIView
 
-- (instancetype)initWithFrame:(CGRect)frame target:(id)target action:(SEL)action;
+SINGLETON_H_CLASS(TopBarPlayButton);
+
+- (void)addTarget:(id)target action:(SEL)action;
 
 - (void)startAnimation;
 

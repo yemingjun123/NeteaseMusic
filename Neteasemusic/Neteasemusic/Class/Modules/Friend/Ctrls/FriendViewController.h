@@ -6,8 +6,8 @@
 //  Copyright © 2016年 叶明君. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface FriendViewController : UIViewController
+@interface FriendViewController : BaseViewController
 
 @end

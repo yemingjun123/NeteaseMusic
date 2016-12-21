@@ -7,12 +7,14 @@
 //
 
 #import "BaseViewController.h"
-#import "TapBarPlayButton.h"
-
+#import "TopBarPlayButton.h"
 
 @interface BaseViewController ()
+{
+    BOOL setect;
+}
 
-@property (strong, nonatomic) TapBarPlayButton *reightBarItem;
+@property (strong, nonatomic) TopBarPlayButton *reightBarItem;
 
 @end
 
@@ -26,12 +28,10 @@
     self.navigationController.navigationBar.barTintColor = UIColorFromRGB(darkRedColor);
     [self setLeftBarButton:[UIImage imageNamed:@"cm2_topbar_icn_back.png"]
         title:nil target:self action:@selector(touchBackEvent)];
-    if (!self.reightBarItem) {
-        self.reightBarItem = [[TapBarPlayButton alloc]initWithFrame:CGRectMake(0, 0, 44, 44)
-            target:self action:@selector(touchPlayPageEvent)];
-        UIBarButtonItem *rightBar = [[UIBarButtonItem alloc] initWithCustomView:self.reightBarItem];
-        self.navigationItem.rightBarButtonItem = rightBar;
-    }
+    self.reightBarItem = [TopBarPlayButton sharedTopBarPlayButton];
+    [self.reightBarItem addTarget:self action:@selector(touchPlayPageEvent)];
+    UIBarButtonItem *rightBar = [[UIBarButtonItem alloc] initWithCustomView:self.reightBarItem];
+    self.navigationItem.rightBarButtonItem = rightBar;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -54,6 +54,15 @@
     [titleLabel sizeToFit];
 }
 
+- (void)setMiddleSegmentedItems:(NSArray *)items target:(id)target action:(SEL)action {
+    UISegmentedControl *segment = [[UISegmentedControl alloc]initWithItems:items];
+    segment.selectedSegmentIndex = 0;
+    segment.frame = CGRectMake(0, 0, 140, 30);
+    segment.tintColor = UIColorFromRGB(whiteColor);
+    [segment addTarget:target action:action forControlEvents:UIControlEventValueChanged];
+    self.navigationItem.titleView = segment;
+}
+
 - (void)setLeftBarButton:(UIImage*)image title:(NSString*)title target:(id)target action:(SEL)action{
     UIButton *button = customBarButtonItem(image, title, target, action);
     button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
@@ -74,7 +83,15 @@
 }
 
 - (void)touchPlayPageEvent {
-    [self.reightBarItem startAnimation];
+    if (setect) {
+        [self.reightBarItem stopAnimation];
+    } else {
+        [self.reightBarItem startAnimation];
+    }
+    setect = !setect;
 }
+
+
+
 
 @end

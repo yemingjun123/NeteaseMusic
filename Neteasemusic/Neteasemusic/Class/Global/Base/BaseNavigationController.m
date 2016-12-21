@@ -1,24 +1,22 @@
 //
-//  PlayListViewController.m
+//  BaseNavigationController.m
 //  Neteasemusic
 //
-//  Created by 叶明君 on 16/12/19.
+//  Created by 叶明君 on 16/12/21.
 //  Copyright © 2016年 叶明君. All rights reserved.
 //
 
-#import "PlayListViewController.h"
+#import "BaseNavigationController.h"
 
-@interface PlayListViewController ()
+@interface BaseNavigationController ()
 
 @end
 
-@implementation PlayListViewController
+@implementation BaseNavigationController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//     Do any additional setup after loading the view from its nib.
-    
-    
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {

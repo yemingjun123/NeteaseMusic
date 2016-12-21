@@ -9,9 +9,11 @@
 //#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+#import "Singleton.h"
 #import "UIViewController+YMJPushTransitioning.h"
 #import "UIView+YMJExtension.h"
 #import "UIScrollView+YMJExtension.h"
+#import "NSString+YMJExtension.h"
 
 #pragma mark - bounds
 #define kSCREENkWIDTH ([[UIScreen mainScreen] bounds].size.width)
@@ -80,3 +82,6 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
         #endif
     #endif
 #endif
+
+
+

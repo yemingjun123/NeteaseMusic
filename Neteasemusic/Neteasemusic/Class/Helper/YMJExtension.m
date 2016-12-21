@@ -58,3 +58,6 @@ UIViewController *newClass(NSString *className) {
     }
     return vc;
 }
+
+
+#define textSize(width,dic)
