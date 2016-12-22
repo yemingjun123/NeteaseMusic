@@ -29,14 +29,7 @@ UINavigationController *createNv(UIViewController *vc, NSString *imageName, NSSt
 
 @implementation TabberController
 
-+ (instancetype)singleton {
-    static TabberController *instance = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        instance = [[TabberController alloc]init];
-    });
-    return instance;
-}
+SINGLETON_M_CLASS(TabberController)
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -48,10 +41,10 @@ UINavigationController *createNv(UIViewController *vc, NSString *imageName, NSSt
     myMusic.title = @"我的音乐";
     
     FriendViewController *friend = [[FriendViewController alloc]init];
-    friend.tabBarItem.title = @"朋友";
+    friend.tabBarItem.title = @"朋 友";
     
     AccountViewController *account = [[AccountViewController alloc]init];
-    account.title = @"账号";
+    account.tabBarItem.title = @"账 号";
     
     self.viewControllers = @[
                              createNv(discover, @"cm2_btm_icn_discovery.png", @"cm2_btm_icn_discovery_prs.png"),

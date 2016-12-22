@@ -10,6 +10,6 @@
 
 @interface TabberController : UITabBarController
 
-+ (instancetype)singleton;
+SINGLETON_H_CLASS(TabberController)
 
 @end

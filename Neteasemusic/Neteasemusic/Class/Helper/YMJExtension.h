@@ -9,11 +9,19 @@
 //#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-#import "Singleton.h"
 #import "UIViewController+YMJPushTransitioning.h"
 #import "UIView+YMJExtension.h"
 #import "UIScrollView+YMJExtension.h"
 #import "NSString+YMJExtension.h"
+
+
+#pragma mark - log
+
+#if DEBUG
+#define NSLog(FORMAT, ...) fprintf(stderr,"[%s:%d]\t%s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+#else
+#define NSLog(FORMAT, ...) {}
+#endif
 
 #pragma mark - bounds
 #define kSCREENkWIDTH ([[UIScreen mainScreen] bounds].size.width)
@@ -83,5 +91,9 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     #endif
 #endif
 
+#pragma mark - gcd
+#define DISPATCH_ASYNS(block) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), block)
+#define DISPATCH_MAIN(block) dispatch_async(dispatch_get_main_queue(),block)
 
-
+#pragma mark - image
+#define load_Image(name) [UIImage imageWithContentsOfFile:[[NSBundle mainBundle]pathForResource:name ofType:nil]]

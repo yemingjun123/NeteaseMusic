@@ -7,6 +7,7 @@
 //
 
 #import "DiscoverViewController.h"
+#import "RankViewController.h"
 
 @interface DiscoverViewController ()<SlidingViewDelegate,SlidingViewDataSource>
 
@@ -34,8 +35,8 @@
     UIViewController *v3 = [[UIViewController alloc]init];
     v3.view.backgroundColor = UIColorFromRGB(whiteColor);
     
-    UIViewController *v4 = [[UIViewController alloc]init];
-    v4.view.backgroundColor = UIColorFromRGB(lightGrayColor);
+    RankViewController *v4 = [[RankViewController alloc]init];
+//    v4.view.backgroundColor = UIColorFromRGB(lightGrayColor);
     
     self.controllers = @[v1,v2,v3,v4];
     

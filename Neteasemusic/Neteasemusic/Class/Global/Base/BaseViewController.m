@@ -24,6 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     self.navigationController.navigationBar.translucent = NO;
     self.navigationController.navigationBar.barTintColor = UIColorFromRGB(darkRedColor);
     [self setLeftBarButton:[UIImage imageNamed:@"cm2_topbar_icn_back.png"]
@@ -90,8 +91,6 @@
     }
     setect = !setect;
 }
-
-
 
 
 @end

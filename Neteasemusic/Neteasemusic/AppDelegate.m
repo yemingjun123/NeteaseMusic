@@ -19,7 +19,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = [TabberController singleton];
+    self.window.rootViewController = [TabberController sharedTabberController];
     [self.window makeKeyAndVisible];
     return YES;
 }

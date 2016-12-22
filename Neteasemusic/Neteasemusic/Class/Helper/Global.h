@@ -9,3 +9,4 @@
 #import <Foundation/Foundation.h>
 
 #import "YMJExtension.h"
+#import "Singleton.h"
