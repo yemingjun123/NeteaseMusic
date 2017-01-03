@@ -25,9 +25,7 @@ void NotificationRemove(id observer, NSString * name, NSString * alias) {
     [kNotificationCenter removeObserver:observer name:name object:alias];
 }
 
-
 #pragma mark - UIButton
-
 UIButton *customBarButtonItem(UIImage *image, NSString *title, id target, SEL action) {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     if (image) {

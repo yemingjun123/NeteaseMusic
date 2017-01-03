@@ -11,13 +11,14 @@
 #import "MyMusicViewController.h"
 #import "FriendViewController.h"
 #import "AccountViewController.h"
+#import "BaseNavigationController.h"
 
 @interface TabberController ()
 
 @end
 
 UINavigationController *createNv(UIViewController *vc, NSString *imageName, NSString *selectImageName) {
-    UINavigationController *nv = [[UINavigationController alloc]initWithRootViewController:vc];
+    UINavigationController *nv = [[BaseNavigationController alloc]initWithRootViewController:vc];
     UIImage *image = [[UIImage imageNamed:imageName] imageWithRenderingMode:
         UIImageRenderingModeAlwaysOriginal];
     UIImage *selectImage = [[UIImage imageNamed:selectImageName] imageWithRenderingMode:

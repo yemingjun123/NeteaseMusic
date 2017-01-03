@@ -14,19 +14,19 @@
 
 @implementation UIImage (YMJEffects)
 
-- (UIImage *)ymj_LightEffect {
-    return [self ymj_BlurWithRadius:30 tintColor:UIColorFromRGB(lightGrayColor) saturationDeltaFactor:kSaturationDeltaFactor maskImage:nil];
+- (UIImage *)ymj_lightEffect {
+    return [self ymj_blurWithRadius:30 tintColor:UIColorFromRGB(lightGrayColor) saturationDeltaFactor:kSaturationDeltaFactor maskImage:nil];
 }
 
-- (UIImage *)ymj_DarkGrayEffect {
-    return [self ymj_BlurWithRadius:20 tintColor:UIColorFromRGB(darkGrayColor) saturationDeltaFactor:kSaturationDeltaFactor maskImage:nil];
+- (UIImage *)ymj_darkGrayEffect {
+    return [self ymj_blurWithRadius:20 tintColor:UIColorFromRGB(darkGrayColor) saturationDeltaFactor:kSaturationDeltaFactor maskImage:nil];
 }
 
-- (UIImage *)ymj_ExtraLightEffect {
-    return [self ymj_BlurWithRadius:20 tintColor:UIColorFromRGB(0x822222) saturationDeltaFactor:kSaturationDeltaFactor maskImage:nil];
+- (UIImage *)ymj_extraLightEffect {
+    return [self ymj_blurWithRadius:20 tintColor:UIColorFromRGB(0x822222) saturationDeltaFactor:kSaturationDeltaFactor maskImage:nil];
 }
 
-- (UIImage *)ymj_BlurWithRadius:(CGFloat)blurRadius tintColor:(UIColor *)tintColor saturationDeltaFactor:(CGFloat)saturationDeltaFactor maskImage:(UIImage *)maskImage {
+- (UIImage *)ymj_blurWithRadius:(CGFloat)blurRadius tintColor:(UIColor *)tintColor saturationDeltaFactor:(CGFloat)saturationDeltaFactor maskImage:(UIImage *)maskImage {
     if (self.size.width < 1 || self.size.height < 1) {
         NSLog (@"*** error: invalid size: (%.2f x %.2f). Both dimensions must be >= 1: %@", self.size.width, self.size.height, self);
         return nil;

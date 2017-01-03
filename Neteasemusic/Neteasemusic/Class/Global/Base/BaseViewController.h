@@ -20,4 +20,6 @@
 
 - (void)setRightBarButton:(UIImage*)image title:(NSString*)title target:(id)target action:(SEL)action;
 
+- (void)nv_pushViewController:(UIViewController *)viewController animated:(BOOL)animated;
+
 @end

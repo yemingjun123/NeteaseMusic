@@ -8,13 +8,12 @@
 
 #import "BaseViewController.h"
 #import "TopBarPlayButton.h"
+#import "MusicPlayerViewController.h"
 
 @interface BaseViewController ()
-{
-    BOOL setect;
-}
 
 @property (strong, nonatomic) TopBarPlayButton *reightBarItem;
+@property (strong, nonatomic) MusicPlayerViewController *musicPlayer;
 
 @end
 
@@ -24,9 +23,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    self.musicPlayer = [[MusicPlayerViewController alloc]init];
     self.navigationController.navigationBar.translucent = NO;
-    self.navigationController.navigationBar.barTintColor = UIColorFromRGB(darkRedColor);
+    [self setColor:UIColorFromRGB(darkRedColor)];
     [self setLeftBarButton:[UIImage imageNamed:@"cm2_topbar_icn_back.png"]
         title:nil target:self action:@selector(touchBackEvent)];
     self.reightBarItem = [TopBarPlayButton sharedTopBarPlayButton];
@@ -38,6 +37,16 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+//    if (self.navigationController.viewControllers.count > 1) {
+//        self.tabBarController.tabBar.hidden = YES;
+//        self.hidesBottomBarWhenPushed
+//    } else {
+//        self.tabBarController.tabBar.hidden = NO;
+//    }
 }
 
 #pragma mark - customNavigationBar
@@ -84,13 +93,13 @@
 }
 
 - (void)touchPlayPageEvent {
-    if (setect) {
-        [self.reightBarItem stopAnimation];
-    } else {
-        [self.reightBarItem startAnimation];
-    }
-    setect = !setect;
+    [self nv_pushViewController:self.musicPlayer animated:YES];
 }
 
+- (void)nv_pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    self.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:viewController animated:YES];
+    self.hidesBottomBarWhenPushed = NO;
+}
 
 @end

@@ -10,12 +10,13 @@
 
 @interface UIImage (YMJEffects)
 
-- (UIImage *)ymj_LightEffect;
+- (UIImage *)ymj_lightEffect;
 
-- (UIImage *)ymj_ExtraLightEffect;
+- (UIImage *)ymj_extraLightEffect;
 
-- (UIImage *)ymj_DarkGrayEffect;
+- (UIImage *)ymj_darkGrayEffect;
 
-- (UIImage *)ymj_BlurWithRadius:(CGFloat)blurRadius tintColor:(UIColor *)tintColor saturationDeltaFactor:(CGFloat)saturationDeltaFactor maskImage:(UIImage *)maskImage;
+- (UIImage *)ymj_blurWithRadius:(CGFloat)blurRadius tintColor:(UIColor *)tintColor saturationDeltaFactor:(CGFloat)saturationDeltaFactor maskImage:(UIImage *)maskImage;
+
 
 @end
