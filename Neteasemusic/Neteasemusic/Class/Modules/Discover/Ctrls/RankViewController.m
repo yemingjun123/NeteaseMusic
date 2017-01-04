@@ -9,25 +9,35 @@
 #import "RankViewController.h"
 #import "UserListCell.h"
 #import "OfficialListCell.h"
+#import "RankViewModel.h"
 #define user_spaceW 10
+
 
 @interface RankViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (strong, nonatomic) RankViewModel *viewModel;
 
 @end
 
 @implementation RankViewController
 
-static NSString *userlist_id = @"userlist_id";
-static NSString *officialist_id = @"officialist_id";
+static NSString *userlistIdentifier = @"userlistIdentifier";
+static NSString *officialistIdentifier = @"officialistIdentifier";
 
 #pragma mark - lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.collectionView registerNib:[UINib nibWithNibName:@"UserListCell" bundle:nil] forCellWithReuseIdentifier:userlist_id];
-    [self.collectionView registerNib:[UINib nibWithNibName:@"OfficialListCell" bundle:nil] forCellWithReuseIdentifier:officialist_id];
+    [self.collectionView registerNib:[UINib nibWithNibName:@"UserListCell" bundle:nil] forCellWithReuseIdentifier:userlistIdentifier];
+    [self.collectionView registerNib:[UINib nibWithNibName:@"OfficialListCell" bundle:nil] forCellWithReuseIdentifier:officialistIdentifier];
+    @weakify(self)
+    [self.viewModel refreshDataCompletion:^(BOOL success) {
+        @strongify(self)
+        if (success) {
+            [self.collectionView reloadData];
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,19 +48,20 @@ static NSString *officialist_id = @"officialist_id";
 #pragma mark - delegate
 //UICollectionViewDataSource
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 2;
+    return 1;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 5;
+    return self.viewModel.modelArray.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        OfficialListCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:officialist_id forIndexPath:indexPath];
+        OfficialListCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:officialistIdentifier forIndexPath:indexPath];
+        cell.ranksModel = self.viewModel.modelArray[indexPath.row];
         return cell;
     } else {
-        UserListCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:userlist_id forIndexPath:indexPath];
+        UserListCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:userlistIdentifier forIndexPath:indexPath];
         return cell;
     }
 }
@@ -78,6 +89,13 @@ static NSString *officialist_id = @"officialist_id";
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
     return CGSizeMake(self.view.ymj_w, 45);
+}
+
+- (RankViewModel *)viewModel {
+    if (!_viewModel) {
+        _viewModel = [[RankViewModel alloc]init];
+    }
+    return _viewModel;
 }
 
 @end

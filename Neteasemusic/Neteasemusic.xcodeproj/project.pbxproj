@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		026BCA2780C29216C41BC6AA /* libPods-NeteasemusicUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 828C3BB74A376270DADAE002 /* libPods-NeteasemusicUITests.a */; };
 		9F07522D1E0BA7B800767753 /* MusicPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F07522B1E0BA7B800767753 /* MusicPlayerViewController.m */; };
 		9F07522E1E0BA7B800767753 /* MusicPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F07522C1E0BA7B800767753 /* MusicPlayerViewController.xib */; };
 		9F0752341E0BB56800767753 /* UIImage+YMJEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F0752331E0BB56800767753 /* UIImage+YMJEffects.m */; };
@@ -152,6 +153,9 @@
 		9F8223821E1C83B5001AFB93 /* cm2_fm_btn_loved@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F8223741E1C83B5001AFB93 /* cm2_fm_btn_loved@3x.png */; };
 		9F8223851E1C847E001AFB93 /* cm2_topbar_icn_share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F8223831E1C847E001AFB93 /* cm2_topbar_icn_share@2x.png */; };
 		9F8223861E1C847E001AFB93 /* cm2_topbar_icn_share@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F8223841E1C847E001AFB93 /* cm2_topbar_icn_share@3x.png */; };
+		9F82238D1E1C9668001AFB93 /* BaseNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F82238C1E1C9668001AFB93 /* BaseNetworking.m */; };
+		9F8223921E1CC4C5001AFB93 /* RankViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8223911E1CC4C5001AFB93 /* RankViewModel.m */; };
+		9F82239D1E1CE7BA001AFB93 /* RankModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F82239C1E1CE7BA001AFB93 /* RankModel.m */; };
 		9F8F584D1E0A4BD0006744A1 /* cm2_topbar_icn_invite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F8F584B1E0A4BD0006744A1 /* cm2_topbar_icn_invite@2x.png */; };
 		9F8F584E1E0A4BD0006744A1 /* cm2_topbar_icn_invite@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F8F584C1E0A4BD0006744A1 /* cm2_topbar_icn_invite@3x.png */; };
 		9F8F58511E0A4C8C006744A1 /* cm2_topbar_icn_mic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F8F584F1E0A4C8C006744A1 /* cm2_topbar_icn_mic@2x.png */; };
@@ -168,6 +172,8 @@
 		9FF58E181E1B8045009DB37A /* cm2_topbar_icn_invite_prs@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FF58E141E1B8045009DB37A /* cm2_topbar_icn_invite_prs@3x.png */; };
 		9FF58E191E1B8045009DB37A /* cm2_topbar_icn_mic_prs@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FF58E151E1B8045009DB37A /* cm2_topbar_icn_mic_prs@2x.png */; };
 		9FF58E1A1E1B8045009DB37A /* cm2_topbar_icn_mic_prs@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FF58E161E1B8045009DB37A /* cm2_topbar_icn_mic_prs@3x.png */; };
+		C2E41E4F191B66AFE511A9A5 /* libPods-NeteasemusicTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F846DFC7EFC2A39645E79F /* libPods-NeteasemusicTests.a */; };
+		F28482B0917FEC459B6FCDC5 /* libPods-Neteasemusic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E4667546596895BBC4BF1A /* libPods-Neteasemusic.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -188,6 +194,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		22B60220D284A1738BB8BE5D /* Pods-Neteasemusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neteasemusic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Neteasemusic/Pods-Neteasemusic.debug.xcconfig"; sourceTree = "<group>"; };
+		24E4667546596895BBC4BF1A /* libPods-Neteasemusic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Neteasemusic.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		307D81082E578F66C2C070DF /* Pods-NeteasemusicUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeteasemusicUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NeteasemusicUITests/Pods-NeteasemusicUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		74F846DFC7EFC2A39645E79F /* libPods-NeteasemusicTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NeteasemusicTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		828C3BB74A376270DADAE002 /* libPods-NeteasemusicUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NeteasemusicUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F07522A1E0BA7B800767753 /* MusicPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicPlayerViewController.h; sourceTree = "<group>"; };
 		9F07522B1E0BA7B800767753 /* MusicPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicPlayerViewController.m; sourceTree = "<group>"; };
 		9F07522C1E0BA7B800767753 /* MusicPlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicPlayerViewController.xib; sourceTree = "<group>"; };
@@ -363,6 +374,12 @@
 		9F8223741E1C83B5001AFB93 /* cm2_fm_btn_loved@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_fm_btn_loved@3x.png"; sourceTree = "<group>"; };
 		9F8223831E1C847E001AFB93 /* cm2_topbar_icn_share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_topbar_icn_share@2x.png"; sourceTree = "<group>"; };
 		9F8223841E1C847E001AFB93 /* cm2_topbar_icn_share@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_topbar_icn_share@3x.png"; sourceTree = "<group>"; };
+		9F82238B1E1C9668001AFB93 /* BaseNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNetworking.h; sourceTree = "<group>"; };
+		9F82238C1E1C9668001AFB93 /* BaseNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNetworking.m; sourceTree = "<group>"; };
+		9F8223901E1CC4C5001AFB93 /* RankViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankViewModel.h; sourceTree = "<group>"; };
+		9F8223911E1CC4C5001AFB93 /* RankViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankViewModel.m; sourceTree = "<group>"; };
+		9F82239B1E1CE7BA001AFB93 /* RankModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankModel.h; sourceTree = "<group>"; };
+		9F82239C1E1CE7BA001AFB93 /* RankModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankModel.m; sourceTree = "<group>"; };
 		9F8F584B1E0A4BD0006744A1 /* cm2_topbar_icn_invite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_topbar_icn_invite@2x.png"; sourceTree = "<group>"; };
 		9F8F584C1E0A4BD0006744A1 /* cm2_topbar_icn_invite@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_topbar_icn_invite@3x.png"; sourceTree = "<group>"; };
 		9F8F584F1E0A4C8C006744A1 /* cm2_topbar_icn_mic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_topbar_icn_mic@2x.png"; sourceTree = "<group>"; };
@@ -385,6 +402,10 @@
 		9FF58E141E1B8045009DB37A /* cm2_topbar_icn_invite_prs@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_topbar_icn_invite_prs@3x.png"; sourceTree = "<group>"; };
 		9FF58E151E1B8045009DB37A /* cm2_topbar_icn_mic_prs@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_topbar_icn_mic_prs@2x.png"; sourceTree = "<group>"; };
 		9FF58E161E1B8045009DB37A /* cm2_topbar_icn_mic_prs@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_topbar_icn_mic_prs@3x.png"; sourceTree = "<group>"; };
+		B6F7D8E2394B5AB733D124BB /* Pods-NeteasemusicTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeteasemusicTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NeteasemusicTests/Pods-NeteasemusicTests.release.xcconfig"; sourceTree = "<group>"; };
+		D071598679FB85162B27443B /* Pods-Neteasemusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neteasemusic.release.xcconfig"; path = "Pods/Target Support Files/Pods-Neteasemusic/Pods-Neteasemusic.release.xcconfig"; sourceTree = "<group>"; };
+		DE29DF7223503D88FBB9FFDF /* Pods-NeteasemusicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeteasemusicTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NeteasemusicTests/Pods-NeteasemusicTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E534C0BF6BFC97B2FAAEF05B /* Pods-NeteasemusicUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeteasemusicUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NeteasemusicUITests/Pods-NeteasemusicUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -395,6 +416,7 @@
 				9F07523B1E0BB6BE00767753 /* CoreImage.framework in Frameworks */,
 				9F0752391E0BB6AD00767753 /* CoreGraphics.framework in Frameworks */,
 				9F0752371E0BB69F00767753 /* Accelerate.framework in Frameworks */,
+				F28482B0917FEC459B6FCDC5 /* libPods-Neteasemusic.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +424,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2E41E4F191B66AFE511A9A5 /* libPods-NeteasemusicTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,12 +432,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				026BCA2780C29216C41BC6AA /* libPods-NeteasemusicUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C7A1597308066ACA052C03E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				22B60220D284A1738BB8BE5D /* Pods-Neteasemusic.debug.xcconfig */,
+				D071598679FB85162B27443B /* Pods-Neteasemusic.release.xcconfig */,
+				DE29DF7223503D88FBB9FFDF /* Pods-NeteasemusicTests.debug.xcconfig */,
+				B6F7D8E2394B5AB733D124BB /* Pods-NeteasemusicTests.release.xcconfig */,
+				307D81082E578F66C2C070DF /* Pods-NeteasemusicUITests.debug.xcconfig */,
+				E534C0BF6BFC97B2FAAEF05B /* Pods-NeteasemusicUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9F0752281E0BA7B800767753 /* Player */ = {
 			isa = PBXGroup;
 			children = (
@@ -439,6 +476,9 @@
 				9F07523A1E0BB6BE00767753 /* CoreImage.framework */,
 				9F0752381E0BB6AD00767753 /* CoreGraphics.framework */,
 				9F0752361E0BB69F00767753 /* Accelerate.framework */,
+				24E4667546596895BBC4BF1A /* libPods-Neteasemusic.a */,
+				74F846DFC7EFC2A39645E79F /* libPods-NeteasemusicTests.a */,
+				828C3BB74A376270DADAE002 /* libPods-NeteasemusicUITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -621,6 +661,8 @@
 		9F2C34E91E07C21D0004867B /* Discover */ = {
 			isa = PBXGroup;
 			children = (
+				9F82239A1E1CE7AC001AFB93 /* Model */,
+				9F82238F1E1CC49F001AFB93 /* viewModel */,
 				9F2C34EA1E07C21D0004867B /* Ctrls */,
 				9F2C34ED1E07C21D0004867B /* Views */,
 				9F2C34EE1E07C21D0004867B /* xib */,
@@ -811,6 +853,7 @@
 		9F2C35131E07C21D0004867B /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				9F8223871E1C8CA1001AFB93 /* Networking */,
 				9F2C35671E07C4D30004867B /* Animations */,
 			);
 			path = Vendors;
@@ -931,6 +974,7 @@
 				9F7DE7DD1E03D394002E782C /* NeteasemusicUITests */,
 				9F7DE7B71E03D394002E782C /* Products */,
 				9F0752351E0BB69F00767753 /* Frameworks */,
+				3C7A1597308066ACA052C03E /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -986,6 +1030,33 @@
 			path = NeteasemusicUITests;
 			sourceTree = "<group>";
 		};
+		9F8223871E1C8CA1001AFB93 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				9F82238B1E1C9668001AFB93 /* BaseNetworking.h */,
+				9F82238C1E1C9668001AFB93 /* BaseNetworking.m */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		9F82238F1E1CC49F001AFB93 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9F8223901E1CC4C5001AFB93 /* RankViewModel.h */,
+				9F8223911E1CC4C5001AFB93 /* RankViewModel.m */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		9F82239A1E1CE7AC001AFB93 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9F82239B1E1CE7BA001AFB93 /* RankModel.h */,
+				9F82239C1E1CE7BA001AFB93 /* RankModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -993,9 +1064,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F7DE7E31E03D394002E782C /* Build configuration list for PBXNativeTarget "Neteasemusic" */;
 			buildPhases = (
+				20134C907D22F29F1718EE94 /* [CP] Check Pods Manifest.lock */,
 				9F7DE7B21E03D394002E782C /* Sources */,
 				9F7DE7B31E03D394002E782C /* Frameworks */,
 				9F7DE7B41E03D394002E782C /* Resources */,
+				FEDC99C7CA04444868E7C5D0 /* [CP] Embed Pods Frameworks */,
+				BA1EB1F57EC3FA082ADCAE27 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1010,9 +1084,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F7DE7E61E03D394002E782C /* Build configuration list for PBXNativeTarget "NeteasemusicTests" */;
 			buildPhases = (
+				CA980B4FBBDE7D2B46A8FE1E /* [CP] Check Pods Manifest.lock */,
 				9F7DE7CB1E03D394002E782C /* Sources */,
 				9F7DE7CC1E03D394002E782C /* Frameworks */,
 				9F7DE7CD1E03D394002E782C /* Resources */,
+				8E38802456E4F31B2B908783 /* [CP] Embed Pods Frameworks */,
+				CD578293BB99575608383844 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1028,9 +1105,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F7DE7E91E03D394002E782C /* Build configuration list for PBXNativeTarget "NeteasemusicUITests" */;
 			buildPhases = (
+				A0EC3D3FEC1452AACEE01E2A /* [CP] Check Pods Manifest.lock */,
 				9F7DE7D61E03D394002E782C /* Sources */,
 				9F7DE7D71E03D394002E782C /* Frameworks */,
 				9F7DE7D81E03D394002E782C /* Resources */,
+				F843E0ED74C8EF6727613218 /* [CP] Embed Pods Frameworks */,
+				8EBBBB03E1FC21FE61B78139 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1242,6 +1322,144 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		20134C907D22F29F1718EE94 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8E38802456E4F31B2B908783 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NeteasemusicTests/Pods-NeteasemusicTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8EBBBB03E1FC21FE61B78139 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NeteasemusicUITests/Pods-NeteasemusicUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0EC3D3FEC1452AACEE01E2A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BA1EB1F57EC3FA082ADCAE27 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Neteasemusic/Pods-Neteasemusic-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA980B4FBBDE7D2B46A8FE1E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CD578293BB99575608383844 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NeteasemusicTests/Pods-NeteasemusicTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F843E0ED74C8EF6727613218 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NeteasemusicUITests/Pods-NeteasemusicUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FEDC99C7CA04444868E7C5D0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Neteasemusic/Pods-Neteasemusic-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9F7DE7B21E03D394002E782C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -1259,6 +1477,7 @@
 				9F0752341E0BB56800767753 /* UIImage+YMJEffects.m in Sources */,
 				9FBF12A81E0B627300A411E5 /* RankViewController.m in Sources */,
 				9F7768621E0A58CB0024F827 /* SlidingViewController.m in Sources */,
+				9F8223921E1CC4C5001AFB93 /* RankViewModel.m in Sources */,
 				9F40AE5A1E0A10820058A395 /* BaseNavigationController.m in Sources */,
 				9FBF12B71E0B682D00A411E5 /* UserListCell.m in Sources */,
 				9F2C35261E07C21D0004867B /* TabberController.m in Sources */,
@@ -1267,12 +1486,14 @@
 				9F40AE451E08F4A50058A395 /* UIScrollView+YMJExtension.m in Sources */,
 				9F2C356B1E07C57B0004867B /* YMJAnimation.m in Sources */,
 				9F30A0891E07DE0100759A4E /* TopBarPlayButton.m in Sources */,
+				9F82239D1E1CE7BA001AFB93 /* RankModel.m in Sources */,
 				9F07522D1E0BA7B800767753 /* MusicPlayerViewController.m in Sources */,
 				9F2C351B1E07C21D0004867B /* FriendViewController.m in Sources */,
 				9F2C35141E07C21D0004867B /* BaseViewController.m in Sources */,
 				9F7DE7BE1E03D394002E782C /* AppDelegate.m in Sources */,
 				9F2C351F1E07C21D0004867B /* MySingerViewController.m in Sources */,
 				9F7DE7BB1E03D394002E782C /* main.m in Sources */,
+				9F82238D1E1C9668001AFB93 /* BaseNetworking.m in Sources */,
 				9F40AE421E08E3C70058A395 /* UIView+YMJExtension.m in Sources */,
 				9F2C35151E07C21D0004867B /* UIViewController+YMJPushTransitioning.m in Sources */,
 			);
@@ -1419,6 +1640,7 @@
 		};
 		9F7DE7E41E03D394002E782C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22B60220D284A1738BB8BE5D /* Pods-Neteasemusic.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4U8M5497ZW;
@@ -1432,6 +1654,7 @@
 		};
 		9F7DE7E51E03D394002E782C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D071598679FB85162B27443B /* Pods-Neteasemusic.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4U8M5497ZW;
@@ -1445,6 +1668,7 @@
 		};
 		9F7DE7E71E03D394002E782C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE29DF7223503D88FBB9FFDF /* Pods-NeteasemusicTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 4U8M5497ZW;
@@ -1458,6 +1682,7 @@
 		};
 		9F7DE7E81E03D394002E782C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6F7D8E2394B5AB733D124BB /* Pods-NeteasemusicTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 4U8M5497ZW;
@@ -1471,6 +1696,7 @@
 		};
 		9F7DE7EA1E03D394002E782C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 307D81082E578F66C2C070DF /* Pods-NeteasemusicUITests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 4U8M5497ZW;
 				INFOPLIST_FILE = NeteasemusicUITests/Info.plist;
@@ -1483,6 +1709,7 @@
 		};
 		9F7DE7EB1E03D394002E782C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E534C0BF6BFC97B2FAAEF05B /* Pods-NeteasemusicUITests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 4U8M5497ZW;
 				INFOPLIST_FILE = NeteasemusicUITests/Info.plist;

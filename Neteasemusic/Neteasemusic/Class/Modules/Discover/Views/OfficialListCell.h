@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RankModel.h"
 
 @interface OfficialListCell : UICollectionViewCell
 
@@ -14,5 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *songName1;
 @property (weak, nonatomic) IBOutlet UILabel *songName2;
 @property (weak, nonatomic) IBOutlet UILabel *songName3;
+
+@property (strong, nonatomic) RanksModel *ranksModel;
 
 @end
