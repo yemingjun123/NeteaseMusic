@@ -10,3 +10,7 @@
 
 #import "YMJExtension.h"
 #import "Singleton.h"
+
+#define app_Version @"4.30903"
+#define app_Channel @"Iphone_Sst"
+

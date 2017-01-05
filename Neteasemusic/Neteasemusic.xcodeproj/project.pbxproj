@@ -166,6 +166,9 @@
 		9FBF12B81E0B682D00A411E5 /* UserListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FBF12B61E0B682D00A411E5 /* UserListCell.xib */; };
 		9FBF12BC1E0B685C00A411E5 /* OfficialListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF12BA1E0B685C00A411E5 /* OfficialListCell.m */; };
 		9FBF12BD1E0B685C00A411E5 /* OfficialListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FBF12BB1E0B685C00A411E5 /* OfficialListCell.xib */; };
+		9FC640761E1E0F8A009E36C3 /* RankSongsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC640741E1E0F8A009E36C3 /* RankSongsViewController.m */; };
+		9FC640771E1E0F8A009E36C3 /* RankSongsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FC640751E1E0F8A009E36C3 /* RankSongsViewController.xib */; };
+		9FC6407A1E1E2890009E36C3 /* RankSongHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC640791E1E2890009E36C3 /* RankSongHeaderView.m */; };
 		9FF207651E0A635800A70C35 /* SegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF207641E0A635800A70C35 /* SegmentView.m */; };
 		9FF207691E0A814500A70C35 /* NSString+YMJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF207681E0A814500A70C35 /* NSString+YMJExtension.m */; };
 		9FF58E171E1B8045009DB37A /* cm2_topbar_icn_invite_prs@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FF58E131E1B8045009DB37A /* cm2_topbar_icn_invite_prs@2x.png */; };
@@ -393,6 +396,11 @@
 		9FBF12B91E0B685C00A411E5 /* OfficialListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfficialListCell.h; sourceTree = "<group>"; };
 		9FBF12BA1E0B685C00A411E5 /* OfficialListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfficialListCell.m; sourceTree = "<group>"; };
 		9FBF12BB1E0B685C00A411E5 /* OfficialListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OfficialListCell.xib; path = ../Views/OfficialListCell.xib; sourceTree = "<group>"; };
+		9FC640731E1E0F8A009E36C3 /* RankSongsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankSongsViewController.h; sourceTree = "<group>"; };
+		9FC640741E1E0F8A009E36C3 /* RankSongsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankSongsViewController.m; sourceTree = "<group>"; };
+		9FC640751E1E0F8A009E36C3 /* RankSongsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RankSongsViewController.xib; sourceTree = "<group>"; };
+		9FC640781E1E2890009E36C3 /* RankSongHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankSongHeaderView.h; sourceTree = "<group>"; };
+		9FC640791E1E2890009E36C3 /* RankSongHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankSongHeaderView.m; sourceTree = "<group>"; };
 		9FF207631E0A635800A70C35 /* SegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentView.h; sourceTree = "<group>"; };
 		9FF207641E0A635800A70C35 /* SegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentView.m; sourceTree = "<group>"; };
 		9FF207661E0A7CC900A70C35 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
@@ -677,6 +685,9 @@
 				9F2C34EC1E07C21D0004867B /* DiscoverViewController.m */,
 				9FBF12A51E0B627300A411E5 /* RankViewController.h */,
 				9FBF12A61E0B627300A411E5 /* RankViewController.m */,
+				9FC640731E1E0F8A009E36C3 /* RankSongsViewController.h */,
+				9FC640741E1E0F8A009E36C3 /* RankSongsViewController.m */,
+				9FC640751E1E0F8A009E36C3 /* RankSongsViewController.xib */,
 			);
 			path = Ctrls;
 			sourceTree = "<group>";
@@ -690,6 +701,8 @@
 				9FBF12B51E0B682D00A411E5 /* UserListCell.m */,
 				9FBF12B91E0B685C00A411E5 /* OfficialListCell.h */,
 				9FBF12BA1E0B685C00A411E5 /* OfficialListCell.m */,
+				9FC640781E1E2890009E36C3 /* RankSongHeaderView.h */,
+				9FC640791E1E2890009E36C3 /* RankSongHeaderView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1246,6 +1259,7 @@
 				9F2C35641E07C2460004867B /* cm2_btm_tab_right@3x.png in Resources */,
 				9F2C35581E07C2460004867B /* cm2_btm_icn_discovery@3x.png in Resources */,
 				9F0752A81E0BDC3F00767753 /* cm2_vehicle_btn_prev@2x.png in Resources */,
+				9FC640771E1E0F8A009E36C3 /* RankSongsViewController.xib in Resources */,
 				9FBF12B81E0B682D00A411E5 /* UserListCell.xib in Resources */,
 				9F0752901E0BDC3F00767753 /* cm2_icn_shuffle@2x.png in Resources */,
 				9F7DE7C61E03D394002E782C /* Assets.xcassets in Resources */,
@@ -1474,6 +1488,7 @@
 				9F2C351D1E07C21D0004867B /* MyMusicViewController.m in Sources */,
 				9F2C35251E07C21D0004867B /* MyMusicTableHeaderView.m in Sources */,
 				9F2C35231E07C21D0004867B /* MyMusicCell.m in Sources */,
+				9FC640761E1E0F8A009E36C3 /* RankSongsViewController.m in Sources */,
 				9F0752341E0BB56800767753 /* UIImage+YMJEffects.m in Sources */,
 				9FBF12A81E0B627300A411E5 /* RankViewController.m in Sources */,
 				9F7768621E0A58CB0024F827 /* SlidingViewController.m in Sources */,
@@ -1493,6 +1508,7 @@
 				9F7DE7BE1E03D394002E782C /* AppDelegate.m in Sources */,
 				9F2C351F1E07C21D0004867B /* MySingerViewController.m in Sources */,
 				9F7DE7BB1E03D394002E782C /* main.m in Sources */,
+				9FC6407A1E1E2890009E36C3 /* RankSongHeaderView.m in Sources */,
 				9F82238D1E1C9668001AFB93 /* BaseNetworking.m in Sources */,
 				9F40AE421E08E3C70058A395 /* UIView+YMJExtension.m in Sources */,
 				9F2C35151E07C21D0004867B /* UIViewController+YMJPushTransitioning.m in Sources */,

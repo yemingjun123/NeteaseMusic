@@ -35,9 +35,12 @@
 - (void)requestWithMethod:(NSString *)methodType params:(id)params completion:(HTTPRequestCompletion)completion {
     NSURLSessionDataTask *task = nil;
     self.completionBlock = completion;
-    self.request = [[AFHTTPRequestSerializer serializer]requestWithMethod:methodType URLString:self.urlString parameters:params error:nil];
+    NSDictionary *parameter = [self setupRequsetParamet:params];
+    self.request = [[AFHTTPRequestSerializer serializer]requestWithMethod:methodType URLString:self.urlString parameters:parameter error:nil];
     self.request.timeoutInterval = 10.0f;
+//    @weakify(self)
     task  = [self.manager dataTaskWithRequest:self.request completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+//        @strongify(self)
         self.completionBlock(response,responseObject,error);
     }];
     [task resume];
@@ -67,6 +70,17 @@
             return;
         }
     }];
+}
+
+- (NSDictionary *)setupRequsetParamet:(NSDictionary *)params {
+    NSMutableDictionary *mParams = [[NSMutableDictionary alloc]initWithDictionary:params];
+    /*
+     @"ua"        : @"Iphone_Sst",
+     @"version"   : @"4.30903",
+     */
+    [mParams setObject:app_Channel forKey:@"ua"];
+    [mParams setObject:app_Version forKey:@"version"];
+    return mParams;
 }
 
 

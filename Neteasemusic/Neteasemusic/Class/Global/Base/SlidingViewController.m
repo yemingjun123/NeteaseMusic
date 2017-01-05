@@ -36,7 +36,7 @@
     self.pageController.view.frame = CGRectMake(0, 40, self.view.ymj_w, self.view.ymj_h - 40);
     self.pageController.dataSource = self;
     self.pageController.delegate = self;
-//    [self addChildViewController:self.pageController];
+    [self addChildViewController:self.pageController];
     [self.view addSubview:self.pageController.view];
 }
 

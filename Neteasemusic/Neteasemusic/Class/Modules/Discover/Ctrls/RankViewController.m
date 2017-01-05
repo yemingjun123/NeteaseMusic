@@ -10,6 +10,7 @@
 #import "UserListCell.h"
 #import "OfficialListCell.h"
 #import "RankViewModel.h"
+#import "RankSongsViewController.h"
 #define user_spaceW 10
 
 
@@ -58,7 +59,8 @@ static NSString *officialistIdentifier = @"officialistIdentifier";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
         OfficialListCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:officialistIdentifier forIndexPath:indexPath];
-        cell.ranksModel = self.viewModel.modelArray[indexPath.row];
+        RanksModel *rankModel = self.viewModel.modelArray[indexPath.row];
+        cell.ranksModel = rankModel;
         return cell;
     } else {
         UserListCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:userlistIdentifier forIndexPath:indexPath];
@@ -68,7 +70,9 @@ static NSString *officialistIdentifier = @"officialistIdentifier";
 
 //UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    
+    RankSongsViewController *ranksong = [[RankSongsViewController alloc]init];
+    ranksong.url = self.viewModel.modelArray[indexPath.row].url;
+    [self nv_pushViewController:ranksong animated:YES];
 }
 
 //UICollectionViewDelegateFlowLayout

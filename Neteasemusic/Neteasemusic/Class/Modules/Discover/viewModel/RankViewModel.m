@@ -8,8 +8,15 @@
 
 #import "RankViewModel.h"
 #import "BaseNetworking.h"
+#import "MJExtension.h"
 
 @interface RankViewModel ()
+
+@property (copy, nonatomic) Completion completionBlock;
+
+@end
+
+@interface RankSongsViewModel ()
 
 @property (copy, nonatomic) Completion completionBlock;
 
@@ -22,8 +29,6 @@
     BaseNetworking *network = [[BaseNetworking alloc]initWithUrl:@"http://a.mll.migu.cn/rdp2/v5.5/ranklist.do"];
     NSDictionary *parms = @{
                             @"groupcode" : @"rank",
-                            @"ua"        : @"Iphone_Sst",
-                            @"version"   : @"4.30903",
                             @"pageno"    : @1
                             };
     @weakify(self)
@@ -31,7 +36,7 @@
         if (responseObject) {
             @strongify(self)
             if (responseObject) {
-                [self startParsingData:responseObject];
+                [self modelArrayWithKeyValues:responseObject];
                 self.completionBlock(YES);
             }
             if (error) {
@@ -41,13 +46,51 @@
     }];
 }
 
-- (void)startParsingData:(id)result {
-    NSArray *groups = [result objectForKey:@"groups"];
-    GroupsModel *groupModel = [GroupsModel mj_objectWithKeyValues:groups[0]];
-    self.modelArray = groupModel.ranks;
+- (void)modelArrayWithKeyValues:(id)result {
+    [RankModel mj_setupObjectClassInArray:^NSDictionary *{
+        return @{@"groups" : [GroupsModel class]};
+    }];
+    [GroupsModel mj_setupObjectClassInArray:^NSDictionary *{
+        return @{@"ranks" : [RanksModel class]};
+    }];
+    [RanksModel mj_setupObjectClassInArray:^NSDictionary *{
+        return @{@"rankSongs" : [RankSongsModel class]};
+    }];
+    RankModel *rankModel = [RankModel mj_objectWithKeyValues:result];
+    self.groupArray = rankModel.groups;
+    self.modelArray = [self.groupArray lastObject].ranks;
+}
+
+@end
+
+@implementation RankSongsViewModel
+
+- (void)refreshDataUrl:(NSString *)url pramas:(id)pramas completion:(Completion)complet {
+    self.completionBlock = complet;
+    BaseNetworking *network = [[BaseNetworking alloc]initWithUrl:url];
+    @weakify(self)
+    [network requestWithMethod:@"GET" params:pramas completion:^(NSURLResponse *response, id responseObject, NSError *error) {
+        if (responseObject) {
+            @strongify(self)
+            if (responseObject) {
+                [self modelArrayWithKeyValues:responseObject];
+//                self.completionBlock(YES);
+            }
+            if (error) {
+                self.completionBlock(NO);
+            }
+        }
+    }];
+}
+
+- (void)modelArrayWithKeyValues:(id)result {
+    [RanksModel mj_setupObjectClassInArray:^NSDictionary *{
+        return @{@"rankSongs" : [RankSongsModel class]};
+    }];
+    self.data = [RanksModel mj_objectWithKeyValues:result];
 }
 
 
-
-
 @end
+
+
