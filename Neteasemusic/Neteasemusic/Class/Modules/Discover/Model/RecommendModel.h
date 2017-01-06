@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "RankModel.h"
-@class GroupModel,RecommendCmModel,BannerModel;
+@class RecommendGroupModel,RecommendCmModel,BannerModel;
 
 @interface RecommendModel : NSObject
 
 @property (copy, nonatomic) NSString *publishTime;
-@property (strong, nonatomic) NSArray <GroupModel *>*groups;
+@property (strong, nonatomic) NSArray <RecommendGroupModel *>*groups;
 
 @end
 
@@ -35,7 +35,7 @@
  ]
  */
 
-@interface GroupModel : NSObject
+@interface RecommendGroupModel : NSObject
 
 @property (copy, nonatomic) NSString *title;
 @property (copy, nonatomic) NSString *type;
@@ -115,7 +115,6 @@
 @property (copy, nonatomic) NSString *img;
 @property (copy, nonatomic) NSString *url;
 @property (copy, nonatomic) NSString *groupcode;
-@property (assign, nonatomic) NSInteger *sourceId;
 @property (copy, nonatomic) NSString *tagPicUrl;
 
 

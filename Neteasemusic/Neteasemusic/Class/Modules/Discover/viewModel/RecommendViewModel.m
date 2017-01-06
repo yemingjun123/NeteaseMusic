@@ -38,41 +38,24 @@
     }];
 }
 
-
 - (void)modelArrayWithKeyValues:(id)result {
-    
     [RecommendModel mj_setupObjectClassInArray:^NSDictionary *{
-        return @{@"groups" : [GroupModel class]};
+        return @{@"groups" : [RecommendGroupModel class]};
     }];
-    [GroupModel mj_setupObjectClassInArray:^NSDictionary *{
-        return @{@"banners" : [BannerModel class]};
+    [RecommendGroupModel mj_setupObjectClassInArray:^NSDictionary *{
+        return @{
+                 @"banners" : [BannerModel class],
+                 @"hotSpots" : [RecommendCmModel class],
+                 @"recommends" : [RecommendCmModel class],
+                 @"firsts" : [RecommendCmModel class],
+                 @"topics" : [RecommendCmModel class],
+                 @"radios" : [RecommendCmModel class],
+                 @"activities" : [RecommendCmModel class],
+                 @"miguColumns" : [RecommendCmModel class],
+                 @"songs" : [RankSongsModel class]
+                 };
     }];
-    [GroupModel mj_setupObjectClassInArray:^NSDictionary *{
-        return @{@"hotSpots" : [RecommendCmModel class]};
-    }];
-    [GroupModel mj_setupObjectClassInArray:^NSDictionary *{
-        return @{@"recommends" : [RecommendCmModel class]};
-    }];
-    [GroupModel mj_setupObjectClassInArray:^NSDictionary *{
-        return @{@"firsts" : [RecommendCmModel class]};
-    }];
-    [GroupModel mj_setupObjectClassInArray:^NSDictionary *{
-        return @{@"topics" : [RecommendCmModel class]};
-    }];
-    [GroupModel mj_setupObjectClassInArray:^NSDictionary *{
-        return @{@"radios" : [RecommendCmModel class]};
-    }];
-    [GroupModel mj_setupObjectClassInArray:^NSDictionary *{
-        return @{@"activities" : [RecommendCmModel class]};
-    }];
-    [GroupModel mj_setupObjectClassInArray:^NSDictionary *{
-        return @{@"miguColumns" : [RecommendCmModel class]};
-    }];
-    [GroupModel mj_setupObjectClassInArray:^NSDictionary *{
-        return @{@"songs" : [RankSongsModel class]};
-    }];
-    RecommendModel *recommendMo = [RecommendModel mj_objectWithKeyValues:result];
-    self.dataModel = recommendMo;
+    self.dataModel = [RecommendModel mj_objectWithKeyValues:result];
 }
 
 @end

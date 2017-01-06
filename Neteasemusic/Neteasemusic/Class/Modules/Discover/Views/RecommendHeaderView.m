@@ -7,7 +7,6 @@
 //
 
 #import "RecommendHeaderView.h"
-#import "RecommendModel.h"
 #import "UIImageView+AFNetworking.h"
 
 @interface RecommendHeaderView () <UIScrollViewDelegate>
@@ -33,7 +32,7 @@
 - (void)setUI {
     _currentIndex = -1;
     self.scrollView = [[UIScrollView alloc]init];
-    self.scrollView.frame = self.frame;
+    self.scrollView.frame = CGRectMake(0, 0, self.ymj_w, self.ymj_h);
     self.scrollView.delegate = self ;
     self.scrollView.pagingEnabled = YES;
     self.scrollView.showsVerticalScrollIndicator = NO;
@@ -43,7 +42,7 @@
     [self addSubview:self.scrollView];
     
     self.pageContrl = [[UIPageControl alloc]init];
-    self.pageContrl.frame = CGRectMake((self.frame.size.width - 80)/2, -20, 80, 20);
+    self.pageContrl.frame = CGRectMake((self.ymj_w - 80) / 2, self.ymj_h - 20, 80, 20);
     self.pageContrl.currentPageIndicatorTintColor = UIColorFromRGB(whiteColor);
     self.pageContrl.pageIndicatorTintColor = UIColorFromRGB(GrayColor);
     self.pageContrl.currentPage = 0;
@@ -72,7 +71,7 @@
     [self.scrollView setContentOffset:CGPointMake(CGRectGetWidth(self.frame), 0)];
 }
 
-- (void)setDataArray:(NSArray *)dataArray {
+- (void)setDataArray:(NSArray<BannerModel *> *)dataArray {
     _dataArray = dataArray;
     self.pageContrl.numberOfPages = _dataArray.count;
 }
@@ -85,11 +84,6 @@
         BannerModel *currentModel = _dataArray[_currentIndex];
         BannerModel *leftModel = _dataArray[leftImageIndex];
         BannerModel *rightModel = _dataArray[rightImageIndex];
-        
-        
-        NSLog(@"1 - %@",currentModel.img);
-        NSLog(@"2 - %@",leftModel.img);
-        NSLog(@"3 - %@",rightModel.img);
         [self.centerImageView setImageWithURL:[NSURL URLWithString:currentModel.img]];
         [self.leftImageView setImageWithURL:[NSURL URLWithString:leftModel.img]];
         [self.rightImageView setImageWithURL:[NSURL URLWithString:rightModel.img]];

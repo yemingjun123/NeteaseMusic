@@ -13,7 +13,7 @@
 @end
 
 
-@implementation GroupModel
+@implementation RecommendGroupModel
 
 @end
 

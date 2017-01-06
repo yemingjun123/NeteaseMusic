@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RecommendModel.h"
 
 @interface RecommendHeaderView : UIView
 
 @property (assign, nonatomic) NSInteger currentIndex ;
 
-@property (strong, nonatomic) NSArray *dataArray;
+@property (strong, nonatomic) NSArray <BannerModel *>*dataArray;
 
 @end

@@ -46,7 +46,7 @@
 }
 
 - (void)setUI {
-    CGRect frame = CGRectMake(0, 200, kSCREENkWIDTH, 200);
+    CGRect frame = CGRectMake(0, 0, kSCREENkWIDTH, 200);
     self.headView = [[RecommendHeaderView alloc]initWithFrame:frame];
     [self.view addSubview:self.headView];
 }
