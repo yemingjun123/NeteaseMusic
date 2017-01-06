@@ -10,9 +10,9 @@
 #import <UIKit/UIKit.h>
 
 #import "UIViewController+YMJPushTransitioning.h"
-#import "UIView+YMJExtension.h"
-#import "UIScrollView+YMJExtension.h"
-#import "NSString+YMJExtension.h"
+#import "UIView+NTExtension.h"
+#import "UIScrollView+NTExtension.h"
+#import "NSString+NTExtension.h"
 
 
 #pragma mark - log
@@ -54,9 +54,11 @@ green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 #define whiteColor          0xffffff
+#define DarkOrangeColor     0xC53F40
 #define darkRedColor        0xd43b33
 #define darkGrayColor       0x333333
 #define lightGrayColor      0x666666
+#define GrayColor           0x999999
 
 #pragma mark - weak&&strong
 #ifndef weakify

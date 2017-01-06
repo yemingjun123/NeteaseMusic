@@ -1,14 +1,14 @@
 //
-//  UIScrollView+YMJExtension.h
+//  UIScrollView+NTExtension.h
 //  Neteasemusic
 //
-//  Created by 叶明君 on 16/12/20.
-//  Copyright © 2016年 叶明君. All rights reserved.
+//  Created by 叶明君 on 17/1/6.
+//  Copyright © 2017年 叶明君. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface UIScrollView (YMJExtension)
+@interface UIScrollView (NTExtension)
 
 @property (assign, nonatomic) CGFloat ymj_insetT;
 @property (assign, nonatomic) CGFloat ymj_insetB;

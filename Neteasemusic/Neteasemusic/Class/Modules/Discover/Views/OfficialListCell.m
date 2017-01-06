@@ -27,7 +27,6 @@
     }
 }
 
-
 - (NSString *)stringInArrayAtIndex:(NSInteger)index {
     if (_ranksModel.rankSongs.count > index) {
         RankSongsModel *model = [_ranksModel.rankSongs objectAtIndex:index];

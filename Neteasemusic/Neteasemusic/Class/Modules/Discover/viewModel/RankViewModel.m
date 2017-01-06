@@ -74,7 +74,7 @@
             @strongify(self)
             if (responseObject) {
                 [self modelArrayWithKeyValues:responseObject];
-//                self.completionBlock(YES);
+                self.completionBlock(YES);
             }
             if (error) {
                 self.completionBlock(NO);
@@ -87,7 +87,11 @@
     [RanksModel mj_setupObjectClassInArray:^NSDictionary *{
         return @{@"rankSongs" : [RankSongsModel class]};
     }];
+    [RanksModel mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
+        return @{@"rankSongs" : @"songs"};
+    }];
     self.data = [RanksModel mj_objectWithKeyValues:result];
+    self.modelArray = self.data.rankSongs;
 }
 
 

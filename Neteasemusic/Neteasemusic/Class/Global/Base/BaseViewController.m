@@ -8,6 +8,7 @@
 
 #import "BaseViewController.h"
 #import "TopBarPlayButton.h"
+#import "UIImage+NTExtension.h"
 #import "MusicPlayerViewController.h"
 
 @interface BaseViewController ()
@@ -28,10 +29,6 @@
     [self setColor:UIColorFromRGB(darkRedColor)];
     [self setLeftBarButton:[UIImage imageNamed:@"cm2_topbar_icn_back.png"]
         title:nil target:self action:@selector(touchBackEvent)];
-    self.reightBarItem = [TopBarPlayButton sharedTopBarPlayButton];
-    [self.reightBarItem addTarget:self action:@selector(touchPlayPageEvent)];
-    UIBarButtonItem *rightBar = [[UIBarButtonItem alloc] initWithCustomView:self.reightBarItem];
-    self.navigationItem.rightBarButtonItem = rightBar;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,12 +38,6 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-//    if (self.navigationController.viewControllers.count > 1) {
-//        self.tabBarController.tabBar.hidden = YES;
-//        self.hidesBottomBarWhenPushed
-//    } else {
-//        self.tabBarController.tabBar.hidden = NO;
-//    }
 }
 
 #pragma mark - customNavigationBar
@@ -87,6 +78,27 @@
     self.navigationItem.rightBarButtonItem = rightBar;
 }
 
+- (void)nv_changeAlphaWithCurrentOffset:(CGFloat)offsetY {
+    CGFloat minAlphaOffset = - 64;
+    CGFloat maxAlphaOffset = 145;
+    CGFloat alpha = (offsetY - minAlphaOffset) / (maxAlphaOffset - minAlphaOffset);
+    if (offsetY > 145) {
+        self.navigationController.navigationBar.translucent = NO;
+    } else {
+        self.navigationController.navigationBar.translucent = YES;
+    }
+    UIImage *backgroundImage = [UIImage imageWithColor:[UIColorFromRGB(darkRedColor)
+                                                        colorWithAlphaComponent:alpha]];
+    [self.navigationController.navigationBar setBackgroundImage:backgroundImage
+                                                  forBarMetrics:UIBarMetricsDefault];
+}
+
+- (void)nv_pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    self.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:viewController animated:animated];
+    self.hidesBottomBarWhenPushed = NO;
+}
+
 #pragma mark - Response Event
 - (void)touchBackEvent {
     [self.navigationController popViewControllerAnimated:YES];
@@ -96,10 +108,5 @@
     [self nv_pushViewController:self.musicPlayer animated:YES];
 }
 
-- (void)nv_pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
-    self.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:viewController animated:YES];
-    self.hidesBottomBarWhenPushed = NO;
-}
 
 @end

@@ -36,7 +36,7 @@
                         <constraint firstAttribute="width" constant="45" id="7zD-vA-pm9"/>
                         <constraint firstAttribute="height" constant="45" id="S2a-iK-ahe"/>
                     </constraints>
-                    <state key="normal" image="cm2_fm_btn_cmt.png"/>
+                    <state key="normal" image="cm2_play_icn_cmt.png"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSV-Aq-fdH">
                     <rect key="frame" x="127.5" y="497" width="45" height="45"/>
@@ -189,10 +189,10 @@
         </view>
     </objects>
     <resources>
-        <image name="cm2_fm_btn_cmt.png" width="49" height="49"/>
         <image name="cm2_fm_btn_love.png" width="49" height="49"/>
         <image name="cm2_icn_list.png" width="44" height="44"/>
         <image name="cm2_icn_shuffle.png" width="44" height="44"/>
+        <image name="cm2_play_icn_cmt.png" width="40" height="40"/>
         <image name="cm2_play_icn_dld.png" width="40" height="40"/>
         <image name="cm2_play_icn_more.png" width="40" height="40"/>
         <image name="cm2_topbar_icn_back.png" width="28" height="28"/>

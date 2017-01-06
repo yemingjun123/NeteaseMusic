@@ -8,6 +8,7 @@
 
 #import "DiscoverViewController.h"
 #import "RankViewController.h"
+#import "RecommendViewController.h"
 
 @interface DiscoverViewController ()<SlidingViewDelegate,SlidingViewDataSource>
 
@@ -24,11 +25,7 @@
     self.delegate = self;
     self.dataSource = self;
     self.titles = @[@"个性推荐",@"歌单",@"主播电台",@"排行榜"];
-    
-    
-    UIViewController *v1 = [[UIViewController alloc]init];
-    v1.view.backgroundColor = UIColorFromRGB(darkRedColor);
-    
+    RecommendViewController *v1 = [[RecommendViewController alloc]init];
     UIViewController *v2 = [[UIViewController alloc]init];
     v2.view.backgroundColor = UIColorFromRGB(darkGrayColor);
     
@@ -36,10 +33,7 @@
     v3.view.backgroundColor = UIColorFromRGB(whiteColor);
     
     RankViewController *v4 = [[RankViewController alloc]init];
-//    v4.view.backgroundColor = UIColorFromRGB(lightGrayColor);
-    
-    self.controllers = @[v1,v2,v3,v4];
-    
+    self.controllers = @[v1,v2,v3,v4];    
     [self reloadData];
 }
 

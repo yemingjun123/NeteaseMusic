@@ -14,9 +14,7 @@ typedef void(^Completion)(BOOL success);
 @interface RankViewModel : NSObject
 
 @property (strong, nonatomic) NSArray<RanksModel *> *modelArray;
-
 @property (strong, nonatomic) NSArray<GroupsModel *> *groupArray;
-
 - (void)refreshDataCompletion:(Completion)complet;
 
 @end
@@ -24,12 +22,8 @@ typedef void(^Completion)(BOOL success);
 
 @interface RankSongsViewModel : NSObject
 
-@property (strong, nonatomic) NSArray *modelArray;
-
+@property (strong, nonatomic) NSArray<RankSongsModel *>*modelArray;
 @property (strong, nonatomic) RanksModel *data;
-
 - (void)refreshDataUrl:(NSString *)url pramas:(id)pramas completion:(Completion)complet;
 
 @end
-
-

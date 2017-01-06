@@ -22,4 +22,6 @@
 
 - (void)nv_pushViewController:(UIViewController *)viewController animated:(BOOL)animated;
 
+- (void)nv_changeAlphaWithCurrentOffset:(CGFloat)offsetY;
+
 @end

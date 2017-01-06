@@ -1,18 +1,18 @@
 //
-//  UIImage+YMJEffects.m
+//  UIImage+NTExtension.m
 //  Neteasemusic
 //
-//  Created by 叶明君 on 16/12/22.
-//  Copyright © 2016年 叶明君. All rights reserved.
+//  Created by 叶明君 on 17/1/6.
+//  Copyright © 2017年 叶明君. All rights reserved.
 //
 
-#import "UIImage+YMJEffects.h"
+#import "UIImage+NTExtension.h"
 #import <Accelerate/Accelerate.h>
 #import <float.h>
 
 #define kSaturationDeltaFactor 1.8
 
-@implementation UIImage (YMJEffects)
+@implementation UIImage (NTExtension)
 
 - (UIImage *)ymj_lightEffect {
     return [self ymj_blurWithRadius:30 tintColor:UIColorFromRGB(lightGrayColor) saturationDeltaFactor:kSaturationDeltaFactor maskImage:nil];
@@ -113,7 +113,6 @@
     CGContextRef outputContext = UIGraphicsGetCurrentContext();
     CGContextScaleCTM(outputContext, 1.0, -1.0);
     CGContextTranslateCTM(outputContext, 0, -self.size.height);
-    
     // Draw base image.
     CGContextDrawImage(outputContext, imageRect, self.CGImage);
     
@@ -126,7 +125,6 @@
         CGContextDrawImage(outputContext, imageRect, effectImage.CGImage);
         CGContextRestoreGState(outputContext);
     }
-    
     // Add in color tint.
     if (tintColor) {
         CGContextSaveGState(outputContext);
@@ -134,12 +132,22 @@
         CGContextFillRect(outputContext, imageRect);
         CGContextRestoreGState(outputContext);
     }
-    
     // Output image is ready.
     UIImage *outputImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-    
     return outputImage;
 }
+
++ (UIImage *)imageWithColor:(UIColor *)color {
+    CGRect rect = CGRectMake(0, 0, 1, 1);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    [color setFill];
+    CGContextFillRect(context, rect);
+    UIImage *imgae = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return imgae;
+}
+
 
 @end

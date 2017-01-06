@@ -1,15 +1,14 @@
 //
-//  UIView+YMJExtension.m
+//  UIView+NTExtension.m
 //  Neteasemusic
 //
-//  Created by 叶明君 on 16/12/20.
-//  Copyright © 2016年 叶明君. All rights reserved.
+//  Created by 叶明君 on 17/1/6.
+//  Copyright © 2017年 叶明君. All rights reserved.
 //
 
-#import "UIView+YMJExtension.h"
+#import "UIView+NTExtension.h"
 
-@implementation UIView (YMJExtension)
-
+@implementation UIView (NTExtension)
 
 - (CGFloat)ymj_x {
     return CGRectGetMinX(self.frame);

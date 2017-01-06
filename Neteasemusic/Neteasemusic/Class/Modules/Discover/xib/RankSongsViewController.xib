@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RankSongsViewController">
             <connections>
+                <outlet property="tableView" destination="vEV-iE-K0k" id="1mh-Sb-hED"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,9 +21,13 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vEV-iE-K0k">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="vEV-iE-K0k">
+                    <rect key="frame" x="0.0" y="-64" width="375" height="731"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Img-9w-8eF"/>
+                        <outlet property="delegate" destination="-1" id="NRL-vX-rpq"/>
+                    </connections>
                 </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -30,7 +35,7 @@
                 <constraint firstAttribute="trailing" secondItem="vEV-iE-K0k" secondAttribute="trailing" id="AXc-K6-bTM"/>
                 <constraint firstAttribute="bottom" secondItem="vEV-iE-K0k" secondAttribute="bottom" id="MgC-DV-PGi"/>
                 <constraint firstItem="vEV-iE-K0k" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="XNu-3s-d9M"/>
-                <constraint firstItem="vEV-iE-K0k" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="kVU-xR-oY7"/>
+                <constraint firstItem="vEV-iE-K0k" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="-64" id="kVU-xR-oY7"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>

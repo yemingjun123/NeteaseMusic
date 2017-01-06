@@ -7,7 +7,7 @@
 //
 
 #import "MusicPlayerViewController.h"
-#import "UIImageView+YMJBlurEffects.h"
+#import "UIImageView+NTExtension.h"
 
 @interface MusicPlayerViewController ()
 

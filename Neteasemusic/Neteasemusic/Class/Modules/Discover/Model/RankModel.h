@@ -80,4 +80,8 @@
 @property (copy, nonatomic) NSString *url;
 @property (copy, nonatomic) NSString *singerIcon;
 
+//在列表中的编号
+@property (assign, nonatomic) NSInteger number;
+@property (strong, nonatomic) UIColor *numberColor;
+
 @end

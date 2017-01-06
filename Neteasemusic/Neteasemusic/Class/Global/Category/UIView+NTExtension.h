@@ -1,14 +1,14 @@
 //
-//  UIView+YMJExtension.h
+//  UIView+NTExtension.h
 //  Neteasemusic
 //
-//  Created by 叶明君 on 16/12/20.
-//  Copyright © 2016年 叶明君. All rights reserved.
+//  Created by 叶明君 on 17/1/6.
+//  Copyright © 2017年 叶明君. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface UIView (YMJExtension)
+@interface UIView (NTExtension)
 
 @property (assign, nonatomic) CGFloat ymj_x;
 @property (assign, nonatomic) CGFloat ymj_y;

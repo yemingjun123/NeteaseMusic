@@ -25,4 +25,13 @@
 
 @implementation RankSongsModel
 
+- (void)setNumber:(NSInteger)number {
+    _number = number;
+    if (_number >= 3) {
+        self.numberColor = UIColorFromRGB(GrayColor);
+    } else {
+        self.numberColor = UIColorFromRGB(DarkOrangeColor);
+    }
+}
+
 @end

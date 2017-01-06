@@ -51,11 +51,13 @@
 }
 
 - (IBAction)touchPlayListEvent:(id)sender {
-    [self.navigationController pushViewController:newClass(@"PlayListViewController") animated:YES];
+    PlayListViewController *play = [[PlayListViewController alloc]init];
+    [self nv_pushViewController:play animated:YES];
 }
 
 - (IBAction)touchMySingerEvent:(id)sender {
-    [self.navigationController pushViewController:newClass(@"MySingerViewController") animated:YES];
+    MyMusicViewController *myMusic = [[MyMusicViewController alloc]init];
+    [self nv_pushViewController:myMusic animated:YES];
 }
 
 @end
