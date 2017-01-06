@@ -56,6 +56,9 @@
                  };
     }];
     self.dataModel = [RecommendModel mj_objectWithKeyValues:result];
+    NSMutableArray *groupArray = [[NSMutableArray alloc]initWithArray:self.dataModel.groups];
+    [groupArray removeObjectAtIndex:0];
+    self.dataArray = groupArray;
 }
 
 @end

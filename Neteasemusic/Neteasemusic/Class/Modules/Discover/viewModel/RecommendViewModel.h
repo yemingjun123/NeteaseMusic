@@ -14,6 +14,8 @@ typedef void(^Completion)(BOOL success);
 @interface RecommendViewModel : NSObject
 
 @property (strong, nonatomic) RecommendModel *dataModel;
+@property (strong, nonatomic) NSArray <RecommendGroupModel *> *dataArray;
+
 - (void)refreshDataCompletion:(Completion)complet;
 
 @end
