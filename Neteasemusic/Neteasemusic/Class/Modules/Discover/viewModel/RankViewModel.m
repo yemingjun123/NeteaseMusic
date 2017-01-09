@@ -7,46 +7,22 @@
 //
 
 #import "RankViewModel.h"
-#import "BaseNetworking.h"
 #import "MJExtension.h"
 
-@interface RankViewModel ()
-
-@property (copy, nonatomic) Completion completionBlock;
-
-@end
-
-@interface RankSongsViewModel ()
-
-@property (copy, nonatomic) Completion completionBlock;
-
-@end
-
 @implementation RankViewModel
+@synthesize responseObject = _responseObject;
 
 - (void)refreshDataCompletion:(Completion)complet{
-    self.completionBlock = complet;
-    BaseNetworking *network = [[BaseNetworking alloc]initWithUrl:@"http://a.mll.migu.cn/rdp2/v5.5/ranklist.do"];
     NSDictionary *parms = @{
                             @"groupcode" : @"rank",
                             @"pageno"    : @1
                             };
-    @weakify(self)
-    [network requestWithMethod:@"GET" params:parms completion:^(NSURLResponse *response, id responseObject, NSError *error) {
-        if (responseObject) {
-            @strongify(self)
-            if (responseObject) {
-                [self modelArrayWithKeyValues:responseObject];
-                self.completionBlock(YES);
-            }
-            if (error) {
-                self.completionBlock(NO);
-            }
-        }
-    }];
+    NSString *url = @"http://a.mll.migu.cn/rdp2/v5.5/ranklist.do";
+    [self refreshDataUrl:url pramas:parms completion:complet];
 }
 
-- (void)modelArrayWithKeyValues:(id)result {
+- (void)setResponseObject:(id)responseObject {
+    _responseObject = responseObject;
     [RankModel mj_setupObjectClassInArray:^NSDictionary *{
         return @{@"groups" : [GroupsModel class]};
     }];
@@ -56,7 +32,7 @@
     [RanksModel mj_setupObjectClassInArray:^NSDictionary *{
         return @{@"rankSongs" : [RankSongsModel class]};
     }];
-    RankModel *rankModel = [RankModel mj_objectWithKeyValues:result];
+    RankModel *rankModel = [RankModel mj_objectWithKeyValues:_responseObject];
     self.groupArray = rankModel.groups;
     self.modelArray = [self.groupArray lastObject].ranks;
 }
@@ -64,36 +40,19 @@
 @end
 
 @implementation RankSongsViewModel
+@synthesize responseObject = _responseObject;
 
-- (void)refreshDataUrl:(NSString *)url pramas:(id)pramas completion:(Completion)complet {
-    self.completionBlock = complet;
-    BaseNetworking *network = [[BaseNetworking alloc]initWithUrl:url];
-    @weakify(self)
-    [network requestWithMethod:@"GET" params:pramas completion:^(NSURLResponse *response, id responseObject, NSError *error) {
-        if (responseObject) {
-            @strongify(self)
-            if (responseObject) {
-                [self modelArrayWithKeyValues:responseObject];
-                self.completionBlock(YES);
-            }
-            if (error) {
-                self.completionBlock(NO);
-            }
-        }
-    }];
-}
-
-- (void)modelArrayWithKeyValues:(id)result {
+- (void)setResponseObject:(id)responseObject {
+    _responseObject = responseObject;
     [RanksModel mj_setupObjectClassInArray:^NSDictionary *{
         return @{@"rankSongs" : [RankSongsModel class]};
     }];
     [RanksModel mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
         return @{@"rankSongs" : @"songs"};
     }];
-    self.data = [RanksModel mj_objectWithKeyValues:result];
+    self.data = [RanksModel mj_objectWithKeyValues:_responseObject];
     self.modelArray = self.data.rankSongs;
 }
-
 
 @end
 

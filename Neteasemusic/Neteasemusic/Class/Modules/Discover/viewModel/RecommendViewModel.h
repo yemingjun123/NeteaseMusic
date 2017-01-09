@@ -8,14 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "RecommendModel.h"
+#import "BaseViewModel.h"
 
-typedef void(^Completion)(BOOL success);
-
-@interface RecommendViewModel : NSObject
+@interface RecommendViewModel : BaseViewModel
 
 @property (strong, nonatomic) RecommendModel *dataModel;
 @property (strong, nonatomic) NSArray <RecommendGroupModel *> *dataArray;
 
 - (void)refreshDataCompletion:(Completion)complet;
+- (NSInteger)numberOfItemsInSection:(NSInteger)section;
+- (CGSize)sizeForItemAtIndexPath:(NSIndexPath *)indexPath;
 
 @end

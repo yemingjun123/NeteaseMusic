@@ -7,11 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BaseViewModel.h"
 #import "RankModel.h"
 
-typedef void(^Completion)(BOOL success);
-
-@interface RankViewModel : NSObject
+@interface RankViewModel : BaseViewModel
 
 @property (strong, nonatomic) NSArray<RanksModel *> *modelArray;
 @property (strong, nonatomic) NSArray<GroupsModel *> *groupArray;
@@ -20,10 +19,9 @@ typedef void(^Completion)(BOOL success);
 @end
 
 
-@interface RankSongsViewModel : NSObject
+@interface RankSongsViewModel : BaseViewModel
 
 @property (strong, nonatomic) NSArray<RankSongsModel *>*modelArray;
 @property (strong, nonatomic) RanksModel *data;
-- (void)refreshDataUrl:(NSString *)url pramas:(id)pramas completion:(Completion)complet;
 
 @end

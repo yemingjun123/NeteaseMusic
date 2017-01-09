@@ -27,7 +27,6 @@ static NSString *userlistIdentifier = @"userlistIdentifier";
 static NSString *officialistIdentifier = @"officialistIdentifier";
 
 #pragma mark - lifecycle
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.collectionView registerNib:[UINib nibWithNibName:@"UserListCell" bundle:nil] forCellWithReuseIdentifier:userlistIdentifier];

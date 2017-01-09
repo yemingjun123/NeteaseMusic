@@ -11,25 +11,32 @@
 
 @interface RecommendHeaderView () <UIScrollViewDelegate>
 
-@property (strong, nonatomic) UIImageView *leftImageView;
-@property (strong, nonatomic) UIImageView *centerImageView;
-@property (strong, nonatomic) UIImageView *rightImageView;
-@property (strong, nonatomic) UIScrollView *scrollView;
+@property (strong, nonatomic) UIImageView   *leftImageView;
+@property (strong, nonatomic) UIImageView   *centerImageView;
+@property (strong, nonatomic) UIImageView   *rightImageView;
+@property (strong, nonatomic) UIScrollView  *scrollView;
 @property (strong, nonatomic) UIPageControl *pageContrl;
+@property (strong, nonatomic) UILabel       *titleLabel;
+@property (assign, nonatomic) RecommendHeaderStyle style;
 
 @end
 
 @implementation RecommendHeaderView
 
-- (instancetype)initWithFrame:(CGRect)frame {
+- (instancetype)initWithFrame:(CGRect)frame style:(RecommendHeaderStyle)style{
     self = [super initWithFrame:frame];
     if (self) {
-        [self setUI];
+        self.style = style;
+        if (style == RecommendHeaderBanner) {
+            [self setBannerUI];
+        } else if (style == RecommendHeaderTag) {
+            [self setTagUI];
+        }
     }
     return self;
 }
 
-- (void)setUI {
+- (void)setBannerUI {
     _currentIndex = -1;
     self.scrollView = [[UIScrollView alloc]init];
     self.scrollView.frame = CGRectMake(0, 0, self.ymj_w, self.ymj_h);
@@ -50,23 +57,38 @@
     [self addImageViews];
 }
 
+- (void)setTagUI {
+    self.leftImageView = [UIImageView new];
+    UIImage *image = [UIImage imageNamed:@"cm2_discover_icn_exclusive.png"];
+    self.leftImageView.frame = CGRectMake(10, 20, image.size.width, image.size.height);
+    self.leftImageView.image = image;
+    [self addSubview:self.leftImageView];
+    
+    self.titleLabel = [UILabel new];
+    self.titleLabel.font = [UIFont systemFontOfSize:16];
+    self.titleLabel.textColor = UIColorFromRGB(darkGrayColor);
+    [self addSubview:self.titleLabel];
+}
+
 - (void)addImageViews {
-    _leftImageView = [[UIImageView alloc]init];
-    _rightImageView = [[UIImageView alloc]init];
-    _centerImageView = [[UIImageView alloc]init];
-    [self.scrollView addSubview:_leftImageView];
-    [self.scrollView addSubview:_centerImageView];
-    [self.scrollView addSubview:_rightImageView];
+    self.leftImageView  = [[UIImageView alloc]init];
+    self.rightImageView = [[UIImageView alloc]init];
+    self.centerImageView = [[UIImageView alloc]init];
+    self.leftImageView.frame   = CGRectMake(0, 0, self.ymj_w , self.ymj_h);
+    self.centerImageView.frame = CGRectMake(self.ymj_w * 1, 0, self.ymj_w, self.ymj_h);
+    self.rightImageView.frame  = CGRectMake(self.ymj_w * 2, 0, self.ymj_w, self.ymj_h);
+    [self.scrollView addSubview:self.leftImageView];
+    [self.scrollView addSubview:self.centerImageView];
+    [self.scrollView addSubview:self.rightImageView];
 }
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    CGSize size = self.frame.size;
-    self.leftImageView.frame   = CGRectMake(0, 0, size.width , size.height);
-    self.centerImageView.frame = CGRectMake(size.width * 1, 0, size.width, size.height);
-    self.rightImageView.frame  = CGRectMake(size.width * 2, 0, size.width, size.height);
+    self.titleLabel.ymj_x = CGRectGetMaxX(self.leftImageView.frame) + 10;
+    self.titleLabel.ymj_y = CGRectGetMinY(self.leftImageView.frame);
 }
 
+#pragma mark - setter
 - (void)setScrollViewContentOffsetCenter {
     [self.scrollView setContentOffset:CGPointMake(CGRectGetWidth(self.frame), 0)];
 }
@@ -79,11 +101,11 @@
 - (void)setCurrentIndex:(NSInteger)currentIndex {
     if (_currentIndex != currentIndex) {
         _currentIndex = currentIndex;
-        NSInteger leftImageIndex = (_currentIndex + _dataArray.count - 1) % _dataArray.count;
-        NSInteger rightImageIndex= (_currentIndex + 1) % _dataArray.count;
-        BannerModel *currentModel = _dataArray[_currentIndex];
-        BannerModel *leftModel = _dataArray[leftImageIndex];
-        BannerModel *rightModel = _dataArray[rightImageIndex];
+        NSInteger leftImageIndex  = (_currentIndex + _dataArray.count - 1) % _dataArray.count;
+        NSInteger rightImageIndex = (_currentIndex + 1) % _dataArray.count;
+        BannerModel *currentModel = self.dataArray[_currentIndex];
+        BannerModel *leftModel    = self.dataArray[leftImageIndex];
+        BannerModel *rightModel   = self.dataArray[rightImageIndex];
         [self.centerImageView setImageWithURL:[NSURL URLWithString:currentModel.img]];
         [self.leftImageView setImageWithURL:[NSURL URLWithString:leftModel.img]];
         [self.rightImageView setImageWithURL:[NSURL URLWithString:rightModel.img]];
@@ -91,6 +113,14 @@
     }
 }
 
+- (void)setTitle:(NSString *)title {
+    _title = title;
+    self.titleLabel.text = _title;
+    [self.titleLabel sizeToFit];
+    [self setNeedsLayout];
+}
+
+#pragma mark - delegate
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     CGPoint offset = scrollView.contentOffset;
     if (offset.x > CGRectGetWidth(self.frame)) {
@@ -100,8 +130,5 @@
         self.currentIndex= (_currentIndex + _dataArray.count - 1) % _dataArray.count;
     }
 }
-
-
-
 
 @end

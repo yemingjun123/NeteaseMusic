@@ -18,7 +18,7 @@
 @interface GroupsModel : NSObject
 
 @property (strong, nonatomic) NSArray<RanksModel *> *ranks;
-@property (copy, nonatomic) NSString *tag;
+@property (copy, nonatomic)   NSString *tag;
 
 @end
 
@@ -38,14 +38,14 @@
 @interface RanksModel : NSObject
 
 @property (strong, nonatomic) NSArray<RankSongsModel *> *rankSongs;
-@property (copy, nonatomic) NSString *img;
-@property (copy, nonatomic) NSString *icon;
-@property (copy, nonatomic) NSString *title;
-@property (copy, nonatomic) NSString *url;
-@property (copy, nonatomic) NSString *summary;
-@property (copy, nonatomic) NSString *shareLink;
-@property (copy, nonatomic) NSString *shareTitle;
-@property (copy, nonatomic) NSString *publishTime;
+@property (copy, nonatomic)   NSString *img;
+@property (copy, nonatomic)   NSString *icon;
+@property (copy, nonatomic)   NSString *title;
+@property (copy, nonatomic)   NSString *url;
+@property (copy, nonatomic)   NSString *summary;
+@property (copy, nonatomic)   NSString *shareLink;
+@property (copy, nonatomic)   NSString *shareTitle;
+@property (copy, nonatomic)   NSString *publishTime;
 
 @end
 

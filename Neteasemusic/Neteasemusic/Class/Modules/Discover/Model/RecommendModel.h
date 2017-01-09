@@ -12,7 +12,7 @@
 
 @interface RecommendModel : NSObject
 
-@property (copy, nonatomic) NSString *publishTime;
+@property (copy, nonatomic)   NSString *publishTime;
 @property (strong, nonatomic) NSArray <RecommendGroupModel *>*groups;
 
 @end
@@ -37,10 +37,11 @@
 
 @interface RecommendGroupModel : NSObject
 
-@property (copy, nonatomic) NSString *title;
-@property (copy, nonatomic) NSString *type;
-@property (copy, nonatomic) NSString *sort;
+@property (copy, nonatomic)   NSString *title;
+@property (copy, nonatomic)   NSString *type;
+@property (copy, nonatomic)   NSString *sort;
 @property (strong, nonatomic) NSArray <BannerModel *>*banners;
+//@property (strong, nonatomic) NSArray <RecommendCmModel *>*items;
 @property (strong, nonatomic) NSArray <RecommendCmModel *>*hotSpots;
 @property (strong, nonatomic) NSArray <RecommendCmModel *>*recommends;
 @property (strong, nonatomic) NSArray <RankSongsModel *>*songs;
