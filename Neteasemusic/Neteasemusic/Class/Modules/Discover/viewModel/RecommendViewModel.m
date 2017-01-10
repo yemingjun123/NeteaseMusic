@@ -10,6 +10,7 @@
 #import "MJExtension.h"
 #define SPACE  10
 #define SIZE_HEIGTH 145
+@class RecommendBannerView,RecommendTagView;
 
 @implementation RecommendViewModel
 @synthesize responseObject = _responseObject;
@@ -25,20 +26,9 @@
     [RecommendModel mj_setupObjectClassInArray:^NSDictionary *{
         return @{@"groups" : [RecommendGroupModel class]};
     }];
-    /*
-     //@property (strong, nonatomic) NSArray <RecommendCmModel *>*hotSpots;
-     //@property (strong, nonatomic) NSArray <RecommendCmModel *>*recommends;
-     //@property (strong, nonatomic) NSArray <RankSongsModel *>*songs;
-     //@property (strong, nonatomic) NSArray <RecommendCmModel *>*firsts;
-     //@property (strong, nonatomic) NSArray <RecommendCmModel *>*topics;
-     //@property (strong, nonatomic) NSArray <RecommendCmModel *>*radios;
-     //@property (strong, nonatomic) NSArray <RecommendCmModel *>*activities;
-     //@property (strong, nonatomic) NSArray <RecommendCmModel *>*miguColumns;
-     */
     [RecommendGroupModel mj_setupObjectClassInArray:^NSDictionary *{
         return @{
                  @"banners" : [BannerModel class],
-//                 @"items"   : [RecommendCmModel class]
                  @"hotSpots" : [RecommendCmModel class],
                  @"recommends" : [RecommendCmModel class],
                  @"songs" : [RankSongsModel class],
@@ -49,17 +39,6 @@
                  @"miguColumns" : [RecommendCmModel class]
                  };
     }];
-//    [RecommendGroupModel mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
-//        return @{@"items" : @"hotSpots",
-//                 @"items" : @"recommends",
-//                 @"items" : @"firsts",
-//                 @"items" : @"topics",
-//                 @"items" : @"radios",
-//                 @"items" : @"activities",
-//                 @"items" : @"miguColumns",
-//                 @"items" : @"songs"
-//                 };
-//    }];
     self.dataModel = [RecommendModel mj_objectWithKeyValues:_responseObject];
     self.dataArray = self.dataModel.groups;
 
@@ -67,56 +46,98 @@
 
 - (NSInteger)numberOfItemsInSection:(NSInteger)section {
     NSInteger number = 0;
+    NSArray *array = [self dataArrayOfItemsInSection:section];
+    if (array) {
+        number = array.count;
+    }
+    return number;
+}
+
+- (NSArray *)dataArrayOfItemsInSection:(NSInteger)section {
+    NSArray *array = nil;
     if (section < self.dataArray.count) {
         RecommendGroupModel *model = [self.dataArray objectAtIndex:section];
         switch (section) {
             case 0:
-                number = 0;
                 break;
             case 1:
-                number = model.hotSpots.count;
+                array = model.hotSpots;
                 break;
             case 2:
-                number = model.recommends.count;
+                array = model.recommends;
                 break;
             case 3:
-                number = model.songs.count;
+                array = model.songs;
                 break;
             case 4:
-                number = model.firsts.count;
+                array = model.firsts;
                 break;
             case 5:
-                number = model.topics.count;
+                array = model.topics;
                 break;
             case 6:
-                number = model.radios.count;
+                array = model.radios;
                 break;
             case 7:
-                number = model.activities.count;
+                array = model.activities;
                 break;
             case 9:
-                number = model.miguColumns.count;
+                array = model.miguColumns;
                 break;
         }
     }
-    return 0;
+    return array;
 }
 
 - (CGSize)sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     CGSize size = CGSizeZero;
     NSInteger number = [self numberOfItemsInSection:indexPath.section];
-    if (number == 2 && number == 4) {
+    if (number == 2 || number == 4 || number == 3) {
         CGFloat w = (kSCREENkWIDTH - 3 * SPACE ) / 2;
         size = CGSizeMake(w, SIZE_HEIGTH);
-    } else if (number >= 5) {
+    }
+    if (number >= 5) {
         CGFloat w = (kSCREENkWIDTH - 4 * SPACE ) / 3;
         size = CGSizeMake(w, SIZE_HEIGTH);
-    } else if ((number == 3 && indexPath.row == 2) || number == 1) {
+    }
+    if ((number == 3 && indexPath.row == 2) || number == 1) {
         CGFloat w = kSCREENkWIDTH - 2 * SPACE;
         size = CGSizeMake(w, SIZE_HEIGTH);
     }
     return size;
 }
 
+- (CGSize)referenceSizeForHeaderInSection:(NSInteger)section {
+    CGSize size = CGSizeZero;
+    if (section == 0 ) {
+        size = CGSizeMake(kSCREENkWIDTH, 200);
+    } else if([self numberOfItemsInSection:section]) {
+        size = CGSizeMake(kSCREENkWIDTH, 45);
+    }
+    return size;
+}
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView atIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        RecommendBannerView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:bannerIdentifier forIndexPath:indexPath];
+        headerView.dataArray = [self.dataArray objectAtIndex:0].banners;
+        return headerView;
+    }
+    RecommendTagView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:tagIdentifier forIndexPath:indexPath];
+    RecommendGroupModel *model = [self.dataArray objectAtIndex:indexPath.section];
+    headerView.title = model.title;
+    return headerView;
+}
+
+- (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    RecommendCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
+    NSArray *array = [self dataArrayOfItemsInSection:indexPath.section];
+    if (indexPath.section == 3) {
+        cell.songModel = array[indexPath.row];
+    } else {
+        cell.topModel = array[indexPath.row];
+    }
+    return cell;
+}
 
 @end

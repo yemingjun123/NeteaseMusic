@@ -1,30 +1,38 @@
 //
-//  RecommendViewController.m
+//  SongMenuViewController.m
 //  Neteasemusic
 //
-//  Created by 叶明君 on 17/1/6.
+//  Created by 叶明君 on 17/1/10.
 //  Copyright © 2017年 叶明君. All rights reserved.
 //
 
-#import "RecommendViewController.h"
-#import "RecommendViewModel.h"
+#import "SongMenuViewController.h"
+#import "SongMenuViewModel.h"
 
-@interface RecommendViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
+@interface SongMenuViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
-@property (strong, nonatomic) RecommendViewModel *viewModel;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (strong, nonatomic)        SongMenuViewModel *viewModel;
+@property (assign, nonatomic)        NSInteger pageNo;
 
 @end
 
-@implementation RecommendViewController
+@implementation SongMenuViewController
 
 #pragma mark - lifecycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self setUI];
+    [self setupUI];
+    _pageNo = 1;
+    NSString *url = @"http://218.200.160.29/rdp2/v5.5/musicLists.do";
+    NSDictionary *pramas = @{
+                            @"groupcode" : @"365925",
+                            @"sort" : @"1",
+                            @"pageno" : @(_pageNo)
+                            };
     @weakify(self)
-    [self.viewModel refreshDataCompletion:^(BOOL success) {
+    [self.viewModel refreshDataUrl:url pramas:pramas completion:^(BOOL success) {
         @strongify(self)
         if (success) {
             [self.collectionView reloadData];
@@ -37,27 +45,27 @@
     // Dispose of any resources that can be recreated.
 }
 
--(RecommendViewModel *)viewModel {
+#pragma mark - getter
+- (SongMenuViewModel *)viewModel {
     if (!_viewModel) {
-        _viewModel = [[RecommendViewModel alloc]init];
+        _viewModel = [[SongMenuViewModel alloc]init];
     }
     return _viewModel;
 }
 
-- (void)setUI {
-    [self.collectionView registerNib:[UINib nibWithNibName:@"RecommendCell" bundle:nil] forCellWithReuseIdentifier:cellIdentifier];
+- (void)setupUI {
+    [self.collectionView registerNib:[UINib nibWithNibName:@"SongMenuCell" bundle:nil] forCellWithReuseIdentifier:cellIdentifier];
     [self.collectionView registerClass:[RecommendTagView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:tagIdentifier];
-    [self.collectionView registerClass:[RecommendBannerView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:bannerIdentifier];
 }
 
 #pragma mark - delegate
 //UICollectionViewDataSource
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return self.viewModel.dataArray.count;
+    return 1;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return [self.viewModel numberOfItemsInSection:section];
+    return self.viewModel.dataArray.count;
 }
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -71,7 +79,7 @@
 
 //UICollectionViewDelegateFlowLayout
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return [self.viewModel sizeForItemAtIndexPath:indexPath];
+    return [self.viewModel sizeForRowInCount:2];
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section  {
@@ -79,7 +87,7 @@
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
-    return [self.viewModel referenceSizeForHeaderInSection:section];
+    return CGSizeMake(self.collectionView.ymj_w, 45);
 }
 
 

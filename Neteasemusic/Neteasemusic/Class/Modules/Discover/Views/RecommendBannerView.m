@@ -6,38 +6,33 @@
 //  Copyright © 2017年 叶明君. All rights reserved.
 //
 
-#import "RecommendHeaderView.h"
+#import "RecommendBannerView.h"
 #import "UIImageView+AFNetworking.h"
 
-@interface RecommendHeaderView () <UIScrollViewDelegate>
+@interface RecommendBannerView () <UIScrollViewDelegate>
 
 @property (strong, nonatomic) UIImageView   *leftImageView;
 @property (strong, nonatomic) UIImageView   *centerImageView;
 @property (strong, nonatomic) UIImageView   *rightImageView;
 @property (strong, nonatomic) UIScrollView  *scrollView;
 @property (strong, nonatomic) UIPageControl *pageContrl;
-@property (strong, nonatomic) UILabel       *titleLabel;
-@property (assign, nonatomic) RecommendHeaderStyle style;
 
 @end
 
-@implementation RecommendHeaderView
+@implementation RecommendBannerView
 
-- (instancetype)initWithFrame:(CGRect)frame style:(RecommendHeaderStyle)style{
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
     self = [super initWithFrame:frame];
     if (self) {
-        self.style = style;
-        if (style == RecommendHeaderBanner) {
-            [self setBannerUI];
-        } else if (style == RecommendHeaderTag) {
-            [self setTagUI];
-        }
+        [self setBannerUI];
     }
     return self;
 }
 
 - (void)setBannerUI {
-    _currentIndex = -1;
+//    _currentIndex = -1;
     self.scrollView = [[UIScrollView alloc]init];
     self.scrollView.frame = CGRectMake(0, 0, self.ymj_w, self.ymj_h);
     self.scrollView.delegate = self ;
@@ -57,19 +52,6 @@
     [self addImageViews];
 }
 
-- (void)setTagUI {
-    self.leftImageView = [UIImageView new];
-    UIImage *image = [UIImage imageNamed:@"cm2_discover_icn_exclusive.png"];
-    self.leftImageView.frame = CGRectMake(10, 20, image.size.width, image.size.height);
-    self.leftImageView.image = image;
-    [self addSubview:self.leftImageView];
-    
-    self.titleLabel = [UILabel new];
-    self.titleLabel.font = [UIFont systemFontOfSize:16];
-    self.titleLabel.textColor = UIColorFromRGB(darkGrayColor);
-    [self addSubview:self.titleLabel];
-}
-
 - (void)addImageViews {
     self.leftImageView  = [[UIImageView alloc]init];
     self.rightImageView = [[UIImageView alloc]init];
@@ -82,12 +64,6 @@
     [self.scrollView addSubview:self.rightImageView];
 }
 
-- (void)layoutSubviews {
-    [super layoutSubviews];
-    self.titleLabel.ymj_x = CGRectGetMaxX(self.leftImageView.frame) + 10;
-    self.titleLabel.ymj_y = CGRectGetMinY(self.leftImageView.frame);
-}
-
 #pragma mark - setter
 - (void)setScrollViewContentOffsetCenter {
     [self.scrollView setContentOffset:CGPointMake(CGRectGetWidth(self.frame), 0)];
@@ -96,6 +72,7 @@
 - (void)setDataArray:(NSArray<BannerModel *> *)dataArray {
     _dataArray = dataArray;
     self.pageContrl.numberOfPages = _dataArray.count;
+    self.currentIndex = 1;
 }
 
 - (void)setCurrentIndex:(NSInteger)currentIndex {
@@ -111,13 +88,6 @@
         [self.rightImageView setImageWithURL:[NSURL URLWithString:rightModel.img]];
         [self setScrollViewContentOffsetCenter];
     }
-}
-
-- (void)setTitle:(NSString *)title {
-    _title = title;
-    self.titleLabel.text = _title;
-    [self.titleLabel sizeToFit];
-    [self setNeedsLayout];
 }
 
 #pragma mark - delegate

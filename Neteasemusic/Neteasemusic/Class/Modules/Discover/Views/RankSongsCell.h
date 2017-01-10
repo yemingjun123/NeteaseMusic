@@ -15,8 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *songNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *singerLanel;
 @property (weak, nonatomic) IBOutlet UIImageView *sqImageView;
-
-@property (strong, nonatomic) RankSongsModel *model;
+@property (strong, nonatomic)        RankSongsModel *model;
 
 - (IBAction)touchMoreEvent:(UIButton *)sender;
 

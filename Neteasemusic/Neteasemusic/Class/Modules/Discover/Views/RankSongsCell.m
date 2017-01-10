@@ -8,8 +8,6 @@
 
 #import "RankSongsCell.h"
 
-
-
 @implementation RankSongsCell
 
 - (void)awakeFromNib {
@@ -30,4 +28,5 @@
 
 - (IBAction)touchMoreEvent:(UIButton *)sender {
 }
+
 @end

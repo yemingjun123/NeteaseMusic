@@ -15,7 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *songName1;
 @property (weak, nonatomic) IBOutlet UILabel *songName2;
 @property (weak, nonatomic) IBOutlet UILabel *songName3;
-
-@property (strong, nonatomic) RanksModel *ranksModel;
+@property (strong, nonatomic)        RanksModel *ranksModel;
 
 @end

@@ -9,18 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "RecommendModel.h"
 
-typedef NS_ENUM(NSUInteger, RecommendHeaderStyle) {
-    RecommendHeaderBanner,
-    RecommendHeaderTag
-};
-
-@interface RecommendHeaderView : UIView
+@interface RecommendBannerView : UICollectionReusableView
 
 @property (assign, nonatomic) NSInteger currentIndex ;
 @property (strong, nonatomic) NSArray <BannerModel *>*dataArray;
-@property (copy, nonatomic)   NSString *title;
-
-- (instancetype)initWithFrame:(CGRect)frame
-                        style:(RecommendHeaderStyle)style;
 
 @end

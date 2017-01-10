@@ -85,15 +85,17 @@
  "playNums": 0
  */
 
+
 @interface RecommendCmModel : NSObject
 
-@property (copy, nonatomic) NSString *title;
-@property (copy, nonatomic) NSString *type;
-@property (copy, nonatomic) NSString *img;
-@property (copy, nonatomic) NSString *url;
-@property (copy, nonatomic) NSString *contentid;
-@property (copy, nonatomic) NSString *summary;
-@property (copy, nonatomic) NSString *shareUrl;
+@property (copy, nonatomic)   NSString *title;
+@property (copy, nonatomic)   NSString *type;
+@property (copy, nonatomic)   NSString *img;
+@property (copy, nonatomic)   NSString *url;
+@property (copy, nonatomic)   NSString *contentid;
+@property (copy, nonatomic)   NSString *summary;
+@property (copy, nonatomic)   NSString *shareUrl;
+@property (assign, nonatomic) NSInteger playNums;
 
 @end
 
