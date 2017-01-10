@@ -20,7 +20,7 @@
     if (_model != model) {
         _model = model;
         [self.imageView setImageWithURL:[NSURL URLWithString:_model.img]];
-        self.summaryLabel.text = _model.summary;
+        self.summaryLabel.text = @"ww";
     }
 }
 
