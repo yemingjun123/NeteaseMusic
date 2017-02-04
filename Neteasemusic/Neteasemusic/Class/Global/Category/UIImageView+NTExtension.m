@@ -22,9 +22,9 @@ CGFloat const kDefaultSaturationDeltaFactor = 1.8;
 - (void)setImageToBlur:(UIImage *)image blurRadius:(CGFloat)blurRadius {
     NSParameterAssert(image);
     blurRadius = (blurRadius <= 0) ? kDefaultBlurRadius : blurRadius;
-    DISPATCH_ASYNS(^{
+    kDispatch_async(^{
         UIImage *blurredImage = [image ymj_blurWithRadius:blurRadius tintColor:nil saturationDeltaFactor:kDefaultSaturationDeltaFactor maskImage:nil];
-        DISPATCH_MAIN(^{
+        kDispatch_main(^{
             self.image = blurredImage;
         });
     });

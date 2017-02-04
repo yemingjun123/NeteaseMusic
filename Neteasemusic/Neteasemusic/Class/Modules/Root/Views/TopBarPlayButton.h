@@ -10,7 +10,7 @@
 
 @interface TopBarPlayButton : UIView
 
-SINGLETON_H_CLASS(TopBarPlayButton);
+Singleton_H_Class(TopBarPlayButton);
 
 - (void)addTarget:(id)target action:(SEL)action;
 

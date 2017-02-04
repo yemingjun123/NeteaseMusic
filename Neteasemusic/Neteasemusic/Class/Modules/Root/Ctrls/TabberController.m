@@ -30,7 +30,7 @@ UINavigationController *createNv(UIViewController *vc, NSString *imageName, NSSt
 
 @implementation TabberController
 
-SINGLETON_M_CLASS(TabberController)
+Singleton_M_Class(TabberController)
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -53,7 +53,6 @@ SINGLETON_M_CLASS(TabberController)
                              createNv(friend, @"cm2_btm_icn_friend.png", @"cm2_btm_icn_friend_prs.png"),
                              createNv(account, @"cm2_btm_icn_account.png", @"cm2_btm_icn_account_prs.png")
                              ];
-    
     self.tabBar.tintColor = UIColorFromRGB(whiteColor);
     UIImage *bgImage = [UIImage imageNamed:@"cm2_btm_tab_right.png"];
     self.tabBar.backgroundImage = bgImage;

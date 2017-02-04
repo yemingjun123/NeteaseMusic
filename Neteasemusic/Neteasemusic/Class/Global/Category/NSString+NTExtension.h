@@ -10,6 +10,8 @@
 
 @interface NSString (NTExtension)
 
-- (CGSize)ymj_stringSizeWithFont:(UIFont *)font width:(CGFloat)width;
+- (CGSize)ymj_boundingSizeWithFont:(UIFont *)font width:(CGFloat)width;
+
+- (CGRect)ymj_boundingRectWithFont:(UIFont *)font width:(CGFloat)width;
 
 @end

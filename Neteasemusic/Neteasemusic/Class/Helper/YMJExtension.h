@@ -94,8 +94,8 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 #endif
 
 #pragma mark - gcd
-#define DISPATCH_ASYNS(block) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), block)
-#define DISPATCH_MAIN(block) dispatch_async(dispatch_get_main_queue(),block)
+#define kDispatch_async(block) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), block)
+#define kDispatch_main(block) dispatch_async(dispatch_get_main_queue(),block)
 
 #pragma mark - image
 #define load_Image(name) [UIImage imageWithContentsOfFile:[[NSBundle mainBundle]pathForResource:name ofType:nil]]

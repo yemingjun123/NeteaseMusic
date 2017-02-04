@@ -20,7 +20,7 @@ UIImage *newImage(NSString *imageName) {
 
 @implementation TopBarPlayButton
 
-SINGLETON_M_CLASS(TopBarPlayButton)
+Singleton_M_Class(TopBarPlayButton)
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];

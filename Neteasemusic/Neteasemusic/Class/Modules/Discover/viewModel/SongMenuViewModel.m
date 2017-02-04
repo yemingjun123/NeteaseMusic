@@ -12,12 +12,6 @@
 @implementation SongMenuViewModel
 @synthesize responseObject = _responseObject;
 
-//- (void)refreshDataCompletion:(Completion)complet{
-//    NSString *url = @"http://218.200.160.29/rdp2/v5.5/index.do";
-//    NSDictionary *pramas = @{ @"pageno" : @1 };
-//    [self refreshDataUrl:url pramas:pramas completion:complet];
-//}
-
 - (void)setResponseObject:(id)responseObject {
     _responseObject = responseObject;
     [SongMenuModel mj_setupObjectClassInArray:^NSDictionary *{
@@ -41,7 +35,7 @@
     return headerView;
 }
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+- (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     SongMenuCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
     cell.model = [self.dataArray objectAtIndex:indexPath.row];
     return cell;

@@ -9,8 +9,8 @@
 #ifndef Header_h
 #define Header_h
 
-#define SINGLETON_H_CLASS(name) + (instancetype)shared##name;
-#define SINGLETON_M_CLASS(name) \
+#define Singleton_H_Class(name) + (instancetype)shared##name;
+#define Singleton_M_Class(name) \
 static name *instance_ = nil;\
 + (instancetype)shared##name{\
     static dispatch_once_t onceToken;\

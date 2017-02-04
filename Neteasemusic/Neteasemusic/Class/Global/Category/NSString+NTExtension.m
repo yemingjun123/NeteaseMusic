@@ -8,11 +8,17 @@
 
 #import "NSString+NTExtension.h"
 
+static const NSUInteger options = NSStringDrawingUsesFontLeading | NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin;
+
 @implementation NSString (NTExtension)
 
-- (CGSize)ymj_stringSizeWithFont:(UIFont *)font width:(CGFloat)width {
-    return [self boundingRectWithSize:CGSizeMake(width, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin
-        attributes:@{NSFontAttributeName : font} context:nil].size;
+- (CGSize)ymj_boundingSizeWithFont:(UIFont *)font width:(CGFloat)width {
+    return [self boundingRectWithSize:CGSizeMake(width, CGFLOAT_MAX) options:options
+        attributes:@{NSFontAttributeName : font} context:NULL].size;
+}
+
+- (CGRect)ymj_boundingRectWithFont:(UIFont *)font width:(CGFloat)width {
+    return [self boundingRectWithSize:CGSizeMake(width, CGFLOAT_MAX) options:options attributes:@{NSFontAttributeName : font} context:NULL];
 }
 
 

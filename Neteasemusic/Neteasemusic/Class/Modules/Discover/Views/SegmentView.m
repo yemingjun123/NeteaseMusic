@@ -51,7 +51,7 @@
     }
     self.lineView = [[UIView alloc]init];
     UIButton *button = self.buttons[0];
-    CGSize size = [button.titleLabel.text ymj_stringSizeWithFont:self.font width:button.ymj_w];
+    CGSize size = [button.titleLabel.text ymj_boundingSizeWithFont:self.font width:button.ymj_w];
     self.lineView.frame = CGRectMake((button.ymj_w - size.width + 5) / 2, self.ymj_h - 2, size.width + 5, 2);
     self.lineView.backgroundColor = self.selectedColor;
     [self addSubview:self.lineView];
@@ -61,7 +61,7 @@
     @weakify(self)
     [UIView animateWithDuration:0.2 animations:^{
         @strongify(self)
-        CGSize size = [selectedButton.titleLabel.text ymj_stringSizeWithFont:self.font width:selectedButton.ymj_w];
+        CGSize size = [selectedButton.titleLabel.text ymj_boundingSizeWithFont:self.font width:selectedButton.ymj_w];
         self.lineView.ymj_w = size.width + 5;
         self.lineView.ymj_x = selectedButton.ymj_x + (selectedButton.ymj_w - self.lineView.ymj_w) / 2;
     }];
@@ -85,7 +85,7 @@
             @weakify(self)
             [UIView animateWithDuration:0.2 animations:^{
                 @strongify(self)
-                CGSize size = [button.titleLabel.text ymj_stringSizeWithFont:self.font width:button.ymj_w];
+                CGSize size = [button.titleLabel.text ymj_boundingSizeWithFont:self.font width:button.ymj_w];
                 self.lineView.ymj_w = size.width + 5;
                 self.lineView.ymj_x = button.ymj_x + (button.ymj_w - self.lineView.ymj_w) / 2;
             } completion:^(BOOL finished) {
