@@ -16,27 +16,33 @@ typedef NS_ENUM(NSUInteger, RefreshState) {
     RefreshStateNoMoreData      /** 所有数据加载完毕，没有更多的数据了 */
 };
 
-typedef void(^RefreshComponentBlock)();
+typedef void(^RefreshComponentBlock)();  /** 刷新的回调 */
 
-@interface RefreshComponent : UIView
+@interface RefreshComponent : UIView {
+    UIEdgeInsets _scrollViewOriginalInset;
+    __weak UIScrollView *_scrollView;
+}
 
 @property (copy, nonatomic) RefreshComponentBlock refreshingBlock;
 @property (assign, nonatomic) RefreshState state;
 @property (weak, nonatomic, readonly) UIScrollView *scrollView;
+@property (assign, nonatomic, readonly) UIEdgeInsets scrollViewOriginalInset;
 
 - (void)beginRefreshing;
 - (void)endRefreshing;
 - (BOOL)isRefreshing;
 
-
-- (void)prepare;
-- (void)placeSubViews;
+- (void)executeRefreshingCallback;   /** 执行刷新的回调 */
+- (void)prepare NS_REQUIRES_SUPER;
+- (void)placeSubViews NS_REQUIRES_SUPER;
 - (void)scrollViewContentOffsetDidChange:(NSDictionary *)change NS_REQUIRES_SUPER;
 - (void)scrollViewContentSizeDidChange:(NSDictionary *)change NS_REQUIRES_SUPER;
 - (void)scrollViewPanStateDidChange:(NSDictionary *)change NS_REQUIRES_SUPER;
 
-@property (assign, nonatomic) CGFloat pullingPercent;
-/** 根据拖拽比例自动切换透明度 */
-@property (assign, nonatomic, getter=isAutomaticallyChangeAlpha) BOOL automaticallyChangeAlpha;
+@end
+
+@interface UILabel (Refresh)
+
++ (instancetype)_label;
 
 @end

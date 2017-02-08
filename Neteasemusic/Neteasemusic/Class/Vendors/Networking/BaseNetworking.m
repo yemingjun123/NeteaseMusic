@@ -23,7 +23,7 @@
 - (instancetype)initWithUrl:(NSString *)urlString {
     self = [super init];
     if (self) {
-        self.manager = [[AFURLSessionManager alloc]initWithSessionConfiguration:
+        self.manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:
             [NSURLSessionConfiguration defaultSessionConfiguration]];
         self.manager.responseSerializer = [AFJSONResponseSerializer serializer];
         [self startMonitoringNetwork];
@@ -59,7 +59,7 @@
 
 - (void)startMonitoringNetwork {
     [[AFNetworkReachabilityManager sharedManager] startMonitoring];
-    [[AFNetworkReachabilityManager sharedManager]setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+    [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
         if(status == AFNetworkReachabilityStatusNotReachable||status ==AFNetworkReachabilityStatusUnknown){
             NSLog(@"网络连接已断开，请检查您的网络！");
             return ;
@@ -71,7 +71,7 @@
 }
 
 - (NSDictionary *)setupRequsetParamet:(NSDictionary *)params {
-    NSMutableDictionary *mParams = [[NSMutableDictionary alloc]initWithDictionary:params];
+    NSMutableDictionary *mParams = [[NSMutableDictionary alloc] initWithDictionary:params];
     [mParams setObject:app_Channel forKey:@"ua"];
     [mParams setObject:app_Version forKey:@"version"];
     return mParams;

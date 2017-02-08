@@ -6,14 +6,12 @@
 //  Copyright © 2016年 叶明君. All rights reserved.
 //
 
-//#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
 #import "UIViewController+YMJPushTransitioning.h"
 #import "UIView+NTExtension.h"
 #import "UIScrollView+NTExtension.h"
 #import "NSString+NTExtension.h"
-
 
 #pragma mark - log
 
@@ -32,13 +30,16 @@
 #pragma mark - Notification
 
 #define kNotificationCenter [NSNotificationCenter defaultCenter]
-#define kUserDefaultAdd(name) [[NSUserDefaults alloc]initWithSuiteName:name]
+#define kUserDefault [NSUserDefaults standardUserDefaults]
 #define kApplication [UIApplication sharedApplication]
+
+void UserDefaultSave(id value, NSString *key);
+void UserDefaultGet(NSString *key);
+void UserDefaultRemove(NSString *key);
 
 void NotificationAdd(id observer, SEL selector, NSString * name, NSString * alias);
 void NotificationPost(NSString * name, NSString * alias, NSDictionary * userInfo);
 void NotificationRemove(id observer, NSString * name, NSString * alias);
-
 
 #pragma mark - new
 
@@ -99,3 +100,6 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 #pragma mark - image
 #define load_Image(name) [UIImage imageWithContentsOfFile:[[NSBundle mainBundle]pathForResource:name ofType:nil]]
+
+#pragma mark - Deprecated
+#define Deprecated(instead) NS_DEPRECATED(2_0, 2_0, 2_0, 2_0, instead)

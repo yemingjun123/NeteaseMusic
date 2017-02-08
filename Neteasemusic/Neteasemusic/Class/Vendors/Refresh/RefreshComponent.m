@@ -7,17 +7,13 @@
 //
 
 #import "RefreshComponent.h"
+#import "RefreshConst.h"
 
 @interface RefreshComponent ()
 
 @property (strong, nonatomic) UIPanGestureRecognizer *pan;
 
 @end
-
-NSString *const RefreshKeyPathContentOffset = @"contentOffset";
-NSString *const RefreshKeyPathContentInset = @"contentInset";
-NSString *const RefreshKeyPathContentSize = @"contentSize";
-NSString *const RefreshKeyPathPanState = @"state";
 
 @implementation RefreshComponent
 
@@ -36,8 +32,8 @@ NSString *const RefreshKeyPathPanState = @"state";
 }
 
 - (void)layoutSubviews {
-    [super layoutSubviews];
     [self placeSubViews];
+    [super layoutSubviews];
 }
 
 - (void)placeSubViews{}
@@ -52,13 +48,13 @@ NSString *const RefreshKeyPathPanState = @"state";
 - (void)willMoveToSuperview:(UIView *)newSuperview {
     [super willMoveToSuperview:newSuperview];
     if (newSuperview && ![newSuperview isKindOfClass:[UIScrollView class]]) return;
-    
+    [self removeObservers];
     if (newSuperview) {
         self.ymj_w = newSuperview.ymj_w;
         self.ymj_x = 0;
-        
         _scrollView = (UIScrollView *)newSuperview;
         _scrollView.alwaysBounceVertical = YES;
+        _scrollViewOriginalInset = _scrollView.contentInset;
         [self addObserver];
     }
 }
@@ -81,13 +77,13 @@ NSString *const RefreshKeyPathPanState = @"state";
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
     if (!self.userInteractionEnabled) return;
- 
-    // 这个就算看不见也需要处理
+    
     if ([keyPath isEqualToString:RefreshKeyPathContentSize]) {
         [self scrollViewContentSizeDidChange:change];
     }
-    // 看不见
+    
     if (self.hidden) return;
+    
     if ([keyPath isEqualToString:RefreshKeyPathContentOffset]) {
         [self scrollViewContentOffsetDidChange:change];
     } else if ([keyPath isEqualToString:RefreshKeyPathPanState]) {
@@ -99,12 +95,10 @@ NSString *const RefreshKeyPathPanState = @"state";
 - (void)scrollViewContentSizeDidChange:(NSDictionary *)change {}
 - (void)scrollViewPanStateDidChange:(NSDictionary *)change{}
 
-
 - (void)beginRefreshing {
-    [UIView animateWithDuration:0.25f animations:^{
+    [UIView animateWithDuration:RefreshFastAnimationDuration animations:^{
         self.alpha = 1.0f;
     }];
-    self.pullingPercent = 1.0f;
     if (self.window) {
         self.state = RefreshStateRefreshing;
     } else {
@@ -119,6 +113,28 @@ NSString *const RefreshKeyPathPanState = @"state";
 
 - (BOOL)isRefreshing {
     return self.state == RefreshStateRefreshing || self.state == RefreshStateWillRefresh;
+}
+
+- (void)executeRefreshingCallback {
+    kDispatch_main(^{
+        if (self.refreshingBlock) {
+            self.refreshingBlock();
+        }
+    });
+}
+
+@end
+
+@implementation UILabel(Refresh)
+
++ (instancetype)_label {
+    UILabel *label = [[UILabel alloc] init];
+    label.font = RefreshLabelFont;
+    label.textColor = RefreshLabelTextColor;
+    label.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    label.textAlignment = NSTextAlignmentCenter;
+    label.backgroundColor = [UIColor clearColor];
+    return label;
 }
 
 @end

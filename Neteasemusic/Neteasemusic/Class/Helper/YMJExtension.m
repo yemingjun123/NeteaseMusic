@@ -6,13 +6,25 @@
 //  Copyright © 2016年 叶明君. All rights reserved.
 //
 
-#import "YMJExtension.h"
+#import <UIKit/UIKit.h>
 #import <objc/runtime.h>
 
 typedef id (*_IMP)(id, SEL, ...);
 
-#pragma mark - Notification
+void UserDefaultSave(id value, NSString *key) {
+    [kUserDefault setObject:value forKey:key];
+    [kUserDefault synchronize];
+}
 
+void UserDefaultGet(NSString *key) {
+    [kUserDefault objectForKey:key];
+}
+
+void UserDefaultRemove(NSString *key) {
+    [kUserDefault removeObjectForKey:key];
+}
+
+#pragma mark - Notification
 void NotificationAdd(id observer, SEL selector, NSString * name, NSString * alias) {
     [kNotificationCenter addObserver:observer selector:selector name:name object:alias];
 }

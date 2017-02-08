@@ -10,7 +10,7 @@
 
 @interface ProgressHUD : UIView
 
-@property (assign, nonatomic) BOOL interaction;
+@property (getter=isInteraction, nonatomic) BOOL interaction;
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) UIView *background;
 @property (strong, nonatomic) UIToolbar *hud;

@@ -8,12 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@class RefreshHeader;
+@class RefreshHeader,RefreshFooter;
 
 @interface UIScrollView (Refresh)
 
-@property (strong, nonatomic) RefreshHeader *nt_header;
-
-
+@property (strong, nonatomic) RefreshHeader *nt_header;  /** 下拉刷新 */
+@property (strong, nonatomic) RefreshFooter *nt_footer;  /** 上拉刷新 */
 
 @end

@@ -13,8 +13,7 @@ static const NSUInteger options = NSStringDrawingUsesFontLeading | NSStringDrawi
 @implementation NSString (NTExtension)
 
 - (CGSize)ymj_boundingSizeWithFont:(UIFont *)font width:(CGFloat)width {
-    return [self boundingRectWithSize:CGSizeMake(width, CGFLOAT_MAX) options:options
-        attributes:@{NSFontAttributeName : font} context:NULL].size;
+    return [self ymj_boundingRectWithFont:font width:width].size;
 }
 
 - (CGRect)ymj_boundingRectWithFont:(UIFont *)font width:(CGFloat)width {

@@ -8,6 +8,7 @@
 
 #import "RecommendViewController.h"
 #import "RecommendViewModel.h"
+#import "Refresh.h"
 
 @interface RecommendViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
@@ -29,6 +30,12 @@
         if (success) {
             [self.collectionView reloadData];
         }
+    }];
+    
+    self.collectionView.nt_header = [LoadingGIFHeader headerWithRefreshingBlock:^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.collectionView.nt_header endRefreshing];
+        });
     }];
 }
 

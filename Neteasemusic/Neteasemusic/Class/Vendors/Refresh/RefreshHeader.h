@@ -12,10 +12,9 @@
 
 + (instancetype)headerWithRefreshingBlock:(RefreshComponentBlock) refreshingBlock;
 
-@property (copy, nonatomic) NSString *lastUpdataTimeKey;
+@property (copy, nonatomic) NSString *lastUpdataTimeKey;  /** 上次刷新时间key */
+@property (copy, nonatomic) NSDate *lastUpdataTime;       /** 上次刷新时间 */
 
-@property (copy, nonatomic) NSDate *lastUpdataTime;
-
-//@property (copy, nonatomic) NSString *
+@property (assign, nonatomic) CGFloat ignoredScrollViewContentInsetTop;
 
 @end

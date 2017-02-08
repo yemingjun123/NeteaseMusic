@@ -93,7 +93,7 @@
 
 - (void)createHUD {
     if (hud == nil) {
-        hud = [[UIToolbar alloc]init];
+        hud = [[UIToolbar alloc] init];
         hud.frame = CGRectZero;
         hud.translucent = NO;
         hud.layer.cornerRadius = 10;
@@ -109,16 +109,16 @@
         }
     }
     if (spinner == nil) {
-        spinner = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+        spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
         spinner.hidesWhenStopped =YES;
     }
     if (spinner.superview == nil) [hud addSubview:spinner];
     if (image == nil) {
-        image = [[UIImageView alloc]init];
+        image = [[UIImageView alloc] init];
     }
     if (image.superview == nil) [hud addSubview:image];
     if (label == nil) {
-        label = [[UILabel alloc]init];
+        label = [[UILabel alloc] init];
         label.frame = CGRectZero;
         label.font = HUD_Font;
         label.textColor = UIColorFromRGB(0x333333);

@@ -10,6 +10,8 @@
 #import "MySingerViewController.h"
 #import "PlayListViewController.h"
 
+#import "Refresh.h"
+
 @interface MyMusicViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (strong, nonatomic)MySingerViewController *singerController;
@@ -25,6 +27,12 @@
     [self setMiddleLabelTitle:@"我的音乐" color:UIColorFromRGB(whiteColor)];
     [self setLeftBarButton:nil title:@"更多" target:self action:@selector(touchMoreEvent)];
     [self.tableView setTableHeaderView:self.tableHeaderView];
+    
+    self.tableView.nt_header = [RefreshStateHeader headerWithRefreshingBlock:^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.tableView.nt_header endRefreshing];
+        });
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
