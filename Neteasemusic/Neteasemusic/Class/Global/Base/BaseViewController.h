@@ -11,11 +11,26 @@
 @interface BaseViewController : UIViewController
 
 - (void)setColor:(UIColor *)color;
-- (void)setMiddleLabelTitle:(NSString *)title color:(UIColor *)color;
-- (void)setMiddleSegmentedItems:(NSArray *)items target:(id)target action:(SEL)action ;
-- (void)setLeftBarButton:(UIImage*)image title:(NSString*)title target:(id)target action:(SEL)action;
-- (void)setRightBarButton:(UIImage*)image title:(NSString*)title target:(id)target action:(SEL)action;
+
+- (void)setMiddleLabelTitle:(NSString *)title
+                      color:(UIColor *)color;
+
+- (void)setMiddleSegmentedItems:(NSArray *)items
+                         target:(id)target
+                         action:(SEL)action ;
+
+- (void)setLeftBarButton:(UIImage*)image
+                   title:(NSString*)title
+                  target:(id)target
+                  action:(SEL)action;
+
+- (void)setRightBarButton:(UIImage*)image
+                    title:(NSString*)title
+                   target:(id)target
+                   action:(SEL)action;
+
 - (void)nv_pushViewController:(UIViewController *)viewController animated:(BOOL)animated;
+
 - (void)nv_changeAlphaWithCurrentOffset:(CGFloat)offsetY;
 
 @end

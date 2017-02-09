@@ -12,7 +12,7 @@
 @implementation RefreshFooter
 
 + (instancetype)footerWithRefreshingBlock:(RefreshComponentBlock)refeshingBlock {
-    RefreshFooter *cmp = [[RefreshFooter alloc]init];
+    RefreshFooter *cmp = [[self alloc] init];
     cmp.refreshingBlock = refeshingBlock;
     return cmp;
 }

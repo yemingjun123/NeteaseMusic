@@ -21,8 +21,8 @@ NSString *const RefreshKeyPathPanState = @"state";
 
 NSString *const RefreshHeaderLastUpdatedKey = @"LastUpdatedTimeKey";
 
-NSString *const RefreshAutoFonterIdleText = @"上拉加载更多";
-NSString *const RefreshAutoFonterRefreshingText = @"正在加载更多数据...";
+NSString *const RefreshAutoFonterIdleText = @"上拉加载";
+NSString *const RefreshAutoFonterRefreshingText = @"加载中...";
 NSString *const RefreshAutoFonterNoMoreDataText = @"已经到底了!";
 
 NSString *const RefreshHeaderIdleText = @"下拉更新";

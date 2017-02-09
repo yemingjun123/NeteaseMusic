@@ -7,8 +7,7 @@
 //
 
 #import "BaseViewController.h"
-@protocol SlidingViewDelegate ;
-@protocol SlidingViewDataSource ;
+@protocol SlidingViewDelegate,SlidingViewDataSource;
 
 @interface SlidingViewController : BaseViewController
 

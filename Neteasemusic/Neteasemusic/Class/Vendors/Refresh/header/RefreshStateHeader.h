@@ -15,12 +15,3 @@
 @property (weak, nonatomic, readonly) UILabel *stateLabel;
 
 @end
-
-
-@interface RefreshGIFHeader : RefreshStateHeader
-
-@property (weak, nonatomic, readonly) UIImageView *gifImageView;
-
-- (void)setImages:(NSArray *)images forState:(RefreshState)state;
-
-@end

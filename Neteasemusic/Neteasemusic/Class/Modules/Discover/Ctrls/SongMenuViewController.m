@@ -8,6 +8,7 @@
 
 #import "SongMenuViewController.h"
 #import "SongMenuViewModel.h"
+#import "Refresh.h"
 
 @interface SongMenuViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
@@ -38,6 +39,7 @@
             [self.collectionView reloadData];
         }
     }];
+    
 }
 
 - (void)didReceiveMemoryWarning {

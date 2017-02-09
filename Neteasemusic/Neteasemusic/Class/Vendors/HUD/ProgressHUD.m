@@ -88,7 +88,12 @@
     [self hudSize];
     [self hudShow];
     if (spin) [spinner startAnimating]; else [spinner stopAnimating];
-    if (hide) [NSThread detachNewThreadSelector:@selector(timedHideHUD) toTarget:self withObject:nil];
+    if (hide) {
+        NSTimeInterval sleep = self.label.text.length * 0.02 + 2;
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(sleep * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self hudHide];
+        });
+    }
 }
 
 - (void)createHUD {
@@ -186,14 +191,5 @@
     [background removeFromSuperview];   background = nil;
 }
 
-- (void)timedHideHUD {
-    @autoreleasepool {
-        NSTimeInterval sleep = label.text.length * 0.04 + 2;
-        [NSThread sleepForTimeInterval:sleep];
-        kDispatch_main(^{
-            [self hudHide];
-        });
-    }
-}
 
 @end

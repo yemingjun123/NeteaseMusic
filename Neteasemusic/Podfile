@@ -4,6 +4,7 @@ target 'Neteasemusic' do
     
 pod 'AFNetworking'
 pod 'MJExtension'
+pod 'Masonry', '~> 1.0.1'
 
 end
 

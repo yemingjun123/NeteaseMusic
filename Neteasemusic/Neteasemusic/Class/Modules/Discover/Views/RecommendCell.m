@@ -19,8 +19,13 @@
 - (void)setTopModel:(RecommendCmModel *)topModel {
     if (_topModel != topModel) {
         _topModel = topModel;
-        [self.imageView setImageWithURL:[NSURL URLWithString:_topModel.img]];
+        
+        self.summaryLabel.text = nil;
+        self.singerLabel.text = nil;
         self.summaryLabel.numberOfLines = 2;
+        self.imageView.image = [UIImage new];
+        
+        [self.imageView setImageWithURL:[NSURL URLWithString:_topModel.img]];
         self.summaryLabel.text = _topModel.summary;
     }
 }
@@ -29,9 +34,14 @@
 - (void)setSongModel:(RankSongsModel *)songModel {
     if (_songModel != songModel) {
         _songModel = songModel;
+   
+        self.summaryLabel.text = nil;
+        self.singerLabel.text = nil;
+        self.summaryLabel.numberOfLines = 1;
+        self.imageView.image = [UIImage new];
+        
         [self.imageView setImageWithURL:[NSURL URLWithString:_songModel.singerIcon]];
         self.summaryLabel.text = _songModel.title;
-        self.summaryLabel.numberOfLines = 1;
         self.singerLabel.text = _songModel.singer;
     }
 }

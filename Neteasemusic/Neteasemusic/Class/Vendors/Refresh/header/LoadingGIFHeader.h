@@ -6,7 +6,7 @@
 //  Copyright © 2017年 叶明君. All rights reserved.
 //
 
-#import "RefreshStateHeader.h"
+#import "RefreshGIFHeader.h"
 
 @interface LoadingGIFHeader : RefreshGIFHeader
 

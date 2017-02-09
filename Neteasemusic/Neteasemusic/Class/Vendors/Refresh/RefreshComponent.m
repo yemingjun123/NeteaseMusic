@@ -102,8 +102,10 @@
     if (self.window) {
         self.state = RefreshStateRefreshing;
     } else {
-        self.state = RefreshStateWillRefresh;
-        [self setNeedsDisplay];
+        if (self.state != RefreshStateRefreshing) {
+            self.state = RefreshStateWillRefresh;
+            [self setNeedsDisplay];
+        };
     }
 }
 
@@ -120,6 +122,13 @@
         if (self.refreshingBlock) {
             self.refreshingBlock();
         }
+    });
+}
+
+- (void)setState:(RefreshState)state {
+    _state = state ;
+    kDispatch_main(^{
+        [self setNeedsLayout];
     });
 }
 

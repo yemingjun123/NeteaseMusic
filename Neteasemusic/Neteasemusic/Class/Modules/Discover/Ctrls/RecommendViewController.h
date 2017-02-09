@@ -6,8 +6,8 @@
 //  Copyright © 2017年 叶明君. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "NTCollectionViewController.h"
 
-@interface RecommendViewController : BaseViewController
+@interface RecommendViewController : NTCollectionViewController
 
 @end

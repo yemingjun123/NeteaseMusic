@@ -33,7 +33,7 @@
 }
 
 - (UIActivityIndicatorView *)loadingView {
-    if (_loadingView) {
+    if (!_loadingView) {
         UIActivityIndicatorView *loadingView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
         loadingView.hidesWhenStopped = YES;
         [self addSubview:_loadingView = loadingView];
@@ -49,6 +49,7 @@
 
 - (void)prepare {
     [super prepare];
+    
     self.labelLeftInset = RefreshLabelLeftInset;
     [self setTitle:RefreshAutoFonterIdleText forState:RefreshStateIdle];
     [self setTitle:RefreshAutoFonterRefreshingText forState:RefreshStateRefreshing];
@@ -61,8 +62,9 @@
 - (void)placeSubViews {
     [super placeSubViews];
     
-    if (self.stateLabel.constraints.count) return;
-    self.stateLabel.frame = self.bounds;
+    if (self.stateLabel.constraints.count == 0) {
+        self.stateLabel.frame = self.bounds;
+    }
     
     if (self.loadingView.constraints.count) return;
     CGFloat loadingCenterX = self.ymj_w * 0.5;

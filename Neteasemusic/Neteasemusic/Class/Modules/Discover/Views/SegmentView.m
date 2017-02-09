@@ -7,11 +7,13 @@
 //
 
 #import "SegmentView.h"
+#import "Masonry.h"
 
 @interface SegmentView ()
 
 @property (strong, nonatomic) NSMutableArray *buttons;
 @property (strong, nonatomic) UIView *lineView;
+@property (strong, nonatomic) UIView *bottomView;
 
 @end
 
@@ -24,6 +26,8 @@
         self.font = [UIFont systemFontOfSize:15];
         self.textColor = UIColorFromRGB(darkGrayColor);
         self.selectedColor = UIColorFromRGB(darkRedColor);
+        
+        
     }
     return self;
 }
@@ -95,7 +99,7 @@
     }
 }
 
-#pragma mark -- set
+#pragma mark -- setter
 - (void)setDataArray:(NSArray *)dataArray {
     if (_dataArray != dataArray) {
         _dataArray = dataArray;
@@ -130,5 +134,18 @@
     }
 }
 
+//- (UIView *)bottomView {
+//    if (!_bottomView) {
+//        _bottomView = [[UIView alloc] init];
+//        [_bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.centerY.equalTo(self);
+//            make.left.equalTo(self.avaterImgView.mas_right).offset(15);
+//        }];
+//
+//        
+//        [self addSubview:_bottomView];
+//    }
+//    return _bottomView;
+//}
 
 @end

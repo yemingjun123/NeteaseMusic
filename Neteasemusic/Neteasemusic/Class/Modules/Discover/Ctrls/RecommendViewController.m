@@ -13,7 +13,6 @@
 @interface RecommendViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
 @property (strong, nonatomic) RecommendViewModel *viewModel;
-@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end
 
@@ -24,18 +23,9 @@
     [super viewDidLoad];
     
     [self setUI];
-    @weakify(self)
-    [self.viewModel refreshDataCompletion:^(BOOL success) {
-        @strongify(self)
-        if (success) {
-            [self.collectionView reloadData];
-        }
-    }];
     
-    self.collectionView.nt_header = [LoadingGIFHeader headerWithRefreshingBlock:^{
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self.collectionView.nt_header endRefreshing];
-        });
+    [self beginHeaderRefrashComplet:^{
+        [self loadData];
     }];
 }
 
@@ -51,10 +41,24 @@
     return _viewModel;
 }
 
+- (void)loadData {
+    @weakify(self)
+    [self.viewModel refreshDataCompletion:^(BOOL success) {
+        @strongify(self)
+        if (success) {
+            [self endRefrash];
+            [self.collectionView reloadData];
+        }
+    }];
+}
+
 - (void)setUI {
     [self.collectionView registerNib:[UINib nibWithNibName:@"RecommendCell" bundle:nil] forCellWithReuseIdentifier:cellIdentifier];
     [self.collectionView registerClass:[RecommendTagView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:tagIdentifier];
     [self.collectionView registerClass:[RecommendBannerView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:bannerIdentifier];
+    self.collectionView.delegate = self;
+    self.collectionView.dataSource = self;
+    self.collectionView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
 }
 
 #pragma mark - delegate

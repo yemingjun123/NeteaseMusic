@@ -33,6 +33,13 @@
             [self.tableView.nt_header endRefreshing];
         });
     }];
+    
+    self.tableView.nt_footer = [RefreshAutoStateFooter footerWithRefreshingBlock:^{
+    
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.tableView.nt_footer endRefreshing];
+        });
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,11 +50,17 @@
 #pragma mark - delegate 
 // UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self tableView:tableView numberOfRowsInSection:section];
+    return 20;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [self tableView:tableView cellForRowAtIndexPath:indexPath];
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"hehehe"];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"hehehe"];
+    }
+    cell.textLabel.text = @"ssasdasdasd";
+    return cell;
 }
 
 #pragma mark - Response Event
